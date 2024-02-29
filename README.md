@@ -23,6 +23,28 @@ Here are the planned features we would like to develop:
 
 ### User interface
 #### Title Screen
+'new game'
+'continue'
+
 #### Credits Screen
+everybody who wants credit
 
 ### Sound
+music
+sound effects
+
+### Environment
+skybox
+    different times of day
+    different times of year
+    dynamic day-night cycle
+
+fog
+
+### player controller
+interaction functionality
+let it fly?
+speed it up
+create a model for hte player
+move from 1st person to third person
+
