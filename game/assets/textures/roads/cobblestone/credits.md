@@ -1,1 +1,3 @@
-cobblestone_floor_08*: https://polyhaven.com/a/cobblestone_floor_08
+# cobblestone_floor_08*: 
+source: https://polyhaven.com/a/cobblestone_floor_08
+license: cc0
