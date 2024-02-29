@@ -2,6 +2,7 @@
 This repository will contain the game collaboratively developed in Paul Vierthaler's "Building Qianlong's World" class at William & Mary in Spring 2024.
 
 ## Organizational ethos
+Below you will find tips on keeping our game organized. One key thing to remember: ALWAYS give credit when you include an asset found elsewhere. You can create a .txt file called 'credits.txt' if one does not exist, which you should use to explain where you found the asset, and information its license!
 
 ### Developing process
 Before you make any changes, be sure to create a new branch in GitHub desktop. Make all of the changes you would like, and when you are ready to have them added to the main game, make a pull request. Please remember to routinely pull remote changes into your version of the game.
