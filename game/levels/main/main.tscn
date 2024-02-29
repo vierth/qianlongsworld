@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://ceg17eyehxdir"]
+
+[ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="1_gyeyk"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ulyki"]
+
+[sub_resource type="Sky" id="Sky_t3s8o"]
+sky_material = SubResource("ProceduralSkyMaterial_ulyki")
+
+[sub_resource type="Environment" id="Environment_giykr"]
+background_mode = 2
+sky = SubResource("Sky_t3s8o")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jmfsn"]
+size = Vector2(10, 10)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ly38x"]
+points = PackedVector3Array(5.07738, 0.079334, 5.07738, -5.07738, -0.079334, -5.07738, -5.07738, 0.079334, -5.07738, 5.07738, -0.079334, -5.07738, -5.07738, -0.079334, 5.07738, -5.07738, 0.079334, 5.07738, 5.07738, 0.079334, -5.07738, 5.07738, -0.079334, 5.07738)
+
+[node name="World" type="Node3D"]
+
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
+environment = SubResource("Environment_giykr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 0.0874339, 0.99617, 0, -0.99617, 0.0874339, 0, 3.08732, 0)
+
+[node name="Terrain" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain"]
+mesh = SubResource("PlaneMesh_jmfsn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain"]
+shape = SubResource("ConvexPolygonShape3D_ly38x")
+
+[node name="Player" parent="." instance=ExtResource("1_gyeyk")]
