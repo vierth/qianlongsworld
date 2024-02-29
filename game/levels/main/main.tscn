@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ceg17eyehxdir"]
+[gd_scene load_steps=10 format=3 uid="uid://ceg17eyehxdir"]
 
+[ext_resource type="Texture2D" uid="uid://cwgnycma6qqbx" path="res://assets/textures/roads/cobblestone/cobblestone_floor_08_diff_2k.jpg" id="1_7mm4m"]
 [ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="1_gyeyk"]
+[ext_resource type="Texture2D" uid="uid://bun0npkhy1ilj" path="res://assets/textures/roads/cobblestone/cobblestone_floor_08_nor_gl_2k.jpg" id="2_u2tk3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ulyki"]
 
@@ -11,7 +13,16 @@ sky_material = SubResource("ProceduralSkyMaterial_ulyki")
 background_mode = 2
 sky = SubResource("Sky_t3s8o")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68tw1"]
+albedo_texture = ExtResource("1_7mm4m")
+normal_enabled = true
+normal_scale = 0.5
+normal_texture = ExtResource("2_u2tk3")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmfsn"]
+material = SubResource("StandardMaterial3D_68tw1")
 size = Vector2(10, 10)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ly38x"]
