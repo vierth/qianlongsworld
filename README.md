@@ -22,6 +22,10 @@ When you build a Godot scene that you think can be reused across levels, please 
 Here are the planned features we would like to develop:
 
 ### User interface
+
+#### guidance?
+minimap/hud situation
+
 #### Title Screen
 'new game'
 'continue'
@@ -48,3 +52,5 @@ speed it up
 create a model for hte player
 move from 1st person to third person
 
+### textures
+what did roads look like? cobblestone? dirt?
