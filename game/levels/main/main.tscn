@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://ceg17eyehxdir"]
+[gd_scene load_steps=11 format=3 uid="uid://ceg17eyehxdir"]
 
 [ext_resource type="Material" uid="uid://u8ms0bm1c8te" path="res://assets/shaders/materials/SkyShader.tres" id="1_6spky"]
 [ext_resource type="Texture2D" uid="uid://cwgnycma6qqbx" path="res://assets/textures/roads/cobblestone/cobblestone_floor_08_diff_2k.jpg" id="1_7mm4m"]
 [ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="1_gyeyk"]
+[ext_resource type="Script" path="res://levels/main/Environment.gd" id="1_haybg"]
 [ext_resource type="Texture2D" uid="uid://bun0npkhy1ilj" path="res://assets/textures/roads/cobblestone/cobblestone_floor_08_nor_gl_2k.jpg" id="2_u2tk3"]
 
 [sub_resource type="Sky" id="Sky_t3s8o"]
@@ -31,12 +32,21 @@ points = PackedVector3Array(5.07738, 0.079334, 5.07738, -5.07738, -0.079334, -5.
 [node name="World" type="Node3D"]
 
 [node name="Environment" type="Node3D" parent="."]
+script = ExtResource("1_haybg")
+day_time = 12.0
+latitude = 39.92
+day_of_year = 182
+use_day_time_for_shader = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
 environment = SubResource("Environment_giykr")
 
 [node name="Sun" type="DirectionalLight3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 0.0874339, 0.99617, 0, -0.99617, 0.0874339, 0, 3.08732, 0)
+
+[node name="Moon" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0957, 0)
+light_color = Color(0.945098, 0.917647, 0.737255, 1)
 
 [node name="Terrain" type="StaticBody3D" parent="."]
 
