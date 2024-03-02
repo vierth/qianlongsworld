@@ -35,7 +35,7 @@ points = PackedVector3Array(5.07738, 0.079334, 5.07738, -5.07738, -0.079334, -5.
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
 environment = SubResource("Environment_giykr")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+[node name="Sun" type="DirectionalLight3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 0.0874339, 0.99617, 0, -0.99617, 0.0874339, 0, 3.08732, 0)
 
 [node name="Terrain" type="StaticBody3D" parent="."]
