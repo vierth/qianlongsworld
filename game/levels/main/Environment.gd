@@ -1,4 +1,5 @@
 # https://godotshaders.com/shader/stylized-sky-with-procedural-sun-and-moon/
+# MIT License
 
 @tool
 extends Node3D
