@@ -1,7 +1,6 @@
-[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://u8ms0bm1c8te"]
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://u8ms0bm1c8te"]
 
 [ext_resource type="Shader" path="res://assets/shaders/code/DynamicSky.gdshader" id="1_4s7gq"]
-[ext_resource type="Texture2D" uid="uid://grk1lt0hswt7" path="res://assets/textures/sky/starmap_2020_4k.jpg" id="2_ifddx"]
 
 [resource]
 shader = ExtResource("1_4s7gq")
@@ -32,5 +31,4 @@ shader_parameter/clouds_fuzziness = 0.5
 shader_parameter/clouds_weight = 0.0
 shader_parameter/clouds_blur = 0.25
 shader_parameter/stars_speed = 1.0
-shader_parameter/stars_texture = ExtResource("2_ifddx")
 shader_parameter/overwritten_time = 438530.0
