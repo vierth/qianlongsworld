@@ -12,6 +12,8 @@ As you make changes, be sure to commit them frequently! It is best to have an in
 ### Levels
 When you add a level create a folder with your name, and place the level scene within it. Keep your scripts local to this file. 
 
+Please use the maps in this repository to create your tiles. Keep in mind taht not every image is extactly the same size, but the conversion factor should be 8.423 pixels per meter, so to find the physical size of your tile in meters, simply devide the resolution by 8.423.
+
 ### Assets
 Models, materials, textures, etc should go in their respective assets folder. 
 
