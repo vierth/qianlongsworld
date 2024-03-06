@@ -20,6 +20,15 @@ Models, materials, textures, etc should go in their respective assets folder.
 #### Prefabs
 When you build a Godot scene that you think can be reused across levels, please save it into the "prefabs" folder. First add a folder for the general category if it doesn't exist, then add it there.
 
+#### Adding a model to the game with custom data
+The first step to adding custom data is to ensure that you have a data structure to hold your information. This should inherent from BaseInfo.
+
+Create your model (saved to the models folder), and be sure you have a tscn that contians collision. See for example, the ritual ewer tscn in the bronzes models. 
+
+Create a custom resource and save it in the data/data_resources. This will hold all of the info about your object and the scene of the model itself.
+
+From there, you can add an interactable_object into your scene and then attach the resource to this. it will dynamically load into your scene.
+
 ## Project roadmap
 Here are the planned features we would like to develop:
 
