@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BronzeInfo" load_steps=3 format=3 uid="uid://djeof6xdytnsv"]
+
+[ext_resource type="Script" path="res://data/custom_classes/bronze_info.gd" id="1_awlyr"]
+[ext_resource type="PackedScene" uid="uid://vyvpdwdqy8o6" path="res://assets/models/bronzes/wine_ewer/ritual_wine_ewer_with_masks.tscn" id="1_ymlq0"]
+
+[resource]
+script = ExtResource("1_awlyr")
+date_of_production = ""
+name = "Ritual Ewer"
+scene = ExtResource("1_ymlq0")
+license = "CC0"
+source = "Smithsonian"

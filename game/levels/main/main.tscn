@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://ceg17eyehxdir"]
+[gd_scene load_steps=10 format=3 uid="uid://ceg17eyehxdir"]
 
 [ext_resource type="Texture2D" uid="uid://cwgnycma6qqbx" path="res://assets/textures/roads/cobblestone/cobblestone_floor_08_diff_2k.jpg" id="1_7mm4m"]
 [ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="1_gyeyk"]
 [ext_resource type="Texture2D" uid="uid://bun0npkhy1ilj" path="res://assets/textures/roads/cobblestone/cobblestone_floor_08_nor_gl_2k.jpg" id="2_u2tk3"]
 [ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://assets/prefabs/environments/environment.tscn" id="4_vvj20"]
+[ext_resource type="PackedScene" uid="uid://bl13fyknwy87t" path="res://assets/prefabs/interactive_scenes/interactable_object.tscn" id="5_dvpyu"]
+[ext_resource type="Resource" uid="uid://djeof6xdytnsv" path="res://data/data_resources/ritual_ewer.tres" id="6_midvn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68tw1"]
 albedo_texture = ExtResource("1_7mm4m")
@@ -33,3 +35,6 @@ mesh = SubResource("PlaneMesh_jmfsn")
 shape = SubResource("ConvexPolygonShape3D_ly38x")
 
 [node name="Player" parent="." instance=ExtResource("1_gyeyk")]
+
+[node name="InteractableObject" parent="." instance=ExtResource("5_dvpyu")]
+item = ExtResource("6_midvn")
