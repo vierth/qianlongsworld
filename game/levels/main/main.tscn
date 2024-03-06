@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="1_gyeyk"]
 [ext_resource type="Texture2D" uid="uid://bun0npkhy1ilj" path="res://assets/textures/roads/cobblestone/cobblestone_floor_08_nor_gl_2k.jpg" id="2_u2tk3"]
 [ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://assets/prefabs/environments/environment.tscn" id="4_vvj20"]
-[ext_resource type="Script" path="res://levels/main/InteractableObject.gd" id="5_7tmox"]
+[ext_resource type="PackedScene" uid="uid://bl13fyknwy87t" path="res://assets/prefabs/interactive_scenes/interactable_object.tscn" id="5_dvpyu"]
 [ext_resource type="Resource" uid="uid://djeof6xdytnsv" path="res://data/data_resources/ritual_ewer.tres" id="6_midvn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68tw1"]
@@ -36,7 +36,5 @@ shape = SubResource("ConvexPolygonShape3D_ly38x")
 
 [node name="Player" parent="." instance=ExtResource("1_gyeyk")]
 
-[node name="InteractableObject" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.179769, -3.41363)
-script = ExtResource("5_7tmox")
+[node name="InteractableObject" parent="." instance=ExtResource("5_dvpyu")]
 item = ExtResource("6_midvn")

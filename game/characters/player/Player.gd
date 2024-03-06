@@ -12,6 +12,9 @@ const JUMP_VELOCITY = 4.5
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
+# Specify if being observed
+var observed = null
+
 # set up mouse handling
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
@@ -55,3 +58,13 @@ func _physics_process(delta):
 		global_position = warp_location
 
 	move_and_slide()
+
+func _process(_delta):
+	var coll = %RayCast3D.get_collider()
+	
+	if coll != observed:
+		if coll != null:
+			print(coll.get_parent().item.name)
+		if observed != null :	
+			pass
+		observed = coll
