@@ -16,5 +16,5 @@ func _ready():
 	#print(mesh_size.size.x, mesh_size.position)
 	#new_scene.global_position.x = mesh_size.s
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
