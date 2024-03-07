@@ -5,3 +5,4 @@ extends Resource
 @export var scene:PackedScene
 @export var license:String
 @export var source:String
+@export var contributor:String
