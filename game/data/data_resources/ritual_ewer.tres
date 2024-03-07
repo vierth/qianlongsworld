@@ -10,3 +10,4 @@ name = "Ritual Ewer"
 scene = ExtResource("1_ymlq0")
 license = "CC0"
 source = "Smithsonian"
+contributor = "Paul Vierthaler"
