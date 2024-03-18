@@ -6,7 +6,7 @@
 size = Vector3(0.1, 2, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_06l3h"]
-size = Vector3(0.1, 2, 1)
+size = Vector3(0.1, 2, 4.84898)
 
 [node name="SceneSwitchZone" type="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

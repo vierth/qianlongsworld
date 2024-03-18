@@ -66,17 +66,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.67768, 0, -7.54248)
 mesh = SubResource("BoxMesh_4m0ph")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="East Building"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.67768, 0, -7.54248)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.678, 0, -7.5)
 shape = SubResource("ConcavePolygonShape3D_o6s1c")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="East Building"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.73099, 0.219961, 7.70331)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.731, 0, 7.5)
 mesh = SubResource("BoxMesh_4m0ph")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="East Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.67768, 0, 7.55689)
 shape = SubResource("ConcavePolygonShape3D_cqo2a")
 
-[node name="SceneSwitcher" parent="." instance=ExtResource("6_o8urw")]
-transform = Transform3D(1, 0, 0, 0, 1.0921, 0, 0, 0, 4.0664, 11.4934, 1.36198, -0.333618)
+[node name="SceneSwitcher" parent="East Building" instance=ExtResource("6_o8urw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2566, -0.13802, -0.333618)
 destination_scene = "res://levels/pvierthaler/room_1/display_room.tscn"
+
+[node name="Collider" parent="East Building/SceneSwitcher" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.415123)
+
+[editable path="East Building/SceneSwitcher"]
