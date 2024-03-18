@@ -18,3 +18,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
+
+
+func _on_area_3d_body_entered(body, string):
+	if body.get_collision_layer() == 2:
+		print('player entered', string)
+	 # Replace with function body.
+
+

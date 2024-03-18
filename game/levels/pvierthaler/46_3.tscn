@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://chhbw7wqahpfl"]
 
 [ext_resource type="PackedScene" uid="uid://c2pg8b0spkgov" path="res://levels/pvierthaler/46_3_tri.tscn" id="1_yeyv7"]
-[ext_resource type="PackedScene" uid="uid://ck0ljd18sthvk" path="res://levels/pvierthaler/yindingqiao.glb" id="2_uj6s5"]
+[ext_resource type="PackedScene" uid="uid://crafq4q4qoim7" path="res://levels/pvierthaler/yindingqiao.glb" id="2_uj6s5"]
 
 [node name="game_tile" type="Node3D"]
 

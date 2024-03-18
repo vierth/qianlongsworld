@@ -15,6 +15,10 @@ run/main_scene="res://levels/main/main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SceneSwitcher="*res://autoloadscripts/scene_switcher.gd"
+
 [display]
 
 window/size/viewport_width=1920
