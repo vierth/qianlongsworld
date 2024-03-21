@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://levels/main/main.gd" id="1_h0s2j"]
 [ext_resource type="Texture2D" uid="uid://bun0npkhy1ilj" path="res://assets/textures/roads/cobblestone/cobblestone_floor_08_nor_gl_2k.jpg" id="2_u2tk3"]
 [ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://assets/prefabs/environments/environment.tscn" id="4_vvj20"]
-[ext_resource type="PackedScene" uid="uid://bpduk82dgyom0" path="res://assets/prefabs/interactive_scenes/scene_switcher.tscn" id="6_o8urw"]
+[ext_resource type="PackedScene" uid="uid://bpduk82dgyom0" path="res://components/scene_switcher.tscn" id="6_o8urw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68tw1"]
 albedo_texture = ExtResource("1_7mm4m")

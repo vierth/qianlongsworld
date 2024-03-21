@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bpduk82dgyom0"]
 
-[ext_resource type="Script" path="res://assets/prefabs/interactive_scenes/switch_zone.gd" id="1_k2hhg"]
+[ext_resource type="Script" path="res://components/switch_zone.gd" id="1_k2hhg"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_aah4b"]
 size = Vector3(0.1, 2, 1)
