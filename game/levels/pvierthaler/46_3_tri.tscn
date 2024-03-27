@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2pg8b0spkgov"]
+[gd_scene load_steps=10 format=3 uid="uid://c2pg8b0spkgov"]
 
 [ext_resource type="Texture2D" uid="uid://dfp0mk7pyuvee" path="res://levels/pvierthaler/beijing_Page_046_03.png" id="1_xddtn"]
 [ext_resource type="PackedScene" uid="uid://dss1ryqpqa1n8" path="res://assets/prefabs/water/WaterPlane.tscn" id="2_cpkfr"]
+[ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://assets/prefabs/environments/environment.tscn" id="3_tn1nh"]
+[ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="4_du3ga"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oifcj"]
 resource_name = "beijing_Page_046_03"
@@ -61,3 +63,8 @@ shape = SubResource("ConcavePolygonShape3D_j7sb6")
 
 [node name="Water" parent="." instance=ExtResource("2_cpkfr")]
 transform = Transform3D(312, 0, 0, 0, 1, 0, 0, 0, 312, -38.786, -1, 2.08165e-12)
+
+[node name="Environment" parent="." instance=ExtResource("3_tn1nh")]
+
+[node name="Player" parent="." instance=ExtResource("4_du3ga")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.646, 4, -1.662)
