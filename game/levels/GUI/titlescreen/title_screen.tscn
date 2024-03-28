@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://bplb2oswk7cka"]
+
+[ext_resource type="Script" path="res://levels/GUI/titlescreen/title_screen.gd" id="1_7jbsr"]
+
+[sub_resource type="Theme" id="Theme_b1lx2"]
+default_font_size = 48
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_b1lx2")
+script = ExtResource("1_7jbsr")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -793.0
+offset_top = 186.0
+offset_right = 781.0
+offset_bottom = 562.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 180
+text = "Qianlong's World"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -304.0
+offset_top = 654.0
+offset_right = 590.0
+offset_bottom = 729.0
+grow_horizontal = 2
+
+[node name="StartButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="SettingsButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="CreditsButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Credits"
+
+[connection signal="button_down" from="HBoxContainer/StartButton" to="." method="_on_start_button_button_down"]
+[connection signal="button_down" from="HBoxContainer/QuitButton" to="." method="_on_quit_button_button_down"]
+[connection signal="button_down" from="HBoxContainer/SettingsButton" to="." method="_on_settings_button_button_down"]
+[connection signal="button_down" from="HBoxContainer/CreditsButton" to="." method="_on_credits_button_button_down"]
