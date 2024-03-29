@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bplb2oswk7cka"]
+[gd_scene load_steps=4 format=3 uid="uid://bplb2oswk7cka"]
 
 [ext_resource type="Script" path="res://levels/GUI/titlescreen/title_screen.gd" id="1_7jbsr"]
+[ext_resource type="Texture2D" uid="uid://blvef05rwoq85" path="res://assets/textures/maps/beijing_Page_049.png" id="2_5x002"]
 
 [sub_resource type="Theme" id="Theme_b1lx2"]
 default_font_size = 48
@@ -14,6 +15,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_b1lx2")
 script = ExtResource("1_7jbsr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -776.0
+offset_top = -845.0
+offset_right = 5171.0
+offset_bottom = 4260.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_5x002")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
