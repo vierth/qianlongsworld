@@ -34,6 +34,9 @@ func _unhandled_input(event):
 		if speed < 0:
 			speed = 0
 
+	if event.is_action_pressed("interact"):
+		print(SqlController.get_item_data(1))
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():

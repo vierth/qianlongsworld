@@ -44,6 +44,8 @@ viewport_path = NodePath("FloatingText/SubViewport")
 script = ExtResource("1_h0s2j")
 
 [node name="Environment" parent="." instance=ExtResource("4_vvj20")]
+day_time = 7.3108
+time_scale = 0.1
 
 [node name="Terrain" type="StaticBody3D" parent="."]
 
