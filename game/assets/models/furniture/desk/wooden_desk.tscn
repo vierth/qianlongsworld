@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcrb6rbx1nbvy"]
+
+[ext_resource type="PackedScene" uid="uid://o3lqhvv2bhmc" path="res://assets/models/woods/desk/wooden_desk.glb" id="1_k0q0c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5rohw"]
+size = Vector3(2.5, 0.9, 1.48)
+
+[node name="WoodenDesk" type="Node3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.565674, 0)
+shape = SubResource("BoxShape3D_5rohw")
+
+[node name="wooden_desk" parent="CollisionShape3D" instance=ExtResource("1_k0q0c")]
+transform = Transform3D(0.999848, 0, -0.0174524, 0, 1, 0, 0.0174524, 0, 0.999848, 0, -0.41, 0)
