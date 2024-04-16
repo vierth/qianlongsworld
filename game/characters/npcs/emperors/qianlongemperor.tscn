@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://dl15j5ugxwd6b"]
+
+[ext_resource type="Script" path="res://characters/npcs/emperors/qianlongemperor.gd" id="1_w7k15"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_852tg"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_47uco"]
+material = SubResource("StandardMaterial3D_852tg")
+radius = 0.3
+height = 1.79
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e5u68"]
+radius = 0.3
+height = 1.79
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6w6aa"]
+height = 1.79
+radius = 2.0
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_5pab7"]
+viewport_path = NodePath("FloatingText/SubViewport")
+
+[node name="Qianlong" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.895, 2.08165e-12)
+collision_layer = 32
+collision_mask = 34
+script = ExtResource("1_w7k15")
+
+[node name="QianlongMesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_47uco")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_e5u68")
+
+[node name="DetectionArea" type="Area3D" parent="."]
+collision_layer = 2
+collision_mask = 34
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea"]
+shape = SubResource("CylinderShape3D_6w6aa")
+
+[node name="FloatingText" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.36158, 2.08165e-12)
+
+[node name="SubViewport" type="SubViewport" parent="FloatingText"]
+transparent_bg = true
+size = Vector2i(400, 80)
+
+[node name="Label" type="Label" parent="FloatingText/SubViewport"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -11.5
+offset_right = 55.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Qianlong"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite3D" type="Sprite3D" parent="FloatingText"]
+transform = Transform3D(0.0134212, 0, -0.99991, 0, 1, 0, 0.99991, 0, 0.0134212, 2.08165e-12, 0, 2.08165e-12)
+modulate = Color(0, 0, 0, 1)
+billboard = 1
+texture = SubResource("ViewportTexture_5pab7")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

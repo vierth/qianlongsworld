@@ -3,13 +3,18 @@
 [ext_resource type="Script" path="res://characters/player/Player.gd" id="1_q8n5c"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_gg2rt"]
+radius = 0.4
+height = 1.73
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fyyq7"]
+radius = 0.4
+height = 1.73
 
 [node name="Player" type="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.1, 2.08165e-12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.865, 2.08165e-12)
 collision_layer = 2
-collision_mask = 29
+collision_mask = 61
+up_direction = Vector3(2.40653e-12, 1, 2.40653e-12)
 script = ExtResource("1_q8n5c")
 
 [node name="PlayerMesh" type="MeshInstance3D" parent="."]

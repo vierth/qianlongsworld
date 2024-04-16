@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ceg17eyehxdir"]
+[gd_scene load_steps=18 format=3 uid="uid://ceg17eyehxdir"]
 
 [ext_resource type="Texture2D" uid="uid://cwgnycma6qqbx" path="res://assets/textures/roads/cobblestone/cobblestone_floor_08_diff_2k.jpg" id="1_7mm4m"]
 [ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="1_gyeyk"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bun0npkhy1ilj" path="res://assets/textures/roads/cobblestone/cobblestone_floor_08_nor_gl_2k.jpg" id="2_u2tk3"]
 [ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://assets/prefabs/environments/environment.tscn" id="4_vvj20"]
 [ext_resource type="PackedScene" uid="uid://bpduk82dgyom0" path="res://components/scene_switcher.tscn" id="6_o8urw"]
+[ext_resource type="PackedScene" uid="uid://dl15j5ugxwd6b" path="res://characters/npcs/emperors/qianlongemperor.tscn" id="7_gwg1r"]
+[ext_resource type="PackedScene" uid="uid://culvo73ud3x6j" path="res://assets/models/trees/willow.glb" id="8_s2fmk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68tw1"]
 albedo_texture = ExtResource("1_7mm4m")
@@ -117,5 +119,20 @@ vertical_alignment = 1
 transform = Transform3D(0.0134212, 0, -0.99991, 0, 1, 0, 0.99991, 0, 0.0134212, 5.10914, 0.865844, 0)
 modulate = Color(0, 0, 0, 1)
 texture = SubResource("ViewportTexture_rn44a")
+
+[node name="Qianlong" parent="." instance=ExtResource("7_gwg1r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.895, -9)
+
+[node name="Trees" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.51832, 0.198374, -7.25718)
+
+[node name="Sketchfab_Scene" parent="Trees" instance=ExtResource("8_s2fmk")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, -0.305344, 0)
+
+[node name="Sketchfab_Scene2" parent="Trees" instance=ExtResource("8_s2fmk")]
+transform = Transform3D(0.932644, -0.0498608, -0.357336, 0.0465603, 0.998756, -0.0178393, 0.357781, 0, 0.933805, -1.42799, -0.358408, 2.94205)
+
+[node name="Sketchfab_Scene3" parent="Trees" instance=ExtResource("8_s2fmk")]
+transform = Transform3D(0.409923, 0, 0.91212, 0, 1, 0, -0.91212, 0, 0.409923, 1.50579, -0.270947, 2.62369)
 
 [editable path="East Building/SceneSwitcher"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dcrb6rbx1nbvy"]
 
-[ext_resource type="PackedScene" uid="uid://o3lqhvv2bhmc" path="res://assets/models/woods/desk/wooden_desk.glb" id="1_k0q0c"]
+[ext_resource type="PackedScene" uid="uid://o3lqhvv2bhmc" path="res://assets/models/furniture/desk/wooden_desk.glb" id="1_k0q0c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5rohw"]
 size = Vector3(2.5, 0.9, 1.48)
