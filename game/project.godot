@@ -24,9 +24,11 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"dufufan": "res://characters/npcs/poetryfans/dufufan.dch",
 "qianlong": "res://dialogue/qianlong.dch"
 }
 directories/dtl_directory={
+"dufufanIntro": "res://assets/textures/portraits/dufufanIntro.dtl",
 "qianlongIntro": "res://dialogue/qianlongIntro.dtl"
 }
 layout/style_list=["res://dialogue/style.tres"]
