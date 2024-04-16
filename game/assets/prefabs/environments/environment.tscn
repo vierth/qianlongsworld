@@ -26,6 +26,7 @@ environment = SubResource("Environment_giykr")
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.751616, 0.630929, 0.192358, 0.535708, -0.754047, 0.380039, 0.384825, -0.182596, -0.904747, 0, 0, 0)
 rotation_order = 4
+shadow_enabled = true
 
 [node name="Moon" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.625103, -0.632607, 0.457225, 0.626447, 0.756053, 0.189601, -0.465628, 0.167907, 0.868906, 0, 0, 0)

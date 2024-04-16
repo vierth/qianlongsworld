@@ -65,3 +65,6 @@ move from 1st person to third person
 
 ### textures
 what did roads look like? cobblestone? dirt?
+
+### Data modeling guidelines
+Use the notes field in each table to record information for internal use. As distinguished from the "description" field, which will be shown to players of the game

@@ -14,10 +14,11 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 # Specify if being observed
 var observed = null
+var talking = false
 
 # set up mouse handling
 func _unhandled_input(event):
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and not talking:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -34,8 +35,10 @@ func _unhandled_input(event):
 		if speed < 0:
 			speed = 0
 
-	if event.is_action_pressed("interact"):
-		print(SqlController.get_item_data(1))
+	#if event.is_action_pressed("interact"):
+		## check for what we are interacting with
+		#
+		#print(SqlController.get_item_data(1))
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -43,7 +46,7 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
@@ -71,3 +74,6 @@ func _process(_delta):
 		if observed != null :	
 			pass
 		observed = coll
+		
+func player():
+	pass
