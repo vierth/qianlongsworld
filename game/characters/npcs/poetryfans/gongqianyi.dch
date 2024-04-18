@@ -1,0 +1,29 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "MainPortrait",
+"description": "",
+"display_name": "Gong Qianyi",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"MainPortrait": {
+"export_overrides": {
+"image": "\"res://addons/dialogic/Example Assets/portraits/Qing-Dynasty-Era-Chinese-Ancestral-Portrait-Newly-Framed-3_2048x.png\""
+},
+"mirror": false,
+"offset": Vector2(375, 0),
+"scale": 1.0,
+"scene": ""
+}
+},
+"scale": 1.0
+}

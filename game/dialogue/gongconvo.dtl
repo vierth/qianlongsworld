@@ -1,0 +1,33 @@
+join gongqianyi 1
+gongqianyi (MainPortrait): Hello friend! What a wonderful day we"re having, isn't it?
+- Why are you standing so close to my face?
+	gongqianyi: 小兔崽子....
+- Lovely day indeed!
+	gongqianyi: What is your name?
+	[text_input var="name"]
+	gongqianyi (MainPortrait): Hi {name}! My name is Gong Qianyi.
+	- Are you related to the great poet, Qian Qianyi??
+		gongqianyi: I am! My mother, peace be unto her, was the only daughter of him and Liu Rushi. Liu was also a poet! They both passed when mother was 16, but she would always read me their works.
+		- Which was your favorite?
+			gongqianyi: I quite enjoy Toubi Ji 55, written almost 100 years ago now. It goes like this\:
+			gongqianyi: "It is not quite like wailing, nor like songs,\
+I grind ink on my broken inkslab as on a shield.\
+My remaining years , I live them as some random musings –\
+Oh, that my sparse brush might sweep the demon-host away!\
+There is no road ahead and the day is waning\: I resort to this;\
+My hair is thin, yet my mind loaded; what else can I do?\
+Only when I am through chanting “Wuyi” will I stop crying;\
+One hundred poems, all wailing and stamping – still not enough.
+			- It's beautiful. Thank you for sharing.
+				You're welcome. Have a splendid rest of your day, {name}. I'll see you around the garden.
+			- What's it about?
+				gongqianyi: It was a reflection his work ethic at the time, and emphasizes a sense of exhaustion. The “demon-host” he is denouncing are, in fact, the Manchus. There are additional hsitorical and literary references, but I am not well read enough in them to fully comprehend.
+				- Interesting!
+					Isn't it? Well, have a splendid rest of your day, {name}. I'll see you around the garden.
+				- *Yawn*
+					Whatever you say. Good day.
+			- I've heard better.
+				gongqianyi: 哼, I'd like to hear yours!
+				[text_input]
+				gongqianyi: Okay, I concede. You are a generational poet, {name}.
+leave gongqianyi
