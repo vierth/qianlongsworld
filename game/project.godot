@@ -25,10 +25,13 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "dufufan": "res://characters/npcs/poetryfans/dufufan.dch",
+"newPoetryFan1": "res://characters/npcs/poetryfans/newPoetryFan1.dch",
+"newPoetryFan2": "res://characters/npcs/poetryfans/newPoetryFan2.dch",
 "qianlong": "res://dialogue/qianlong.dch"
 }
 directories/dtl_directory={
 "dufufanIntro": "res://assets/textures/portraits/dufufanIntro.dtl",
+"poetryConv": "res://dialogue/poetryConv.dtl",
 "qianlongIntro": "res://dialogue/qianlongIntro.dtl"
 }
 layout/style_list=["res://dialogue/style.tres"]

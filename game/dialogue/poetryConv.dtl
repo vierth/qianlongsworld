@@ -1,0 +1,18 @@
+join newPoetryFan1 (poetryfan1) 1
+newPoetryFan1: Welcome to my poetry party!
+join newPoetryFan2 (poetryfan2) 3
+newPoetryFan2 (poetryfan2): Thank you!
+newPoetryFan1 (poetryfan1): What would you like to hear a poem about? I am an expert on nature poetry.
+newPoetryFan2 (poetryfan2): I am a fan of farewell poetry.
+- I would like to hear a poem about nature.
+	newPoetryFan1 (poetryfan1): Okay! This is a poem by Luo Binwang.
+	newPoetryFan1: Goose, goose, goose, \
+You bend your neck towards the sky and sing.\
+Your white feathers float on the emerald water,\
+Your red feet push the clear waves.
+- I would prefer a farewell poem.
+	newPoetryFan2 (poetryfan2): Great! This is a poem by Du Mu.
+	newPoetryFan2: Fond are my feelings, yet unfeeling I feign,\
+Before our wine-cups, we merry-make in vain.\
+So heartful, the candle, our parting it grieves, \
+And in tears it melts, 'til the sky lights again.
