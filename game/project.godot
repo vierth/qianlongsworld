@@ -25,11 +25,14 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "dufufan": "res://characters/npcs/poetryfans/dufufan.dch",
+"my_new_char_1": "res://my_new_char_1.dch",
+"my_new_char_2": "res://my_new_char_2.dch",
 "qianlong": "res://dialogue/qianlong.dch"
 }
 directories/dtl_directory={
 "dufufanIntro": "res://assets/textures/portraits/dufufanIntro.dtl",
-"qianlongIntro": "res://dialogue/qianlongIntro.dtl"
+"qianlongIntro": "res://dialogue/qianlongIntro.dtl",
+"testconv1": "res://testconv1.dtl"
 }
 layout/style_list=["res://dialogue/style.tres"]
 layout/default_style="res://dialogue/style.tres"
@@ -60,10 +63,6 @@ window/size/viewport_height=1080
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/godot-sqlite/plugin.cfg")
-
-[filesystem]
-
-import/blender/enabled=false
 
 [input]
 

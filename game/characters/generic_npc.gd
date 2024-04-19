@@ -22,6 +22,7 @@ func _on_area_3d_body_entered(body):
 
 func _on_area_3d_body_exited(body):
 	if body.has_method("player"):
+		print('player exited area')
 		player_detected = false
 	 # Replace with function body.
 
@@ -29,7 +30,10 @@ func run_dialogue(dialogue_string):
 	Dialogic.start(dialogue_string)
 	
 func DialogicSignal(arg):
+	print('singal fire')
+	print(player_detected)
 	if arg == "exit":
+		
 		player_detected.talking = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
