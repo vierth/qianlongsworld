@@ -27,16 +27,20 @@ directories/dch_directory={
 "dufufan": "res://characters/npcs/poetryfans/dufufan.dch",
 "my_new_char_1": "res://my_new_char_1.dch",
 "my_new_char_2": "res://my_new_char_2.dch",
+"gongqianyi": "res://characters/npcs/poetryfans/gongqianyi.dch",
 "qianlong": "res://dialogue/qianlong.dch"
 }
 directories/dtl_directory={
 "dufufanIntro": "res://assets/textures/portraits/dufufanIntro.dtl",
+"gongconvo": "res://dialogue/gongconvo.dtl",
 "qianlongIntro": "res://dialogue/qianlongIntro.dtl",
 "testconv1": "res://testconv1.dtl"
 }
 layout/style_list=["res://dialogue/style.tres"]
 layout/default_style="res://dialogue/style.tres"
-variables={}
+variables={
+"name": ""
+}
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
