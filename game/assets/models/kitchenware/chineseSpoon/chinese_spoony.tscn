@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://2bq88xxk5brv"]
+
+[ext_resource type="PackedScene" uid="uid://cvmbh50nt3ykr" path="res://assets/models/kitchenware/chineseSpoon/chinese_spoony.glb" id="1_fhm4l"]
+
+[node name="chinese_spoony" instance=ExtResource("1_fhm4l")]
