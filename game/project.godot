@@ -25,9 +25,9 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "dufufan": "res://characters/npcs/poetryfans/dufufan.dch",
+"gongqianyi": "res://characters/npcs/poetryfans/gongqianyi.dch",
 "my_new_char_1": "res://my_new_char_1.dch",
 "my_new_char_2": "res://my_new_char_2.dch",
-"gongqianyi": "res://characters/npcs/poetryfans/gongqianyi.dch",
 "qianlong": "res://dialogue/qianlong.dch"
 }
 directories/dtl_directory={
