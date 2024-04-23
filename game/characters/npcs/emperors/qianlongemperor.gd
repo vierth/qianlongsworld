@@ -28,7 +28,6 @@ func run_dialogue(dialogue_string):
 	Dialogic.start(dialogue_string)
 	
 func DialogicSignal(arg):
-	print(player_detected.talking)
 	if arg == "qianlong_exit":
 		player_detected.talking = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
