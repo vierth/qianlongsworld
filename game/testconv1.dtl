@@ -1,0 +1,10 @@
+join my_new_char_1 1
+my_new_char_1: Welcome to my poetry party!!
+join my_new_char_2 1
+my_new_char_2: Thanks! It is a real pleasure to be here
+my_new_char_1: Know any good poems about the moon?
+my_new_char_2: Yeah! Ever heard of Li Bai? He wrote some good ones
+- Really?
+	my_new_char_2: Yeah! Here is a good one...
+- I know!
+	my_new_char_1: Yeah, I know! here is my favorite about the moon!

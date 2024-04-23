@@ -1,0 +1,21 @@
+join dufufan (dufuportrait) 2
+dufufan: Hello! I am a huge fan of Du Fu!
+dufufan: Would you like to hear me recite a poem?
+- Sure!
+	dufufan: Awesome!
+	A kingdom smashed, its hills and rivers still here,\
+spring in the city, plants and trees grow deep.\
+\
+Moved by the moment, flowers splash with tears,\
+alarmed at parting, birds startle the heart.\
+\
+War's beacon fires have gone on three months,\
+letters from home are worth thousands in gold.\
+\
+Fingers run through white hair until it thins,\
+cap-pins[a] will almost no longer hold.\
+
+	Stephen Owen translated that!
+- No thanks!
+	Dang, ok
+[signal arg="exit"]

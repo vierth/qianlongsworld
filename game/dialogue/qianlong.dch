@@ -15,6 +15,15 @@
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
+"": {
+"export_overrides": {
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "QianlongYoung": {
 "export_overrides": {
 "image": "\"res://assets/textures/portraits/1280px-清_郎世宁绘《清高宗乾隆帝朝服像》.png\""

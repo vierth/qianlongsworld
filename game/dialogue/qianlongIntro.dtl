@@ -5,4 +5,4 @@ qianlong: Glad you could make it!
 	qianlong: Beijing. It is the year 1750.
 - Thanks!
 	qianlong: You are welcome!
-[signal arg="exit"]
+[signal arg="qianlong_exit"]

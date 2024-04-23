@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ceg17eyehxdir"]
+[gd_scene load_steps=26 format=3 uid="uid://ceg17eyehxdir"]
 
 [ext_resource type="Texture2D" uid="uid://cwgnycma6qqbx" path="res://assets/textures/roads/cobblestone/cobblestone_floor_08_diff_2k.jpg" id="1_7mm4m"]
 [ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="1_gyeyk"]
@@ -8,6 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://bpduk82dgyom0" path="res://components/scene_switcher.tscn" id="6_o8urw"]
 [ext_resource type="PackedScene" uid="uid://dl15j5ugxwd6b" path="res://characters/npcs/emperors/qianlongemperor.tscn" id="7_gwg1r"]
 [ext_resource type="PackedScene" uid="uid://culvo73ud3x6j" path="res://assets/models/trees/willow.glb" id="8_s2fmk"]
+[ext_resource type="PackedScene" uid="uid://bkq5l6o7clkjp" path="res://characters/generic_npc.tscn" id="9_s4nyb"]
+[ext_resource type="PackedScene" uid="uid://bxe2m06hdgsrt" path="res://assets/models/statues/round_mendun.blend" id="10_2l2f1"]
+[ext_resource type="PackedScene" uid="uid://busnh818u4yud" path="res://assets/models/kitchenware/bowl2.glb" id="11_tth01"]
+[ext_resource type="PackedScene" uid="uid://crrxgvfgo2urp" path="res://assets/models/kitchenware/chineseSpoon/chinese_spoony.blend" id="12_c1o7s"]
+[ext_resource type="PackedScene" uid="uid://dmql66p5wc46m" path="res://assets/models/inkstone/inkstone/InkStone.glb" id="13_qferl"]
+[ext_resource type="PackedScene" uid="uid://0rhl4ceqsfcg" path="res://assets/models/EnamelWares/enamelsnuffbottle.blend" id="14_lx5kc"]
+[ext_resource type="PackedScene" uid="uid://c30ceymjk4tt3" path="res://assets/models/BookModels/openbookmodel.blend" id="15_r7in4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68tw1"]
 albedo_texture = ExtResource("1_7mm4m")
@@ -41,6 +48,9 @@ data = PackedVector3Array(-0.5, 1.5, 5, 0.5, 1.5, 5, -0.5, -1.5, 5, 0.5, 1.5, 5,
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_rn44a"]
 viewport_path = NodePath("FloatingText/SubViewport")
+
+[sub_resource type="BoxMesh" id="BoxMesh_t534c"]
+size = Vector3(20, 1, 1)
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_h0s2j")
@@ -120,9 +130,6 @@ transform = Transform3D(0.0134212, 0, -0.99991, 0, 1, 0, 0.99991, 0, 0.0134212, 
 modulate = Color(0, 0, 0, 1)
 texture = SubResource("ViewportTexture_rn44a")
 
-[node name="Qianlong" parent="." instance=ExtResource("7_gwg1r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.895, -9)
-
 [node name="Trees" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.51832, 0.198374, -7.25718)
 
@@ -134,5 +141,39 @@ transform = Transform3D(0.932644, -0.0498608, -0.357336, 0.0465603, 0.998756, -0
 
 [node name="Sketchfab_Scene3" parent="Trees" instance=ExtResource("8_s2fmk")]
 transform = Transform3D(0.409923, 0, 0.91212, 0, 1, 0, -0.91212, 0, 0.409923, 1.50579, -0.270947, 2.62369)
+
+[node name="AssetDisplay" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 5.32685)
+
+[node name="Shelf" type="MeshInstance3D" parent="AssetDisplay"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 5.77215)
+mesh = SubResource("BoxMesh_t534c")
+skeleton = NodePath("../..")
+
+[node name="round_mendun" parent="AssetDisplay" instance=ExtResource("10_2l2f1")]
+transform = Transform3D(0.016353, 0, -0.999866, 0, 1, 0, 0.999866, 0, 0.016353, 7.02704, 0.48582, 5.79375)
+
+[node name="bowl2" parent="AssetDisplay" instance=ExtResource("11_tth01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.13663, 0.12218, 5.86775)
+
+[node name="chinese_spoony" parent="AssetDisplay" instance=ExtResource("12_c1o7s")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 4.17812, 0.1253, 5.98085)
+
+[node name="InkStone" parent="AssetDisplay" instance=ExtResource("13_qferl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.14143, 0.00138998, 5.90475)
+
+[node name="enamelsnuffbottle" parent="AssetDisplay" instance=ExtResource("14_lx5kc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.85816, 0.54796, 5.76045)
+
+[node name="openbookmodel" parent="AssetDisplay" instance=ExtResource("15_r7in4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.59474, 0.01642, 5.77585)
+
+[node name="NPCs" type="Node3D" parent="."]
+
+[node name="Qianlong" parent="NPCs" instance=ExtResource("7_gwg1r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.895, -9)
+
+[node name="DufuFan" parent="NPCs" instance=ExtResource("9_s4nyb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 5.32685)
 
 [editable path="East Building/SceneSwitcher"]
