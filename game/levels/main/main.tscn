@@ -130,9 +130,6 @@ transform = Transform3D(0.0134212, 0, -0.99991, 0, 1, 0, 0.99991, 0, 0.0134212, 
 modulate = Color(0, 0, 0, 1)
 texture = SubResource("ViewportTexture_rn44a")
 
-[node name="Qianlong" parent="." instance=ExtResource("7_gwg1r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.895, -9)
-
 [node name="Trees" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.51832, 0.198374, -7.25718)
 
@@ -145,29 +142,38 @@ transform = Transform3D(0.932644, -0.0498608, -0.357336, 0.0465603, 0.998756, -0
 [node name="Sketchfab_Scene3" parent="Trees" instance=ExtResource("8_s2fmk")]
 transform = Transform3D(0.409923, 0, 0.91212, 0, 1, 0, -0.91212, 0, 0.409923, 1.50579, -0.270947, 2.62369)
 
-[node name="Node3D" parent="." instance=ExtResource("9_s4nyb")]
+[node name="AssetDisplay" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 5.32685)
 
-[node name="Shelf" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.5, 11.099)
+[node name="Shelf" type="MeshInstance3D" parent="AssetDisplay"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 5.77215)
 mesh = SubResource("BoxMesh_t534c")
+skeleton = NodePath("../..")
 
-[node name="round_mendun" parent="." instance=ExtResource("10_2l2f1")]
-transform = Transform3D(0.016353, 0, -0.999866, 0, 1, 0, 0.999866, 0, 0.016353, 7.02704, 1.48582, 11.1206)
+[node name="round_mendun" parent="AssetDisplay" instance=ExtResource("10_2l2f1")]
+transform = Transform3D(0.016353, 0, -0.999866, 0, 1, 0, 0.999866, 0, 0.016353, 7.02704, 0.48582, 5.79375)
 
-[node name="bowl2" parent="." instance=ExtResource("11_tth01")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.13663, 1.12218, 11.1946)
+[node name="bowl2" parent="AssetDisplay" instance=ExtResource("11_tth01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.13663, 0.12218, 5.86775)
 
-[node name="chinese_spoony" parent="." instance=ExtResource("12_c1o7s")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 4.17812, 1.1253, 11.3077)
+[node name="chinese_spoony" parent="AssetDisplay" instance=ExtResource("12_c1o7s")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 4.17812, 0.1253, 5.98085)
 
-[node name="InkStone" parent="." instance=ExtResource("13_qferl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.14143, 1.00139, 11.2316)
+[node name="InkStone" parent="AssetDisplay" instance=ExtResource("13_qferl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.14143, 0.00138998, 5.90475)
 
-[node name="enamelsnuffbottle" parent="." instance=ExtResource("14_lx5kc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.85816, 1.54796, 11.0873)
+[node name="enamelsnuffbottle" parent="AssetDisplay" instance=ExtResource("14_lx5kc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.85816, 0.54796, 5.76045)
 
-[node name="openbookmodel" parent="." instance=ExtResource("15_r7in4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.59474, 1.01642, 11.1027)
+[node name="openbookmodel" parent="AssetDisplay" instance=ExtResource("15_r7in4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.59474, 0.01642, 5.77585)
+
+[node name="NPCs" type="Node3D" parent="."]
+
+[node name="Qianlong" parent="NPCs" instance=ExtResource("7_gwg1r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.895, -9)
+
+[node name="DufuFan" parent="NPCs" instance=ExtResource("9_s4nyb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 5.32685)
 
 [editable path="East Building/SceneSwitcher"]
