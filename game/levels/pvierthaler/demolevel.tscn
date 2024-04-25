@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://dcu5v78bt64yq"]
+
+[ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="1_smwtt"]
+[ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://assets/prefabs/environments/environment.tscn" id="2_1shqv"]
+[ext_resource type="PackedScene" uid="uid://bpduk82dgyom0" path="res://components/scene_switcher.tscn" id="3_cj72r"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_21kc5"]
+size = Vector2(10, 10)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_j4kta"]
+data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0, -5)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PlaneMesh_21kc5")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_j4kta")
+
+[node name="Player" parent="." instance=ExtResource("1_smwtt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.865, 0.461612)
+
+[node name="Environment" parent="." instance=ExtResource("2_1shqv")]
+
+[node name="SceneSwitchZone" parent="." instance=ExtResource("3_cj72r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.05281, 1, 0)
+destination_scene = "res://levels/main/main.tscn"
+
+[node name="DebugShape" parent="SceneSwitchZone" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 5.41439, 0, 0, 0)
+visible = true
+
+[node name="Collider" parent="SceneSwitchZone" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1794)
+
+[editable path="SceneSwitchZone"]

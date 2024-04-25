@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://ceg17eyehxdir"]
+[gd_scene load_steps=27 format=3 uid="uid://ceg17eyehxdir"]
 
 [ext_resource type="Texture2D" uid="uid://cwgnycma6qqbx" path="res://assets/textures/roads/cobblestone/cobblestone_floor_08_diff_2k.jpg" id="1_7mm4m"]
 [ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="1_gyeyk"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dmql66p5wc46m" path="res://assets/models/inkstone/inkstone/InkStone.glb" id="13_qferl"]
 [ext_resource type="PackedScene" uid="uid://0rhl4ceqsfcg" path="res://assets/models/EnamelWares/enamelsnuffbottle.blend" id="14_lx5kc"]
 [ext_resource type="PackedScene" uid="uid://c30ceymjk4tt3" path="res://assets/models/BookModels/openbookmodel.blend" id="15_r7in4"]
+[ext_resource type="PackedScene" uid="uid://ruigj6ttxwlv" path="res://assets/models/walls/Hutong Wall vedits.glb" id="16_a72kf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68tw1"]
 albedo_texture = ExtResource("1_7mm4m")
@@ -175,5 +176,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.895, -9)
 
 [node name="DufuFan" parent="NPCs" instance=ExtResource("9_s4nyb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 5.32685)
+
+[node name="Hutong Wall vedits" parent="." instance=ExtResource("16_a72kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.079, 2.08165e-12, 5.267)
 
 [editable path="East Building/SceneSwitcher"]
