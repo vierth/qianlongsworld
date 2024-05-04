@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bpduk82dgyom0" path="res://components/scene_switcher.tscn" id="6_o8urw"]
 [ext_resource type="PackedScene" uid="uid://dl15j5ugxwd6b" path="res://characters/npcs/emperors/qianlongemperor.tscn" id="7_gwg1r"]
 [ext_resource type="PackedScene" uid="uid://culvo73ud3x6j" path="res://assets/models/trees/willow.glb" id="8_s2fmk"]
-[ext_resource type="PackedScene" uid="uid://bkq5l6o7clkjp" path="res://characters/generic_npc.tscn" id="9_s4nyb"]
+[ext_resource type="PackedScene" path="res://characters/generic_npc.tscn" id="9_s4nyb"]
 [ext_resource type="PackedScene" uid="uid://bxe2m06hdgsrt" path="res://assets/models/statues/round_mendun.blend" id="10_2l2f1"]
 [ext_resource type="PackedScene" uid="uid://busnh818u4yud" path="res://assets/models/kitchenware/bowl2.glb" id="11_tth01"]
 [ext_resource type="PackedScene" uid="uid://crrxgvfgo2urp" path="res://assets/models/kitchenware/chineseSpoon/chinese_spoony.blend" id="12_c1o7s"]
@@ -97,7 +97,7 @@ shape = SubResource("ConcavePolygonShape3D_cqo2a")
 
 [node name="SceneSwitcher" parent="East Building" instance=ExtResource("6_o8urw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2566, -0.13802, -0.333618)
-destination_scene = "res://levels/pvierthaler/46_3_tri.tscn"
+destination_scene = "res://levels/pvierthaler/46_3.tscn"
 
 [node name="Collider" parent="East Building/SceneSwitcher" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.415123)
