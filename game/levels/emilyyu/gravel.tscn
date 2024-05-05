@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://cu3i72f6wiecx"]
+
+[ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player.tscn" id="1_ijsn6"]
+[ext_resource type="Texture2D" uid="uid://dm87v0olu05p7" path="res://patterned_cobblestone_diff_1k.jpg" id="2_43q5n"]
+[ext_resource type="Texture2D" uid="uid://dsldmpoq7e8fq" path="res://patterned_cobblestone_disp_1k.png" id="3_1xvhw"]
+[ext_resource type="Texture2D" uid="uid://cx3egybg2vv" path="res://patterned_cobblestone_ao_1k.jpg" id="3_eo22r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_86p1u"]
+albedo_texture = ExtResource("2_43q5n")
+roughness_texture = ExtResource("3_eo22r")
+normal_enabled = true
+normal_texture = ExtResource("3_1xvhw")
+uv1_scale = Vector3(60, 60, 60)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bhxw2"]
+material = SubResource("StandardMaterial3D_86p1u")
+size = Vector2(308, 255)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2m561"]
+
+[node name="gravel" type="Node3D"]
+
+[node name="Player2" parent="." instance=ExtResource("1_ijsn6")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_bhxw2")
+skeleton = NodePath("StaticBody3D")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_2m561")
+
+[node name="Node3D" type="Node3D" parent="."]
