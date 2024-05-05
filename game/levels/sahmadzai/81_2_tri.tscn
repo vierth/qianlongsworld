@@ -20,23 +20,24 @@ data = PackedVector3Array(188.116, -0.0001, -156.535, 191.28, -0.0001, -153.951,
 [node name="81_2_tri" type="StaticBody3D"]
 
 [node name="terrain_mesh_map" type="MeshInstance3D" parent="."]
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 191.28, 0, 156.535)
 mesh = ExtResource("1_8at2l")
 skeleton = NodePath("../terrain_mesh")
 surface_material_override/0 = SubResource("StandardMaterial3D_aimwe")
 
 [node name="terrain_mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 191.28, 0, 156.535)
 mesh = ExtResource("1_8at2l")
 surface_material_override/0 = SubResource("ShaderMaterial_tktiy")
 
 [node name="collision_mesh" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 191.28, 0, 156.535)
 visible = false
 shape = SubResource("ConcavePolygonShape3D_lqsrc")
 
 [node name="Water" parent="." instance=ExtResource("2_03cl2")]
-transform = Transform3D(312, 0, 0, 0, 1, 0, 0, 0, 312, -35, -1.5, 0)
+transform = Transform3D(312, 0, 0, 0, 1, 0, 0, 0, 312, 156, -1, 156)
 
 [node name="Environment" parent="." instance=ExtResource("3_ycseq")]
 
 [node name="Player" parent="." instance=ExtResource("4_vgmhe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.736, 2, -1.662)

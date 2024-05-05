@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cewsjer2rwts3"]
+[gd_scene load_steps=10 format=3 uid="uid://cewsjer2rwts3"]
 
 [ext_resource type="PackedScene" uid="uid://becys06dfqeoc" path="res://levels/sahmadzai/81_2_tri.tscn" id="1_4cnrm"]
 [ext_resource type="PackedScene" uid="uid://crafq4q4qoim7" path="res://levels/pvierthaler/yindingqiao.glb" id="2_00wlw"]
@@ -9,7 +9,6 @@
 [ext_resource type="Script" path="res://levels/sahmadzai/minimap.gd" id="7_r76qj"]
 [ext_resource type="Texture2D" uid="uid://tok5je4sjdq4" path="res://assets/textures/maps/beijing_Page_081_02.png" id="8_mhkjv"]
 [ext_resource type="Texture2D" uid="uid://ylpb03iipcun" path="res://levels/sahmadzai/location_arrow.png" id="9_crl4n"]
-[ext_resource type="Script" path="res://levels/sahmadzai/fullmap.gd" id="10_tcv7c"]
 
 [node name="game_tile" type="Node3D"]
 
@@ -4552,10 +4551,10 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -140.0
 [node name="Hutong Wall vedits70" parent="BL Walls" instance=ExtResource("3_54koo")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -137.205, 0, -61.602)
 
-[node name="MiniMap" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("7_r76qj")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="MiniMap"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="UI"]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -4566,12 +4565,12 @@ offset_bottom = -40.0
 grow_vertical = 0
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="MiniMap/SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="UI/SubViewportContainer"]
 handle_input_locally = false
 size = Vector2i(200, 200)
 render_target_update_mode = 4
 
-[node name="TextureRect" type="TextureRect" parent="MiniMap/SubViewportContainer/SubViewport"]
+[node name="TextureRect" type="TextureRect" parent="UI/SubViewportContainer/SubViewport"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -4585,27 +4584,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("8_mhkjv")
 
-[node name="PlayerMarker" type="Sprite2D" parent="MiniMap/SubViewportContainer/SubViewport"]
+[node name="PlayerMarker" type="Sprite2D" parent="UI/SubViewportContainer/SubViewport"]
 position = Vector2(100, 100)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("9_crl4n")
-
-[node name="Full Screen Map" type="CanvasLayer" parent="."]
-script = ExtResource("10_tcv7c")
-
-[node name="ColorRect" type="ColorRect" parent="Full Screen Map"]
-offset_right = 1920.0
-offset_bottom = 1080.0
-color = Color(0, 0, 0, 0.588235)
-
-[node name="TextureRect" type="TextureRect" parent="Full Screen Map"]
-offset_left = 296.0
-offset_right = 2933.0
-offset_bottom = 2158.0
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("8_mhkjv")
-
-[node name="PlayerMarker" type="Sprite2D" parent="Full Screen Map"]
-position = Vector2(296, 1.13687e-13)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("9_crl4n")

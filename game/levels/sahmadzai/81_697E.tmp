@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cewsjer2rwts3"]
+[gd_scene load_steps=8 format=3 uid="uid://cewsjer2rwts3"]
 
 [ext_resource type="PackedScene" uid="uid://becys06dfqeoc" path="res://levels/sahmadzai/81_2_tri.tscn" id="1_4cnrm"]
 [ext_resource type="PackedScene" uid="uid://crafq4q4qoim7" path="res://levels/pvierthaler/yindingqiao.glb" id="2_00wlw"]
@@ -6,20 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://ruigj6ttxwlv" path="res://assets/models/walls/Hutong Wall vedits.glb" id="3_54koo"]
 [ext_resource type="PackedScene" uid="uid://bprptvbij0lms" path="res://levels/sahmadzai/models/building_template.tscn" id="4_j1dn5"]
 [ext_resource type="PackedScene" uid="uid://bd7efr5as4lrw" path="res://assets/models/walls/hutong_wall_vedits.tscn" id="6_vr0vd"]
-[ext_resource type="Script" path="res://levels/sahmadzai/minimap.gd" id="7_r76qj"]
-[ext_resource type="Texture2D" uid="uid://tok5je4sjdq4" path="res://assets/textures/maps/beijing_Page_081_02.png" id="8_mhkjv"]
-[ext_resource type="Texture2D" uid="uid://ylpb03iipcun" path="res://levels/sahmadzai/location_arrow.png" id="9_crl4n"]
-[ext_resource type="Script" path="res://levels/sahmadzai/fullmap.gd" id="10_tcv7c"]
+[ext_resource type="Script" path="res://levels/sahmadzai/minimapCam.gd" id="7_rr1ri"]
 
 [node name="game_tile" type="Node3D"]
 
 [node name="terrain" parent="." instance=ExtResource("1_4cnrm")]
 
 [node name="yindingqiao" parent="." instance=ExtResource("2_00wlw")]
-transform = Transform3D(0.000612611, 0, -1.6, 0, 3.2, 0, 1.35, 0, 0.000726058, 132.776, -9.6, 70.9196)
+transform = Transform3D(0.000612611, 0, -1.6, 0, 3.2, 0, 1.35, 0, 0.000726058, -60, -9.6, -85)
 
 [node name="Right Wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 191.26, 0, 156.54)
 
 [node name="marble_fence" parent="Right Wall" instance=ExtResource("3_1q76p")]
 transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 1, 100.355, 0, -78.2937)
@@ -55,7 +51,6 @@ transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 1, 100.355, 0, 58.506)
 transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 1, 100.355, 0, 73.706)
 
 [node name="TopRight Wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 191.26, 0, 156.54)
 
 [node name="marble_fence2" parent="TopRight Wall" instance=ExtResource("3_1q76p")]
 transform = Transform3D(-1.31134e-07, 0, -1, 0, 1, 0, 3, 0, -4.37114e-08, 100.169, 0, -93.27)
@@ -76,7 +71,6 @@ transform = Transform3D(-1.31134e-07, 0, -1, 0, 1, 0, 3, 0, -4.37114e-08, 160.96
 transform = Transform3D(-1.31134e-07, 0, -1, 0, 1, 0, 3, 0, -4.37114e-08, 176.169, 0, -93.27)
 
 [node name="BottomRight Wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 191.26, 0, 156.54)
 
 [node name="marble_fence2" parent="BottomRight Wall" instance=ExtResource("3_1q76p")]
 transform = Transform3D(-1.31134e-07, 0, -1, 0, 1, 0, 3, 0, -4.37114e-08, 100.169, 0, 73.7)
@@ -97,7 +91,6 @@ transform = Transform3D(-1.31134e-07, 0, -1, 0, 1, 0, 3, 0, -4.37114e-08, 160.96
 transform = Transform3D(-1.31134e-07, 0, -1, 0, 1, 0, 3, 0, -4.37114e-08, 176.169, 0, 73.7)
 
 [node name="RS Buildings" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 191.26, 0, 156.54)
 
 [node name="building_template" parent="RS Buildings" instance=ExtResource("4_j1dn5")]
 transform = Transform3D(-1.31134e-07, 0, -2.666, 0, 5, 0, 3, 0, -1.16535e-07, 125.6, 0, 7)
@@ -226,7 +219,6 @@ transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 4, 153.35, 0, 10.3)
 transform = Transform3D(-1.31134e-07, 0, 7.6, 0, 4, 0, -3, 0, -3.32207e-07, 169.35, 0, 23.3)
 
 [node name="RS Wall facing River" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 191.26, 0, 156.54)
 
 [node name="Hutong Wall vedits" parent="RS Wall facing River" instance=ExtResource("3_54koo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.15, 0, -97.5)
@@ -680,7 +672,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.15, 0, 153.413)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.6, 85.15, 0, 155.633)
 
 [node name="RS Wall Near River" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 191.26, 0, 156.54)
 
 [node name="Hutong Wall vedits" parent="RS Wall Near River" instance=ExtResource("3_54koo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.85, 0, -155.16)
@@ -1016,7 +1007,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.85, 0, 152.054)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1, 62.85, 0, 154.97)
 
 [node name="RS Wall Top" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 191.26, 0, 156.54)
 
 [node name="Hutong Wall vedits" parent="RS Wall Top" instance=ExtResource("3_54koo")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 85.84, 0, -98.96)
@@ -1343,7 +1333,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 187.36
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 189.88, 0, -98.96)
 
 [node name="TL Buildings" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 191.26, 0, 156.54)
 
 [node name="building_template" parent="TL Buildings" instance=ExtResource("4_j1dn5")]
 transform = Transform3D(5.6, 0, 0, 0, 4, 0, 0, 0, 3.7, 8, 0, -140.866)
@@ -1418,7 +1407,6 @@ transform = Transform3D(-1.30402e-07, 0, 0.680851, 0, 3, 0, -2.98325, 0, -2.9760
 transform = Transform3D(4.1, 0, 0, 0, 3, 0, 0, 0, 1.1, -33.4859, 0, -141.835)
 
 [node name="TL Walls" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 191.26, 0, 156.54)
 
 [node name="Hutong Wall vedits" parent="TL Walls" instance=ExtResource("3_54koo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.9135, 0, -140.232)
@@ -1982,7 +1970,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.186, 0, -111.382)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.186, 0, -114.202)
 
 [node name="BL Buildings" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 191.26, 0, 156.54)
 
 [node name="building_template" parent="BL Buildings" instance=ExtResource("4_j1dn5")]
 transform = Transform3D(-1.18895e-07, 0, 3.69346, 0, 4, 0, -2.72, 0, -1.61446e-07, -129.083, -0.00305176, -73.5111)
@@ -2333,7 +2320,6 @@ transform = Transform3D(4.28882, 0, 0, 0, 4, 0, 0, 0, 1.14139, -111.201, -0.0026
 transform = Transform3D(34.796, 0, 0, 0, 5, 0, 0, 0, 2.491, -149.578, -0.00268555, 138.743)
 
 [node name="BL Walls" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 191.26, 0, 156.54)
 
 [node name="Hutong Wall vedits" parent="BL Walls" instance=ExtResource("3_54koo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -171.838, -0.000244141, -72.5975)
@@ -4552,10 +4538,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -140.0
 [node name="Hutong Wall vedits70" parent="BL Walls" instance=ExtResource("3_54koo")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -137.205, 0, -61.602)
 
-[node name="MiniMap" type="CanvasLayer" parent="."]
-script = ExtResource("7_r76qj")
+[node name="UI" type="CanvasLayer" parent="."]
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="MiniMap"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="UI"]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -4566,46 +4551,11 @@ offset_bottom = -40.0
 grow_vertical = 0
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="MiniMap/SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="UI/SubViewportContainer"]
 handle_input_locally = false
 size = Vector2i(200, 200)
 render_target_update_mode = 4
 
-[node name="TextureRect" type="TextureRect" parent="MiniMap/SubViewportContainer/SubViewport"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -1925.44
-offset_top = -1258.46
-offset_right = 711.56
-offset_bottom = 899.544
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("8_mhkjv")
-
-[node name="PlayerMarker" type="Sprite2D" parent="MiniMap/SubViewportContainer/SubViewport"]
-position = Vector2(100, 100)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("9_crl4n")
-
-[node name="Full Screen Map" type="CanvasLayer" parent="."]
-script = ExtResource("10_tcv7c")
-
-[node name="ColorRect" type="ColorRect" parent="Full Screen Map"]
-offset_right = 1920.0
-offset_bottom = 1080.0
-color = Color(0, 0, 0, 0.588235)
-
-[node name="TextureRect" type="TextureRect" parent="Full Screen Map"]
-offset_left = 296.0
-offset_right = 2933.0
-offset_bottom = 2158.0
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("8_mhkjv")
-
-[node name="PlayerMarker" type="Sprite2D" parent="Full Screen Map"]
-position = Vector2(296, 1.13687e-13)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("9_crl4n")
+[node name="Camera3D" type="Camera3D" parent="UI/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 30, 0)
+script = ExtResource("7_rr1ri")
