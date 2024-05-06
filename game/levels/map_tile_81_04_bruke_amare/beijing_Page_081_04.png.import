@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ofsqrnb0gvhv"
-path="res://.godot/imported/beijing_Page_081_04.png-59ab36f6de80a9c7cef76e8add70f5fb.ctex"
+path="res://.godot/imported/beijing_Page_081_04.png-e85c933f736148714ef15192354fd0c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/Bamare/beijing_Page_081_04.png"
-dest_files=["res://.godot/imported/beijing_Page_081_04.png-59ab36f6de80a9c7cef76e8add70f5fb.ctex"]
+source_file="res://levels/map_tile_81_04_bruke_amare/beijing_Page_081_04.png"
+dest_files=["res://.godot/imported/beijing_Page_081_04.png-e85c933f736148714ef15192354fd0c4.ctex"]
 
 [params]
 

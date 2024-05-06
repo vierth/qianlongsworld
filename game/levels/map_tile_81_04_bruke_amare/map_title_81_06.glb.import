@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cn6fr8dbt3sy2"
-path="res://.godot/imported/map_title_81_06.glb-90d0df5229a6ff02cf72cf9fdaddf112.scn"
+path="res://.godot/imported/map_title_81_06.glb-a34d602bce979e77e5ebf12da8219daa.scn"
 
 [deps]
 
-source_file="res://levels/Bamare/map_title_81_06.glb"
-dest_files=["res://.godot/imported/map_title_81_06.glb-90d0df5229a6ff02cf72cf9fdaddf112.scn"]
+source_file="res://levels/map_tile_81_04_bruke_amare/map_title_81_06.glb"
+dest_files=["res://.godot/imported/map_title_81_06.glb-a34d602bce979e77e5ebf12da8219daa.scn"]
 
 [params]
 
