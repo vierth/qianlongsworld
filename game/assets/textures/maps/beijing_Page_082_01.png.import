@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c70e67e2rfp6h"
-path.s3tc="res://.godot/imported/plywood_diff_2k.jpg-74db38f3268d019460da49768822c03a.s3tc.ctex"
+uid="uid://gq5q2qtdv6ln"
+path.s3tc="res://.godot/imported/beijing_Page_082_01.png-b8e446ebba23a68e7b23389ee704fb10.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/textures/plywood_diff_2k.jpg"
-dest_files=["res://.godot/imported/plywood_diff_2k.jpg-74db38f3268d019460da49768822c03a.s3tc.ctex"]
+source_file="res://assets/textures/maps/beijing_Page_082_01.png"
+dest_files=["res://.godot/imported/beijing_Page_082_01.png-b8e446ebba23a68e7b23389ee704fb10.s3tc.ctex"]
 
 [params]
 
