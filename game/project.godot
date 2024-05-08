@@ -28,13 +28,15 @@ directories/dch_directory={
 "gongqianyi": "res://characters/npcs/poetryfans/gongqianyi.dch",
 "my_new_char_1": "res://my_new_char_1.dch",
 "my_new_char_2": "res://my_new_char_2.dch",
-"qianlong": "res://dialogue/qianlong.dch"
+"qianlong": "res://dialogue/qianlong.dch",
+"yongzheng_emperor": "res://characters/npcs/poetryfans/yongzheng_emperor.dch"
 }
 directories/dtl_directory={
 "dufufanIntro": "res://assets/textures/portraits/dufufanIntro.dtl",
 "gongconvo": "res://dialogue/gongconvo.dtl",
 "qianlongIntro": "res://dialogue/qianlongIntro.dtl",
-"testconv1": "res://testconv1.dtl"
+"testconv1": "res://testconv1.dtl",
+"yongzheng_timeline": "res://dialogue/yongzheng_timeline.dtl"
 }
 layout/style_list=["res://dialogue/style.tres"]
 layout/default_style="res://dialogue/style.tres"
