@@ -12,8 +12,14 @@ script/source = "extends CharacterBody3D
 
 @onready var neck = $Neck
 @onready var cam = $Neck/Camera3D
+@onready var main_cam = $Neck/Camera3D as Camera3D
+@onready var secondary_cam = $Neck/Camera3D2 as Camera3D
+var is_main_camera_active = true
+var active_cam = main_cam
 
-var speed = 5.0
+
+var speed = Settings.player_speed
+var sens = Settings.mouse_sensitivity
 const JUMP_VELOCITY = 4.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -23,24 +29,36 @@ var gravity = ProjectSettings.get_setting(\"physics/3d/default_gravity\")
 var observed = null
 var talking = false
 
+func switch_camera():
+	is_main_camera_active = !is_main_camera_active
+	main_cam.current = is_main_camera_active
+	secondary_cam.current = !is_main_camera_active
+	active_cam = main_cam if is_main_camera_active else secondary_cam
+
+
 # set up mouse handling
 func _unhandled_input(event):
+	if active_cam == null:
+		active_cam = main_cam
+	if event.is_action_pressed(\"switch_camera\"):
+		switch_camera()
 	if event is InputEventMouseButton and not talking:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if event.is_action_pressed(\"ui_cancel\"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		Settings.current_scene = get_parent().scene_file_path
+		Settings.pos_x = global_position.x
+		Settings.pos_y = global_position.y
+		Settings.velocity_y = velocity.y
+		Settings.facing_x = cam.global_rotation.x
+		Settings.facing_y = neck.global_rotation.y
+		SceneSwitcher.switch_scene(\"res://levels/GUI/pausescreen/pause_screen.tscn\")
 		
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion:
-			neck.rotate_y(-event.relative.x * 0.01)
-			cam.rotate_x(-event.relative.y * 0.01)
-			cam.rotation.x = clamp(cam.rotation.x, deg_to_rad(-60), deg_to_rad(90))
-	if event.is_action_pressed(\"speed_up\"):
-		speed += 1
-	if event.is_action_pressed(\"speed_down\"):
-		speed -= 1
-		if speed < 0:
-			speed = 0
+			neck.rotate_y(-event.relative.x * sens)
+			active_cam.rotate_x(-event.relative.y * 0.01)
+			active_cam.rotation.x = clamp(active_cam.rotation.x, deg_to_rad(-60), deg_to_rad(90))
 
 	#if event.is_action_pressed(\"interact\"):
 		## check for what we are interacting with
@@ -66,7 +84,14 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
-
+	if Settings.current_scene == \"res://levels/GUI/pausescreen/pause_screen.tscn\":
+		Settings.current_scene = scene_file_path
+		global_position.x = Settings.pos_x
+		global_position.y = Settings.pos_y 
+		velocity.y = Settings.velocity_y
+		cam.global_rotation.x = Settings.facing_x
+		neck.global_rotation.y = Settings.facing_y
+	
 	if global_position.y < min_y:
 		global_position = warp_location
 
@@ -74,13 +99,22 @@ func _physics_process(delta):
 
 func _process(_delta):
 	var coll = %RayCast3D.get_collider()
-	
-	if coll != observed:
-		if coll != null:
-			print(coll.get_parent().item.name)
-		if observed != null :	
-			pass
-		observed = coll
+	var coll2 = %RayCast3D2.get_collider()
+	if is_main_camera_active:
+		if coll != observed:
+			if coll != null:
+				print(coll.get_parent().item.name)
+			if observed != null :	
+				pass
+			observed = coll
+	else:
+		observed = null
+		if coll2 != observed:
+			if coll2 != null:
+				print(coll2.get_parent().item.name)
+			if observed != null :	
+				pass
+			observed = coll2
 		
 func player():
 	pass
@@ -143,14 +177,6 @@ script = ExtResource("4_pd2dw")
 parent = NodePath("../../..")
 
 [node name="RayCast3D" type="RayCast3D" parent="Neck/Camera3D"]
-unique_name_in_owner = true
-target_position = Vector3(2.08165e-12, 2.08165e-12, -3)
-collision_mask = 12
-
-[node name="Camera3D2" type="Camera3D" parent="Neck"]
-transform = Transform3D(1, 0, 0, 0, 0.749395, 0.662123, 0, -0.662123, 0.749395, 2.08165e-12, 7.28922, 6.69717)
-
-[node name="RayCast3D2" type="RayCast3D" parent="Neck/Camera3D2"]
 unique_name_in_owner = true
 target_position = Vector3(2.08165e-12, 2.08165e-12, -3)
 collision_mask = 12
