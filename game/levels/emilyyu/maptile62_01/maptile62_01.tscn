@@ -1,16 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://g8a0dcku4f8q"]
+[gd_scene load_steps=11 format=3 uid="uid://g8a0dcku4f8q"]
 
-[ext_resource type="Script" path="res://levels/emilyyu/CharacterBody3D.gd" id="1_dnh50"]
 [ext_resource type="Texture2D" uid="uid://dm87v0olu05p7" path="res://levels/emilyyu/patterned_cobblestone_diff_1k.jpg" id="2_oj4pp"]
 [ext_resource type="Texture2D" uid="uid://dsldmpoq7e8fq" path="res://levels/emilyyu/patterned_cobblestone_disp_1k.png" id="3_2ksk0"]
 [ext_resource type="Texture2D" uid="uid://cx3egybg2vv" path="res://levels/emilyyu/patterned_cobblestone_ao_1k.jpg" id="4_mt1jl"]
 [ext_resource type="PackedScene" uid="uid://c6qjqvf1kn58v" path="res://levels/emilyyu/buildingmodel.tscn" id="5_7ppeb"]
+[ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="6_exyfe"]
 [ext_resource type="PackedScene" uid="uid://fb1b11mtc3h5" path="res://levels/emilyyu/wallmodeling.tscn" id="6_irgkg"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_k0c17"]
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hodxl"]
-points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607, 0.498884, 0.169713, 0.559144, 0.464172, 0.231051, -0.803591, 0.320455, 0.40741, 0.651043, -0.243523, -0.482789, 0.594843, 0.0822132, -0.362868, -0.682312, 0.289697, 0.469044, -0.654529, -0.0662713, -0.127444, 0.842701, -0.338103, -0.393435, -0.683942, -0.244717, 0.438255, 0.623309, 0.200849, 0.0841477, 0.977454, 0.114795, -0.0682023, -0.976458, -0.12927, 0.20055, -0.563129, -0.451454, -0.185527, 0.595453, -0.453475, -0.273363, 0.592268, 0.407754, -0.00693649, -0.476823, 0.49966, 0.375821, -0.588614, 0.316955, 0.111579, 0.563059, -0.481177, -0.41725, 0.527866, -0.270497, -0.484546, -0.596972, -0.0665097, -0.279747, 0.908561, 0.0533361, -0.250197, -0.880712, 0.205319, 0.263647, -0.902771, -0.127394, 0.293368, 0.871526, -0.157196, 0.373412, -0.526319, -0.328246, 0.499663, 0.476641, -0.00688856, 0.0531056, 0.875001, 0.324703, -0.154543, -0.590854, 0.465879, -0.0972799, -0.782358, -0.398188, -0.387649, -0.498171, 0.31565, -0.30068, -0.587995, -0.388901)
+[ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://assets/prefabs/environments/environment.tscn" id="7_7fhtd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ns7q"]
 albedo_texture = ExtResource("2_oj4pp")
@@ -26,25 +22,7 @@ size = Vector2(308, 255)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_b2fj0"]
 data = PackedVector3Array(154, 0, 127.5, -154, 0, 127.5, 154, 0, -127.5, -154, 0, 127.5, -154, 0, -127.5, 154, 0, -127.5)
 
-[sub_resource type="Environment" id="Environment_molrs"]
-
 [node name="maptile62_01" type="Node3D"]
-
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-script = ExtResource("1_dnh50")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1789, 0)
-mesh = SubResource("CapsuleMesh_k0c17")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1789, 0)
-shape = SubResource("ConvexPolygonShape3D_hodxl")
-
-[node name="Neck" type="Node3D" parent="CharacterBody3D"]
-
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Neck"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.92358, 0)
 
 [node name="ground" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.999986, -0.00525342, 0, 0.00525342, 0.999986, 0, 0, 0, 1, 0, 0, 0)
@@ -1335,8 +1313,7 @@ transform = Transform3D(-0.0537577, 0, 0.575974, 0, 1, 0, -1.35495, 0, -0.022851
 [node name="WALL67" parent="Node3D2" instance=ExtResource("6_irgkg")]
 transform = Transform3D(-2.05291, 0, 0.0217864, 0, 1, 0, -0.0792235, 0, -0.56455, 24.6621, 0, 76.7591)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_molrs")
+[node name="Player" parent="." instance=ExtResource("6_exyfe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43, 1.56191, -6)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.897856, 0.423254, 0.121288, -0.379027, 0.602851, 0.702075, 0.224038, -0.676334, 0.701698, 0, 117.793, 0)
+[node name="Environment" parent="." instance=ExtResource("7_7fhtd")]
