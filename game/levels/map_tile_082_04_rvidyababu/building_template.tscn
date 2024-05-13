@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0u8qr8s80cbh"]
+[gd_scene load_steps=6 format=3 uid="uid://c0u8qr8s80cbh"]
 
-[ext_resource type="Texture2D" uid="uid://ced0nsujtoy51" path="res://gravel_road_diff_4k.jpg" id="1_b04ku"]
-[ext_resource type="Texture2D" uid="uid://hwnma2trc6ch" path="res://81_03.png" id="1_uyup1"]
+[ext_resource type="Texture2D" uid="uid://ced0nsujtoy51" path="res://levels/map_tile_082_04_rvidyababu/gravel_road_diff_4k.jpg" id="1_b04ku"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_83u1x"]
 albedo_texture = ExtResource("1_b04ku")
@@ -10,7 +9,6 @@ albedo_texture = ExtResource("1_b04ku")
 size = Vector3(30, 10, 5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nctxq"]
-albedo_texture = ExtResource("1_uyup1")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_h01ka"]
 data = PackedVector3Array(-15, 5, 2.5, 15, 5, 2.5, -15, -5, 2.5, 15, 5, 2.5, 15, -5, 2.5, -15, -5, 2.5, 15, 5, -2.5, -15, 5, -2.5, 15, -5, -2.5, -15, 5, -2.5, -15, -5, -2.5, 15, -5, -2.5, 15, 5, 2.5, 15, 5, -2.5, 15, -5, 2.5, 15, 5, -2.5, 15, -5, -2.5, 15, -5, 2.5, -15, 5, -2.5, -15, 5, 2.5, -15, -5, -2.5, -15, 5, 2.5, -15, -5, 2.5, -15, -5, -2.5, 15, 5, 2.5, -15, 5, 2.5, 15, 5, -2.5, -15, 5, 2.5, -15, 5, -2.5, 15, 5, -2.5, -15, -5, 2.5, 15, -5, 2.5, -15, -5, -2.5, 15, -5, 2.5, 15, -5, -2.5, -15, -5, -2.5)

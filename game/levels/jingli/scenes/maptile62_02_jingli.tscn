@@ -1,12 +1,12 @@
 [gd_scene load_steps=13 format=3 uid="uid://b3t46kdcrhqhp"]
 
-[ext_resource type="Texture2D" uid="uid://sx7aum1huywb" path="res://ground_texture/patterned_cobblestone_diff_1k.jpg" id="1_8s6nq"]
-[ext_resource type="Texture2D" uid="uid://baeacv7tylwwg" path="res://ground_texture/patterned_cobblestone_disp_1k.png" id="2_eg6mk"]
-[ext_resource type="Texture2D" uid="uid://boc1l4kgd3fdi" path="res://ground_texture/patterned_cobblestone_ao_1k.jpg" id="3_u3e80"]
-[ext_resource type="Script" path="res://scripts/CharacterBody3D.gd" id="4_q7xjq"]
-[ext_resource type="PackedScene" uid="uid://6yqr61mj73do" path="res://wall.tscn" id="5_tib5h"]
-[ext_resource type="PackedScene" uid="uid://bagtqr1dojm6q" path="res://building.tscn" id="6_pfdo0"]
-[ext_resource type="PackedScene" uid="uid://bfqkkmmmk1tma" path="res://sky/main.tscn" id="7_n1eak"]
+[ext_resource type="Texture2D" uid="uid://sx7aum1huywb" path="res://levels/jingli/ground_texture/patterned_cobblestone_diff_1k.jpg" id="1_8s6nq"]
+[ext_resource type="Texture2D" uid="uid://baeacv7tylwwg" path="res://levels/jingli/ground_texture/patterned_cobblestone_disp_1k.png" id="2_eg6mk"]
+[ext_resource type="Texture2D" uid="uid://boc1l4kgd3fdi" path="res://levels/jingli/ground_texture/patterned_cobblestone_ao_1k.jpg" id="3_u3e80"]
+[ext_resource type="Script" path="res://characters/player/Player.gd" id="4_q7xjq"]
+[ext_resource type="PackedScene" uid="uid://6yqr61mj73do" path="res://levels/jingli/wall.tscn" id="5_tib5h"]
+[ext_resource type="PackedScene" uid="uid://bagtqr1dojm6q" path="res://levels/jingli/building.tscn" id="6_pfdo0"]
+[ext_resource type="PackedScene" uid="uid://bfqkkmmmk1tma" path="res://levels/jingli/sky/main.tscn" id="7_n1eak"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6eqxm"]
 albedo_texture = ExtResource("1_8s6nq")
