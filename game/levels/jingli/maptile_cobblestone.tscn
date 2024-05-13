@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://dp5hsjcyq4vyf"]
 
-[ext_resource type="Texture2D" uid="uid://sx7aum1huywb" path="res://levels/jingli/ground_texture/patterned_cobblestone_diff_1k.jpg" id="1_ylve4"]
-[ext_resource type="Texture2D" uid="uid://baeacv7tylwwg" path="res://levels/jingli/ground_texture/patterned_cobblestone_disp_1k.png" id="2_mm82e"]
-[ext_resource type="Texture2D" uid="uid://boc1l4kgd3fdi" path="res://levels/jingli/ground_texture/patterned_cobblestone_ao_1k.jpg" id="3_fatu6"]
+[ext_resource type="Texture2D" uid="uid://sx7aum1huywb" path="res://ground_texture/patterned_cobblestone_diff_1k.jpg" id="1_ylve4"]
+[ext_resource type="Texture2D" uid="uid://baeacv7tylwwg" path="res://ground_texture/patterned_cobblestone_disp_1k.png" id="2_mm82e"]
+[ext_resource type="Texture2D" uid="uid://boc1l4kgd3fdi" path="res://ground_texture/patterned_cobblestone_ao_1k.jpg" id="3_fatu6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1i7cb"]
 albedo_texture = ExtResource("1_ylve4")
