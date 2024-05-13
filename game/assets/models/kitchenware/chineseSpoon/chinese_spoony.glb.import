@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cvmbh50nt3ykr"
-path="res://.godot/imported/chinese_spoony.glb-be6a372c7b107994a792a131a94faede.scn"
+path="res://.godot/imported/chinese_spoony.glb-b15f77c2706cad70482ac1543daa51a5.scn"
 
 [deps]
 
-source_file="res://Assets/models/kitchenware/chineseSpoon/chinese_spoony.glb"
-dest_files=["res://.godot/imported/chinese_spoony.glb-be6a372c7b107994a792a131a94faede.scn"]
+source_file="res://assets/models/kitchenware/chineseSpoon/chinese_spoony.glb"
+dest_files=["res://.godot/imported/chinese_spoony.glb-b15f77c2706cad70482ac1543daa51a5.scn"]
 
 [params]
 

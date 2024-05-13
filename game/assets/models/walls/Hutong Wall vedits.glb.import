@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ruigj6ttxwlv"
-path="res://.godot/imported/Hutong Wall vedits.glb-4d4a15d0826862233a6f90d076c463fb.scn"
+path="res://.godot/imported/Hutong Wall vedits.glb-99b2105c657ce83b2986056138fca697.scn"
 
 [deps]
 
-source_file="res://Assets/models/walls/Hutong Wall vedits.glb"
-dest_files=["res://.godot/imported/Hutong Wall vedits.glb-4d4a15d0826862233a6f90d076c463fb.scn"]
+source_file="res://assets/models/walls/Hutong Wall vedits.glb"
+dest_files=["res://.godot/imported/Hutong Wall vedits.glb-99b2105c657ce83b2986056138fca697.scn"]
 
 [params]
 

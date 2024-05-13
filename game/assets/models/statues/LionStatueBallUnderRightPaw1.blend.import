@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cphhkqriqrhij"
-path="res://.godot/imported/LionStatueBallUnderRightPaw1.blend-65e11f73205c1fec409f062749a0b687.scn"
+path="res://.godot/imported/LionStatueBallUnderRightPaw1.blend-084e555e7ae80eeae7955294fc819aa0.scn"
 
 [deps]
 
-source_file="res://Assets/models/statues/LionStatueBallUnderRightPaw1.blend"
-dest_files=["res://.godot/imported/LionStatueBallUnderRightPaw1.blend-65e11f73205c1fec409f062749a0b687.scn"]
+source_file="res://assets/models/statues/LionStatueBallUnderRightPaw1.blend"
+dest_files=["res://.godot/imported/LionStatueBallUnderRightPaw1.blend-084e555e7ae80eeae7955294fc819aa0.scn"]
 
 [params]
 
