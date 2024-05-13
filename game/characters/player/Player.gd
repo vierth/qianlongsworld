@@ -11,7 +11,8 @@ var active_cam = main_cam
 
 
 
-var speed = 5.0
+var speed = Settings.player_speed
+var sens = Settings.mouse_sensitivity
 const JUMP_VELOCITY = 4.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -41,18 +42,18 @@ func _unhandled_input(event):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		
+		Settings.current_scene = get_parent().scene_file_path
+		Settings.pos_x = global_position.x
+		Settings.pos_y = global_position.y
+		Settings.velocity_y = velocity.y
+		Settings.facing_x = active_cam.rotation.x
+		Settings.facing_y = neck.rotation.y
+		SceneSwitcher.switch_scene("res://levels/GUI/pausescreen/pause_screen.tscn")
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion:
 			neck.rotate_y(-event.relative.x * 0.01)
 			active_cam.rotate_x(-event.relative.y * 0.01)
 			active_cam.rotation.x = clamp(active_cam.rotation.x, deg_to_rad(-60), deg_to_rad(90))
-	if event.is_action_pressed("speed_up"):
-		speed += 1
-	if event.is_action_pressed("speed_down"):
-		speed -= 1
-		if speed < 0:
-			speed = 0
 
 	#if event.is_action_pressed("interact"):
 		## check for what we are interacting with
@@ -81,6 +82,14 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
+
+	if Settings.current_scene == "res://levels/GUI/pausescreen/pause_screen.tscn":
+		Settings.current_scene = scene_file_path
+		global_position.x = Settings.pos_x
+		global_position.y = Settings.pos_y 
+		velocity.y = Settings.velocity_y
+		active_cam.global_rotation.x = Settings.facing_x
+		neck.global_rotation.y = Settings.facing_y
 
 	if global_position.y < min_y:
 		global_position = warp_location
