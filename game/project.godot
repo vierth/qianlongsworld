@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Game"
-run/main_scene="res://levels/jingli/maptile62_02_jingli.tscn"
+run/main_scene="res://levels/Brownstein_Sarah_45_1/map_tile_45_1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
