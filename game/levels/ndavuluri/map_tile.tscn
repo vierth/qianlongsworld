@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cd4mlpau8ajhk"]
 
-[ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://assets/prefabs/environments/environment.tscn" id="1_h1tmt"]
+[ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://levels/sheckstall/assets/prefabs/environments/environment.tscn" id="1_h1tmt"]
 [ext_resource type="PackedScene" path="res://levels/ndavuluri/building_example.tscn" id="2_o7lpk"]
 [ext_resource type="Texture2D" uid="uid://m86gjbhrm0ex" path="res://levels/ndavuluri/grassbushcc008.png" id="2_wvlg6"]
 [ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="4_q757e"]
