@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bxe2m06hdgsrt"
-path="res://.godot/imported/round_mendun.blend-f75be74ad852279eb2f4b7f169bccf6a.scn"
+path="res://.godot/imported/round_mendun.blend-e6f1922137b18039099eaec81c48a273.scn"
 
 [deps]
 
-source_file="res://assets/models/statues/round_mendun.blend"
-dest_files=["res://.godot/imported/round_mendun.blend-f75be74ad852279eb2f4b7f169bccf6a.scn"]
+source_file="res://Assets/models/statues/round_mendun.blend"
+dest_files=["res://.godot/imported/round_mendun.blend-e6f1922137b18039099eaec81c48a273.scn"]
 
 [params]
 

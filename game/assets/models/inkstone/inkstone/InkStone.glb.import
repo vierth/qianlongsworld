@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dmql66p5wc46m"
-path="res://.godot/imported/InkStone.glb-8f1d0c01b2302e334af89a1f9e84fe2f.scn"
+path="res://.godot/imported/InkStone.glb-bc28b2d381d86df56647978b5a137221.scn"
 
 [deps]
 
-source_file="res://assets/models/inkstone/inkstone/InkStone.glb"
-dest_files=["res://.godot/imported/InkStone.glb-8f1d0c01b2302e334af89a1f9e84fe2f.scn"]
+source_file="res://Assets/models/inkstone/inkstone/InkStone.glb"
+dest_files=["res://.godot/imported/InkStone.glb-bc28b2d381d86df56647978b5a137221.scn"]
 
 [params]
 

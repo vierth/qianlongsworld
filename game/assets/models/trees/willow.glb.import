@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://culvo73ud3x6j"
-path="res://.godot/imported/willow.glb-b40eb720c50308136764dc5ab76e30e0.scn"
+path="res://.godot/imported/willow.glb-58215d4a83c5eb8a582a3270703ceedd.scn"
 
 [deps]
 
-source_file="res://assets/models/trees/willow.glb"
-dest_files=["res://.godot/imported/willow.glb-b40eb720c50308136764dc5ab76e30e0.scn"]
+source_file="res://Assets/models/trees/willow.glb"
+dest_files=["res://.godot/imported/willow.glb-58215d4a83c5eb8a582a3270703ceedd.scn"]
 
 [params]
 
