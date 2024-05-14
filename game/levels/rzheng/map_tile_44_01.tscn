@@ -2,16 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="1_1ofx6"]
 [ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://assets/prefabs/environments/environment.tscn" id="1_765xi"]
-[ext_resource type="Texture2D" path="res://levels/rzheng/bake_color2_4k.png" id="2_mkmao"]
-[ext_resource type="Texture2D" path="res://levels/rzheng/bake_normal_4k.png" id="3_c84ym"]
-[ext_resource type="Texture2D" path="res://levels/rzheng/bake_rough_4k.png" id="4_ui1xp"]
-[ext_resource type="Texture2D" path="res://levels/rzheng/beijing_Page_044_01.png" id="5_2sghx"]
+[ext_resource type="Texture2D" uid="uid://d340vp5q7spwv" path="res://levels/rzheng/bake_color2_4k.png" id="2_mkmao"]
+[ext_resource type="Texture2D" uid="uid://blxwf5fm6bjec" path="res://levels/rzheng/bake_normal_4k.png" id="3_c84ym"]
+[ext_resource type="Texture2D" uid="uid://dgn4wa1ym8uxk" path="res://levels/rzheng/bake_rough_4k.png" id="4_ui1xp"]
+[ext_resource type="Texture2D" uid="uid://cei5xi4osxiki" path="res://levels/rzheng/beijing_Page_044_01.png" id="5_2sghx"]
 [ext_resource type="PackedScene" uid="uid://bxkro1o1x83nu" path="res://levels/rzheng/m_building.tscn" id="7_llfbj"]
 [ext_resource type="PackedScene" uid="uid://ruigj6ttxwlv" path="res://assets/models/walls/Hutong Wall vedits.glb" id="8_ja1fx"]
 [ext_resource type="PackedScene" uid="uid://drv3cp6as6rnl" path="res://levels/rzheng/l_building.tscn" id="9_1ng3i"]
 [ext_resource type="PackedScene" uid="uid://3udicp2w7ruq" path="res://levels/rzheng/hole_in_the_wall.tscn" id="10_150a5"]
 [ext_resource type="PackedScene" uid="uid://dw58htantlmhk" path="res://levels/rzheng/door.tscn" id="11_ir073"]
-[ext_resource type="PackedScene" path="res://levels/rzheng/pailou.tscn" id="12_jmibv"]
+[ext_resource type="PackedScene" uid="uid://cv4whdkec57h7" path="res://levels/rzheng/pailou.tscn" id="12_jmibv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_637ww"]
 albedo_texture = ExtResource("2_mkmao")
@@ -594,7 +594,7 @@ transform = Transform3D(0.72, 0, 0, 0, 1, 0, 0, 0, 1.04, -152.7, 0, -67.7)
 [node name="corner_2" type="Node3D" parent="."]
 
 [node name="pailou2" parent="corner_2" instance=ExtResource("12_jmibv")]
-transform = Transform3D(-2.64454e-08, 0, 0.734229, 0, 1, 0, -0.605, 0, -3.20942e-08, -11.2, 0, -105.55)
+transform = Transform3D(-6.95667e-08, 0, 2.11453, 0, 1, 0, -1.5915, 0, -9.24292e-08, -11.367, 0, -105.715)
 
 [node name="section1" type="Node3D" parent="corner_2"]
 
@@ -1615,7 +1615,7 @@ transform = Transform3D(-1.58975e-07, 0, 3.03528, 0, 1.8, 0, -3.63693, 0, -1.326
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -144.891, -1.90735e-06, 109.408)
 
 [node name="pailou" parent="corner_3" instance=ExtResource("12_jmibv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.19193, -53.0167, 0, 94.4673)
+transform = Transform3D(3.57368, 0, 0, 0, 1, 0, 0, 0, 4.32075, -53.0167, 0, 94.7019)
 
 [node name="section9" type="Node3D" parent="corner_3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.857, 0, -0.017)
@@ -1829,7 +1829,7 @@ transform = Transform3D(-9.07885e-08, 0, 2.1, 0, 1.8, 0, -2.077, 0, -9.17939e-08
 transform = Transform3D(-9.07885e-08, 0, 2.1, 0, 1.8, 0, -2.077, 0, -9.17939e-08, 86.2, 0, 36.5)
 
 [node name="pailou2" parent="corner_4" instance=ExtResource("12_jmibv")]
-transform = Transform3D(0.8, 0, 0, 0, 1, 0, 0, 0, 0.700855, -19.3, 0, 114.039)
+transform = Transform3D(2.65727, 0, 0, 0, 1, 0, 0, 0, 2.78683, -19.7575, 0, 113.71)
 
 [node name="section2" type="Node3D" parent="corner_4"]
 
