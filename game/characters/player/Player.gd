@@ -88,7 +88,7 @@ func _physics_process(delta):
 		if global_position.y < min_y:
 			global_position = warp_location
 
-		move_and_slide()
+	move_and_slide()
 
 func _process(_delta):
 	var coll = %RayCast3D.get_collider()

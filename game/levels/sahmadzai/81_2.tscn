@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://becys06dfqeoc" path="res://levels/sahmadzai/81_2_tri.tscn" id="1_4cnrm"]
 [ext_resource type="PackedScene" uid="uid://crafq4q4qoim7" path="res://levels/pvierthaler/yindingqiao.glb" id="2_00wlw"]
-[ext_resource type="PackedScene" uid="uid://c5mvrtyhwxn5h" path="res://assets/models/fences/marble_fence.glb" id="3_1q76p"]
+[ext_resource type="PackedScene" uid="uid://cwyt6dufhf4i4" path="res://assets/models/fences/marble_fence.glb" id="3_1q76p"]
 [ext_resource type="PackedScene" uid="uid://ruigj6ttxwlv" path="res://assets/models/walls/Hutong Wall vedits.glb" id="3_54koo"]
 [ext_resource type="PackedScene" uid="uid://bprptvbij0lms" path="res://levels/sahmadzai/models/building_template.tscn" id="4_j1dn5"]
 [ext_resource type="PackedScene" uid="uid://bd7efr5as4lrw" path="res://assets/models/walls/hutong_wall_vedits.tscn" id="6_vr0vd"]
