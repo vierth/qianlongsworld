@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cx3egybg2vv"
-path.s3tc="res://.godot/imported/patterned_cobblestone_ao_1k.jpg-7335bef64b87b31011f194d9274346ea.s3tc.ctex"
+path.s3tc="res://.godot/imported/patterned_cobblestone_ao_1k.jpg-9d51b84e98b08ffef73f3745aa0b1e76.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://patterned_cobblestone_ao_1k.jpg"
-dest_files=["res://.godot/imported/patterned_cobblestone_ao_1k.jpg-7335bef64b87b31011f194d9274346ea.s3tc.ctex"]
+source_file="res://levels/emilyyu/patterned_cobblestone_ao_1k.jpg"
+dest_files=["res://.godot/imported/patterned_cobblestone_ao_1k.jpg-9d51b84e98b08ffef73f3745aa0b1e76.s3tc.ctex"]
 
 [params]
 

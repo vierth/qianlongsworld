@@ -1,6 +1,6 @@
 [gd_scene load_steps=42 format=3 uid="uid://tcds8h5crx1l"]
 
-[ext_resource type="PackedScene" uid="uid://cvpry5330k14f" path="res://levels/Bamare/map_title_81_05.tscn" id="1_j3hrp"]
+[ext_resource type="PackedScene" uid="uid://cvpry5330k14f" path="res://levels/map_tile_81_04_bruke_amare/map_title_81_05.tscn" id="1_j3hrp"]
 [ext_resource type="PackedScene" uid="uid://nrvypjlylee1" path="res://levels/pvierthaler/yindingqiao_v2.tscn" id="2_aaqcf"]
 [ext_resource type="PackedScene" uid="uid://dss1ryqpqa1n8" path="res://assets/prefabs/water/WaterPlane.tscn" id="2_xqar5"]
 [ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="4_h7bam"]

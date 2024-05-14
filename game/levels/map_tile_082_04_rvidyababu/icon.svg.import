@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ceiys7kphshkw"
-path="res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+path="res://.godot/imported/icon.svg-8c1e64c89e5d86c5a77cc9c7197b9fdc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.svg"
-dest_files=["res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"]
+source_file="res://levels/map_tile_082_04_rvidyababu/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-8c1e64c89e5d86c5a77cc9c7197b9fdc.ctex"]
 
 [params]
 

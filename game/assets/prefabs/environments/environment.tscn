@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bjikvl7hhugl2"]
 
 [ext_resource type="Script" path="res://levels/main/Environment.gd" id="1_o07kv"]
-[ext_resource type="Material" uid="uid://u8ms0bm1c8te" path="res://assets/shaders/materials/SkyShader.tres" id="2_8md66"]
+[ext_resource type="Material" uid="uid://u8ms0bm1c8te" path="res://levels/sheckstall/assets/shaders/materials/SkyShader.tres" id="2_8md66"]
 
 [sub_resource type="Sky" id="Sky_t3s8o"]
 sky_material = ExtResource("2_8md66")

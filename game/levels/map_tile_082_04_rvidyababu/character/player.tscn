@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://drilqm3jcbmnf"]
 
-[ext_resource type="Script" path="res://scripts/Player.gd" id="1_q8n5c"]
+[ext_resource type="Script" path="res://levels/map_tile_082_04_rvidyababu/scripts/Player.gd" id="1_q8n5c"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_gg2rt"]
 
