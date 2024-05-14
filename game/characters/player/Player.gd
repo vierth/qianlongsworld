@@ -10,7 +10,6 @@ var is_main_camera_active = true
 var active_cam = main_cam
 
 
-
 var speed = 5.0
 const JUMP_VELOCITY = 4.5
 
@@ -28,11 +27,8 @@ func switch_camera():
 	active_cam = main_cam if is_main_camera_active else secondary_cam
 
 
-
 # set up mouse handling
 func _unhandled_input(event):
-	
-	
 	if active_cam == null:
 		active_cam = main_cam
 	if event.is_action_pressed("switch_camera"):
@@ -53,7 +49,13 @@ func _unhandled_input(event):
 		speed -= 1
 		if speed < 0:
 			speed = 0
-
+			
+	if event.is_action_pressed("show_new_painting"):	
+		var gallery_building = get_tree().current_scene.get_node("gallery_building")
+		if gallery_building.get_is_entered():
+			var painting = get_tree().current_scene.get_node("painting")
+			painting.show_new_painting()
+			
 	#if event.is_action_pressed("interact"):
 		## check for what we are interacting with
 		#
@@ -105,7 +107,6 @@ func _process(_delta):
 			if observed != null :	
 				pass
 			observed = coll2
-		
-
+	
 func player():
 	pass
