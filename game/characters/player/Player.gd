@@ -2,10 +2,13 @@ extends CharacterBody3D
 
 @export var warp_location = Vector3(0,2,0)
 @export var min_y : int = -20
+@export var max_y : int = 20
 
 @onready var neck = $Neck
 @onready var main_cam = $Neck/Camera3D as Camera3D
 @onready var secondary_cam = $Neck/Camera3D2 as Camera3D
+@onready var movement_sound = $MovementSound as AudioStreamPlayer
+
 var is_main_camera_active = true
 var active_cam = main_cam
 
@@ -20,6 +23,14 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 # Specify if being observed
 var observed = null
 var talking = false
+
+# Creative mode variables
+var creative_mode = false
+var original_collision_shape = null
+
+# Water variables
+var in_water = false
+@export var water_level = 0.0  # Adjust this to match your water plane height
 
 func switch_camera():
 	is_main_camera_active = !is_main_camera_active
@@ -53,39 +64,72 @@ func _unhandled_input(event):
 		speed -= 1
 		if speed < 0:
 			speed = 0
+			
+	if event.is_action_pressed("toggle_creative_mode"):
+		creative_mode = !creative_mode
+		if creative_mode:
+			original_collision_shape = $CollisionShape3D.shape
+			$CollisionShape3D.shape = null  # Remove collision
+			movement_sound.stop()  # Stop walking sound when entering creative mode
+#			water_audio_player.stop()  # Stop water sound when entering creative mode
+		else:
+			$CollisionShape3D.shape = original_collision_shape  # Restore collision
 
 	#if event.is_action_pressed("interact"):
 		## check for what we are interacting with
 		#
 		#print(SqlController.get_item_data(1))
 
+
 func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y -= gravity * delta
+	if creative_mode:
+		var input_dir = Input.get_vector("left", "right", "forward", "back")
+		var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
-	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		if direction:
+			velocity.x = direction.x * speed
+			velocity.z = direction.z * speed
+		else:
+			velocity.x = move_toward(velocity.x, 0, speed)
+			velocity.z = move_toward(velocity.z, 0, speed)
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir = Input.get_vector("left", "right", "forward", "back")
-	
-	var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
+		if Input.is_action_pressed("move_up"):
+			velocity.y = speed
+		elif Input.is_action_pressed("move_down"):
+			velocity.y = -speed
+		else:
+			velocity.y = 0
 
-	if direction:
-		velocity.x = direction.x * speed
-		velocity.z = direction.z * speed
+		move_and_slide()
 	else:
-		velocity.x = move_toward(velocity.x, 0, speed)
-		velocity.z = move_toward(velocity.z, 0, speed)
+		# Add the gravity.
+		if not is_on_floor():
+			velocity.y -= gravity * delta
 
-	if global_position.y < min_y:
-		global_position = warp_location
+		# Handle jump.
+		if Input.is_action_just_pressed("jump") and is_on_floor():
+			velocity.y = JUMP_VELOCITY
 
-	move_and_slide()
+		# Get the input direction and handle the movement/deceleration.
+		# As good practice, you should replace UI actions with custom gameplay actions.
+		var input_dir = Input.get_vector("left", "right", "forward", "back")
+		var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+
+		if direction:
+			velocity.x = direction.x * speed
+			velocity.z = direction.z * speed
+			if not movement_sound.playing:
+				movement_sound.play()  # Play walking sound
+		else:
+			velocity.x = move_toward(velocity.x, 0, speed)
+			velocity.z = move_toward(velocity.z, 0, speed)
+			if movement_sound.playing:
+				movement_sound.stop()  # Stop walking sound
+
+		if global_position.y < min_y:
+			global_position = warp_location
+
+		move_and_slide()
 
 func _process(_delta):
 	var coll = %RayCast3D.get_collider()

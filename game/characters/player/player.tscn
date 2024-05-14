@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://buoa4rfr48kmo"]
+[gd_scene load_steps=6 format=3 uid="uid://buoa4rfr48kmo"]
 
 [ext_resource type="Script" path="res://characters/player/Player.gd" id="1_q8n5c"]
+[ext_resource type="AudioStream" uid="uid://cvc6l3tdxbw7e" path="res://sound/walking.mp3" id="2_eehtu"]
+[ext_resource type="AudioStream" uid="uid://bl3cwf1hh27at" path="res://sound/swimming.mp3" id="3_0p1ua"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_gg2rt"]
 radius = 0.4
@@ -43,3 +45,10 @@ transform = Transform3D(1, 0, 0, 0, 0.749395, 0.662123, 0, -0.662123, 0.749395, 
 unique_name_in_owner = true
 target_position = Vector3(2.08165e-12, 2.08165e-12, -3)
 collision_mask = 12
+
+[node name="MovementSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_eehtu")
+volume_db = 1.231
+
+[node name="SwimmingSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0p1ua")

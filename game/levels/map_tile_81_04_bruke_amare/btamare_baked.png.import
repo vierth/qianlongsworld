@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c86hvve38tmp7"
-path.s3tc="res://.godot/imported/btamare_baked.png-bd75ca743b837643b19ed5db99d3d6f3.s3tc.ctex"
+path.s3tc="res://.godot/imported/btamare_baked.png-af991586f5ae1b2517b8e58b942b5853.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://levels/Bamare/btamare_baked.png"
-dest_files=["res://.godot/imported/btamare_baked.png-bd75ca743b837643b19ed5db99d3d6f3.s3tc.ctex"]
+source_file="res://levels/map_tile_81_04_bruke_amare/btamare_baked.png"
+dest_files=["res://.godot/imported/btamare_baked.png-af991586f5ae1b2517b8e58b942b5853.s3tc.ctex"]
 
 [params]
 

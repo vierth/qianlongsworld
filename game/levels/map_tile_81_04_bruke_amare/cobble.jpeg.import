@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btukentajwuqn"
-path="res://.godot/imported/cobble.jpeg-1e98d85968bb57a4bdb0662e9e8077e6.ctex"
+path="res://.godot/imported/cobble.jpeg-ac2b6f3b18153ae797c980300f1b9f0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/Bamare/cobble.jpeg"
-dest_files=["res://.godot/imported/cobble.jpeg-1e98d85968bb57a4bdb0662e9e8077e6.ctex"]
+source_file="res://levels/map_tile_81_04_bruke_amare/cobble.jpeg"
+dest_files=["res://.godot/imported/cobble.jpeg-ac2b6f3b18153ae797c980300f1b9f0c.ctex"]
 
 [params]
 
