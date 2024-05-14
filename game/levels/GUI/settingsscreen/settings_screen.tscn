@@ -1,0 +1,461 @@
+[gd_scene load_steps=7 format=3 uid="uid://0jsqh0qkqoca"]
+
+[ext_resource type="Script" path="res://levels/GUI/settingsscreen/settings_screen.gd" id="1_whp6l"]
+[ext_resource type="FontFile" uid="uid://b5nu84rp3nks6" path="res://assets/fonts/DMSerifDisplay-Regular.ttf" id="3_2voxe"]
+[ext_resource type="FontFile" uid="uid://c5pa5j5xqjyac" path="res://assets/fonts/DMSerifDisplay-Italic.ttf" id="3_3qmal"]
+[ext_resource type="Script" path="res://levels/GUI/settingsscreen/speed_slider.gd" id="3_bky7t"]
+[ext_resource type="Script" path="res://levels/GUI/settingsscreen/sens_slider.gd" id="4_uffby"]
+[ext_resource type="Script" path="res://levels/GUI/settingsscreen/ReturnButton.gd" id="5_pwf4m"]
+
+[node name="SettingsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_whp6l")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.27, 0.27, 0.27, 1)
+
+[node name="Settings" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -312.0
+offset_right = 312.0
+offset_bottom = 248.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 20
+theme_override_fonts/normal_font = ExtResource("3_3qmal")
+theme_override_fonts/italics_font = ExtResource("3_3qmal")
+theme_override_font_sizes/normal_font_size = 180
+theme_override_font_sizes/italics_font_size = 180
+text = "Settings"
+fit_content = true
+
+[node name="SpeedSliderLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -213.0
+offset_top = -267.0
+offset_right = 214.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.68274, 0.970038, 0.948853, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/normal_font = ExtResource("3_3qmal")
+theme_override_fonts/italics_font = ExtResource("3_3qmal")
+theme_override_font_sizes/normal_font_size = 60
+theme_override_font_sizes/italics_font_size = 180
+text = "Set Player Speed"
+fit_content = true
+
+[node name="MouseSensLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -143.0
+offset_right = 229.0
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.68274, 0.970038, 0.948853, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/normal_font = ExtResource("3_3qmal")
+theme_override_fonts/italics_font = ExtResource("3_3qmal")
+theme_override_font_sizes/normal_font_size = 60
+theme_override_font_sizes/italics_font_size = 180
+text = "Mouse Sensitivity"
+fit_content = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.374
+anchor_top = 0.334
+anchor_right = 0.627
+anchor_bottom = 0.533
+offset_left = 0.279968
+offset_top = 0.359985
+offset_right = -0.560059
+offset_bottom = -24.6801
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 100
+
+[node name="SpeedSlider" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+max_value = 20.0
+value = 5.0
+rounded = true
+script = ExtResource("3_bky7t")
+
+[node name="MouseSensSlider" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+min_value = 0.002
+max_value = 0.02
+step = 0.005
+value = 0.012
+script = ExtResource("4_uffby")
+
+[node name="ReturnButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -161.0
+offset_top = -513.0
+offset_right = 162.0
+offset_bottom = -406.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_2voxe")
+theme_override_font_sizes/font_size = 60
+text = "Return"
+script = ExtResource("5_pwf4m")
+
+[node name="ControlsInner" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.878
+anchor_top = 0.234
+anchor_right = 0.878
+anchor_bottom = 0.234
+offset_left = -224.76
+offset_top = 0.279984
+offset_right = 223.24
+offset_bottom = 801.28
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.34, 0.34, 0.34, 1)
+
+[node name="Label" type="Label" parent="ControlsInner"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.022
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.143999
+offset_right = -10.0
+offset_bottom = -532.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_2voxe")
+theme_override_font_sizes/font_size = 70
+text = "Controls"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlsInner"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 235.0
+offset_right = 123.0
+offset_bottom = 741.0
+theme_override_constants/separation = 15
+
+[node name="WRect" type="ColorRect" parent="ControlsInner/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.230315, 0.230315, 0.230315, 1)
+
+[node name="WLabel" type="Label" parent="ControlsInner/VBoxContainer/WRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_2voxe")
+theme_override_font_sizes/font_size = 60
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ControlsInner/VBoxContainer/WRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.463
+anchor_top = 0.144
+anchor_right = 2.148
+anchor_bottom = 1.0
+offset_left = -22.04
+offset_top = -6.52
+offset_right = 24.16
+offset_bottom = 5.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 25
+text = "Forward"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ARect" type="ColorRect" parent="ControlsInner/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.230315, 0.230315, 0.230315, 1)
+
+[node name="ALabel" type="Label" parent="ControlsInner/VBoxContainer/ARect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_2voxe")
+theme_override_font_sizes/font_size = 60
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ControlsInner/VBoxContainer/ARect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.463
+anchor_top = 0.144
+anchor_right = 2.148
+anchor_bottom = 1.0
+offset_left = -22.04
+offset_top = -6.52
+offset_right = 24.16
+offset_bottom = 5.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 25
+text = "Left"
+vertical_alignment = 1
+
+[node name="SRect" type="ColorRect" parent="ControlsInner/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.230315, 0.230315, 0.230315, 1)
+
+[node name="SLabel" type="Label" parent="ControlsInner/VBoxContainer/SRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_2voxe")
+theme_override_font_sizes/font_size = 60
+text = "S"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ControlsInner/VBoxContainer/SRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.463
+anchor_top = 0.144
+anchor_right = 2.148
+anchor_bottom = 1.0
+offset_left = -22.04
+offset_top = -6.52
+offset_right = 24.16
+offset_bottom = 5.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 25
+text = "Right"
+vertical_alignment = 1
+
+[node name="DRect" type="ColorRect" parent="ControlsInner/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.230315, 0.230315, 0.230315, 1)
+
+[node name="DLabel" type="Label" parent="ControlsInner/VBoxContainer/DRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.99998
+offset_bottom = 0.999985
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_2voxe")
+theme_override_font_sizes/font_size = 60
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ControlsInner/VBoxContainer/DRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.463
+anchor_top = 0.144
+anchor_right = 2.148
+anchor_bottom = 1.0
+offset_left = -22.04
+offset_top = -11.52
+offset_right = 24.16
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 25
+text = "Back"
+vertical_alignment = 1
+
+[node name="InteractRect" type="ColorRect" parent="ControlsInner/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.230315, 0.230315, 0.230315, 1)
+
+[node name="InteractLabel" type="Label" parent="ControlsInner/VBoxContainer/InteractRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_2voxe")
+theme_override_font_sizes/font_size = 60
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ControlsInner/VBoxContainer/InteractRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.463
+anchor_top = 0.144
+anchor_right = 2.148
+anchor_bottom = 1.0
+offset_left = -22.04
+offset_top = -6.52
+offset_right = 24.16
+offset_bottom = 5.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 25
+text = "Interact"
+vertical_alignment = 1
+
+[node name="Space" type="ColorRect" parent="ControlsInner/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.230315, 0.230315, 0.230315, 1)
+
+[node name="SpaceLabel" type="Label" parent="ControlsInner/VBoxContainer/Space"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_2voxe")
+theme_override_font_sizes/font_size = 30
+text = "Space"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ControlsInner/VBoxContainer/Space"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.463
+anchor_top = 0.144
+anchor_right = 2.148
+anchor_bottom = 1.0
+offset_left = -22.04
+offset_top = -11.52
+offset_right = 24.16
+theme_override_font_sizes/font_size = 25
+text = "Jump"
+vertical_alignment = 1
+
+[node name="PauseRect" type="ColorRect" parent="ControlsInner/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.230315, 0.230315, 0.230315, 1)
+
+[node name="PauseLabel" type="Label" parent="ControlsInner/VBoxContainer/PauseRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_2voxe")
+theme_override_font_sizes/font_size = 40
+text = "Esc"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ControlsInner/VBoxContainer/PauseRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.463
+anchor_top = 0.144
+anchor_right = 2.148
+anchor_bottom = 1.0
+offset_left = -22.04
+offset_top = -6.52
+offset_right = 24.16
+offset_bottom = 5.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 25
+text = "Pause"
+vertical_alignment = 1
+
+[connection signal="value_changed" from="VBoxContainer/SpeedSlider" to="." method="_on_speed_slider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/MouseSensSlider" to="." method="_on_mouse_sens_slider_value_changed"]
+[connection signal="button_down" from="ReturnButton" to="." method="_on_return_button_button_down"]
