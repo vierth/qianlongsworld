@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://3udicp2w7ruq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3txbo"]
+render_priority = 1
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4k6ae"]
+material = SubResource("StandardMaterial3D_3txbo")
+size = Vector3(3, 2.8, 1)
+
+[node name="hole_in_the_wall" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.260664, 0, 0, 0, 1, 0, 0, 0, 1, 0.379, 1.4, 0)
+mesh = SubResource("BoxMesh_4k6ae")
+skeleton = NodePath("../..")
