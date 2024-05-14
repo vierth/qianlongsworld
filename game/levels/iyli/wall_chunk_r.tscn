@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqdo8uu61rusy"]
+
+[ext_resource type="Texture2D" uid="uid://cbxlkfae8ycki" path="res://levels/iyli/patterned_clay_plaster_diff_4k.jpg" id="1_6m6jy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5nok0"]
+albedo_texture = ExtResource("1_6m6jy")
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_og8xw"]
+material = SubResource("StandardMaterial3D_5nok0")
+size = Vector3(36, 7, 3.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qpsiu"]
+points = PackedVector3Array(18, 3.5, 1.75, 18, 3.5, -1.75, -18, 3.5, 1.75, 18, -3.5, 1.75, 18, -3.5, -1.75, -18, 3.5, -1.75, -18, -3.5, 1.75, -18, -3.5, -1.75)
+
+[node name="wall chunkR" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_og8xw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_qpsiu")

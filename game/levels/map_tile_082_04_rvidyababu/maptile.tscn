@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://ciitfdjpy8caq"]
 
-[ext_resource type="PackedScene" uid="uid://drilqm3jcbmnf" path="res://character/player.tscn" id="1_ccwit"]
-[ext_resource type="Texture2D" uid="uid://ccj36du2uik15" path="res://concrete_layers_diff_4k.jpg" id="2_houly"]
-[ext_resource type="PackedScene" uid="uid://c0u8qr8s80cbh" path="res://building_template.tscn" id="3_bybdr"]
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ykj0q"]
-data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0, -50, 50, 0, -50)
+[ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://assets/prefabs/environments/environment.tscn" id="1_86361"]
+[ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="1_ccwit"]
+[ext_resource type="Texture2D" uid="uid://ccj36du2uik15" path="res://levels/map_tile_082_04_rvidyababu/concrete_layers_diff_4k.jpg" id="2_houly"]
+[ext_resource type="PackedScene" uid="uid://c0u8qr8s80cbh" path="res://levels/map_tile_082_04_rvidyababu/building_template.tscn" id="3_bybdr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tuufi"]
 albedo_texture = ExtResource("2_houly")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ux2vv"]
 
@@ -18,28 +18,25 @@ size = Vector2(311.3, 255.6)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m8tlm"]
 
-[sub_resource type="Environment" id="Environment_uluif"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_q0py0"]
+data = PackedVector3Array(155.65, 0, 127.8, -155.65, 0, 127.8, 155.65, 0, -127.8, -155.65, 0, 127.8, -155.65, 0, -127.8, 155.65, 0, -127.8)
 
 [node name="tutorial" type="Node3D"]
 
+[node name="Environment" parent="." instance=ExtResource("1_86361")]
+
 [node name="Player" parent="." instance=ExtResource("1_ccwit")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.297349, 0.959344, -0.223233)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.297349, 1.77111, -3.94338)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_ykj0q")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 material_override = SubResource("StandardMaterial3D_tuufi")
 mesh = SubResource("PlaneMesh_jy5oc")
 surface_material_override/0 = SubResource("StandardMaterial3D_m8tlm")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_uluif")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.2828, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_q0py0")
 
 [node name="buildings" type="Node3D" parent="."]
 

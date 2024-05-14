@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blp64f4u5vdlu"
-path.s3tc="res://.godot/imported/beijing_Page_062_02-2.png-7cea90f7dbe45628e885913926963c6f.s3tc.ctex"
+path.s3tc="res://.godot/imported/beijing_Page_062_02-2.png-a998969bb076999203a5f7b749ba09ad.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://maptile_picture/beijing_Page_062_02-2.png"
-dest_files=["res://.godot/imported/beijing_Page_062_02-2.png-7cea90f7dbe45628e885913926963c6f.s3tc.ctex"]
+source_file="res://levels/jingli/maptile_picture/beijing_Page_062_02-2.png"
+dest_files=["res://.godot/imported/beijing_Page_062_02-2.png-a998969bb076999203a5f7b749ba09ad.s3tc.ctex"]
 
 [params]
 

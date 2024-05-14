@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://u23eliyi5eo0"]
+
+[ext_resource type="Texture2D" uid="uid://cbxlkfae8ycki" path="res://levels/iyli/patterned_clay_plaster_diff_4k.jpg" id="1_5rdiu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qm1fq"]
+albedo_texture = ExtResource("1_5rdiu")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_0g6fg"]
+material = SubResource("StandardMaterial3D_qm1fq")
+size = Vector3(8, 4, 0.66)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a5s4g"]
+data = PackedVector3Array(-4, 2, 0.33, 4, 2, 0.33, -4, -2, 0.33, 4, 2, 0.33, 4, -2, 0.33, -4, -2, 0.33, 4, 2, -0.33, -4, 2, -0.33, 4, -2, -0.33, -4, 2, -0.33, -4, -2, -0.33, 4, -2, -0.33, 4, 2, 0.33, 4, 2, -0.33, 4, -2, 0.33, 4, 2, -0.33, 4, -2, -0.33, 4, -2, 0.33, -4, 2, -0.33, -4, 2, 0.33, -4, -2, -0.33, -4, 2, 0.33, -4, -2, 0.33, -4, -2, -0.33, 4, 2, 0.33, -4, 2, 0.33, 4, 2, -0.33, -4, 2, 0.33, -4, 2, -0.33, 4, 2, -0.33, -4, -2, 0.33, 4, -2, 0.33, -4, -2, -0.33, 4, -2, 0.33, 4, -2, -0.33, -4, -2, -0.33)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_0g6fg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_a5s4g")
