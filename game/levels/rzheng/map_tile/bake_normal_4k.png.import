@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgn4wa1ym8uxk"
-path.s3tc="res://.godot/imported/bake_rough_4k.png-51de7d178cc1922497abd3510359e44d.s3tc.ctex"
+uid="uid://blxwf5fm6bjec"
+path.s3tc="res://.godot/imported/bake_normal_4k.png-2a5fbe4df11f4307baef8e2ad1f39e05.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://levels/rzheng/bake_rough_4k.png"
-dest_files=["res://.godot/imported/bake_rough_4k.png-51de7d178cc1922497abd3510359e44d.s3tc.ctex"]
+source_file="res://levels/rzheng/map_tile/bake_normal_4k.png"
+dest_files=["res://.godot/imported/bake_normal_4k.png-2a5fbe4df11f4307baef8e2ad1f39e05.s3tc.ctex"]
 
 [params]
 
@@ -20,12 +20,12 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://levels/rzheng/bake_normal_4k.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
