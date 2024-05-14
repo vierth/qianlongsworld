@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpduk82dgyom0"]
+
+[ext_resource type="Script" path="res://assets/prefabs/interactive_scenes/switch_zone.gd" id="1_k2hhg"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_aah4b"]
+size = Vector3(0.1, 2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_06l3h"]
+size = Vector3(0.1, 2, 1)
+
+[node name="SceneSwitchZone" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_k2hhg")
+
+[node name="DebugShape" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("BoxMesh_aah4b")
+skeleton = NodePath("")
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_06l3h")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

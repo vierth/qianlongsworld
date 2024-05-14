@@ -35,3 +35,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0, 2.08165e-12)
 unique_name_in_owner = true
 target_position = Vector3(2.08165e-12, 2.08165e-12, -3)
 collision_mask = 12
+
+[node name="Camera3D2" type="Camera3D" parent="Neck"]
+transform = Transform3D(1, 0, 0, 0, 0.749395, 0.662123, 0, -0.662123, 0.749395, 2.08165e-12, 7.28922, 6.69717)
+
+[node name="RayCast3D2" type="RayCast3D" parent="Neck/Camera3D2"]
+unique_name_in_owner = true
+target_position = Vector3(2.08165e-12, 2.08165e-12, -3)
+collision_mask = 12
