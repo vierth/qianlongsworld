@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://isybudnxkdya"]
+
+[ext_resource type="Texture2D" uid="uid://cbxlkfae8ycki" path="res://levels/iyli/patterned_clay_plaster_diff_4k.jpg" id="1_tgeu8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2wpp3"]
+albedo_texture = ExtResource("1_tgeu8")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_yghl6"]
+material = SubResource("StandardMaterial3D_2wpp3")
+size = Vector3(4, 5, 3)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0mkel"]
+data = PackedVector3Array(-2, 2.5, 1.5, 2, 2.5, 1.5, -2, -2.5, 1.5, 2, 2.5, 1.5, 2, -2.5, 1.5, -2, -2.5, 1.5, 2, 2.5, -1.5, -2, 2.5, -1.5, 2, -2.5, -1.5, -2, 2.5, -1.5, -2, -2.5, -1.5, 2, -2.5, -1.5, 2, 2.5, 1.5, 2, 2.5, -1.5, 2, -2.5, 1.5, 2, 2.5, -1.5, 2, -2.5, -1.5, 2, -2.5, 1.5, -2, 2.5, -1.5, -2, 2.5, 1.5, -2, -2.5, -1.5, -2, 2.5, 1.5, -2, -2.5, 1.5, -2, -2.5, -1.5, 2, 2.5, 1.5, -2, 2.5, 1.5, 2, 2.5, -1.5, -2, 2.5, 1.5, -2, 2.5, -1.5, 2, 2.5, -1.5, -2, -2.5, 1.5, 2, -2.5, 1.5, -2, -2.5, -1.5, 2, -2.5, 1.5, 2, -2.5, -1.5, -2, -2.5, -1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uj7cg"]
+albedo_color = Color(0.701961, 0.309804, 0.262745, 1)
+albedo_texture = ExtResource("1_tgeu8")
+uv1_triplanar = true
+
+[sub_resource type="PrismMesh" id="PrismMesh_8vf2v"]
+material = SubResource("StandardMaterial3D_uj7cg")
+size = Vector3(4, 1, 3)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_d22yo"]
+data = PackedVector3Array(0, 0.5, 1.5, 2, -0.5, 1.5, -2, -0.5, 1.5, 0, 0.5, -1.5, -2, -0.5, -1.5, 2, -0.5, -1.5, 0, 0.5, 1.5, 0, 0.5, -1.5, 2, -0.5, 1.5, 0, 0.5, -1.5, 2, -0.5, -1.5, 2, -0.5, 1.5, 0, 0.5, -1.5, 0, 0.5, 1.5, -2, -0.5, -1.5, 0, 0.5, 1.5, -2, -0.5, 1.5, -2, -0.5, -1.5, -2, -0.5, 1.5, 2, -0.5, 1.5, -2, -0.5, -1.5, 2, -0.5, 1.5, 2, -0.5, -1.5, -2, -0.5, -1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n2l3e"]
+albedo_color = Color(0.721569, 0.298039, 0.227451, 1)
+albedo_texture = ExtResource("1_tgeu8")
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_r3lhb"]
+material = SubResource("StandardMaterial3D_n2l3e")
+size = Vector3(4, 1, 3)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_f0pgr"]
+data = PackedVector3Array(-2, 0.5, 1.5, 2, 0.5, 1.5, -2, -0.5, 1.5, 2, 0.5, 1.5, 2, -0.5, 1.5, -2, -0.5, 1.5, 2, 0.5, -1.5, -2, 0.5, -1.5, 2, -0.5, -1.5, -2, 0.5, -1.5, -2, -0.5, -1.5, 2, -0.5, -1.5, 2, 0.5, 1.5, 2, 0.5, -1.5, 2, -0.5, 1.5, 2, 0.5, -1.5, 2, -0.5, -1.5, 2, -0.5, 1.5, -2, 0.5, -1.5, -2, 0.5, 1.5, -2, -0.5, -1.5, -2, 0.5, 1.5, -2, -0.5, 1.5, -2, -0.5, -1.5, 2, 0.5, 1.5, -2, 0.5, 1.5, 2, 0.5, -1.5, -2, 0.5, 1.5, -2, 0.5, -1.5, 2, 0.5, -1.5, -2, -0.5, 1.5, 2, -0.5, 1.5, -2, -0.5, -1.5, 2, -0.5, 1.5, 2, -0.5, -1.5, -2, -0.5, -1.5)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_yghl6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_0mkel")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.50899, 0)
+mesh = SubResource("PrismMesh_8vf2v")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_d22yo")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.52733, 0)
+mesh = SubResource("BoxMesh_r3lhb")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_f0pgr")
