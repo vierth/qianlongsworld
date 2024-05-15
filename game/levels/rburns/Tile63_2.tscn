@@ -29,23 +29,23 @@ sky_material = SubResource("ProceduralSkyMaterial_dwtgj")
 background_mode = 2
 sky = SubResource("Sky_pdcon")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n551u"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fd4tw"]
 albedo_texture = ExtResource("2_irf6t")
 uv1_scale = Vector3(100, 100, 100)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_44tms"]
-material = SubResource("StandardMaterial3D_n551u")
+material = SubResource("StandardMaterial3D_fd4tw")
 size = Vector2(328.375, 268)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_s6pq2"]
 data = PackedVector3Array(164.188, 0, 134, -164.188, 0, 134, 164.188, 0, -134, -164.188, 0, 134, -164.188, 0, -134, 164.188, 0, -134)
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_tgab2"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ypbjk"]
 albedo_texture = ExtResource("3_w4dmc")
 uv1_scale = Vector3(30, 2.5, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_tghmj"]
-material = SubResource("ORMMaterial3D_tgab2")
+material = SubResource("ORMMaterial3D_ypbjk")
 size = Vector3(13.5, 3, 1)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ewfqv"]
@@ -63,7 +63,7 @@ data = PackedVector3Array(-6.75, 1.5, 0.5, 6.75, 1.5, 0.5, -6.75, -1.5, 0.5, 6.7
 environment = SubResource("Environment_18re3")
 
 [node name="player" parent="." instance=ExtResource("1_sbft0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.0514, 12.6168, -2.46756)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.0514, 1.25919, -13.704)
 warp_location = Vector3(2.08165e-12, 20, 2.08165e-12)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -1986,7 +1986,7 @@ shape = SubResource("ConcavePolygonShape3D_ewfqv")
 transform = Transform3D(-0.0284073, 5.24105e-10, -1.23378, 1.78124e-11, 1, 6.46514e-10, 0.93031, -3.14307e-12, -0.037674, -44.6148, -2.78116e-08, -16.747)
 
 [node name="Wall" type="StaticBody3D" parent="Walls/North Walls/Wall52"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.8664, 0, 29.4398)
+transform = Transform3D(1, -4.33681e-19, 0, 6.50521e-19, 1, 5.87502e-17, 0, 9.89334e-19, 1, -34.8664, -3.55271e-15, 29.4398)
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Walls/North Walls/Wall52/Wall"]
 transform = Transform3D(1, 9.82482e-18, -3.12572e-08, -9.82482e-18, 1, 2.67797e-17, 3.12572e-08, -2.67797e-17, 1, 25.22, 1.5, -16.5095)

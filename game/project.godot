@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Game"
-run/main_scene="res://levels/rburns/Tile63_2.tscn"
+run/main_scene="res://levels/jessicajohnson/beijing_Page_080_02_Jessica_Johnson.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,10 +19,8 @@ config/icon="res://icon.svg"
 
 SceneSwitcher="*res://autoloadscripts/scene_switcher.gd"
 SqlController="*res://autoloadscripts/sql_controller.gd"
-
 Settings="*res://autoloadscripts/Settings.gd"
 GameState="*res://autoloadscripts/GameState.gd"
-
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
