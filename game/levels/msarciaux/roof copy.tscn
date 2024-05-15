@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://8yshbg6jt1ke"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_3ycfv"]
+albedo_color = Color(0.435294, 0, 0.188235, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_o6tet"]
+material = SubResource("ORMMaterial3D_3ycfv")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_c3yjw"]
+points = PackedVector3Array(0, 0.5, 0.5, 0.5, -0.5, 0.5, 0, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_unal2"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(3.758, 0, 0, 0, 0.918, 0, 0, 0, 6.26992, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PrismMesh_o6tet")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_c3yjw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.249658, 0, 0, 0, 1.02202, 0, 0, 0, 0.33398, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_unal2")
