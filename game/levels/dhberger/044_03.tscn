@@ -1,4 +1,4 @@
-[gd_scene load_steps=427 format=3 uid="uid://10qsee0b045g"]
+[gd_scene load_steps=428 format=3 uid="uid://10qsee0b045g"]
 
 [ext_resource type="Texture2D" uid="uid://cfg18pb1aixdi" path="res://levels/dhberger/beijing_Page_044_03.png" id="1_ct01d"]
 [ext_resource type="Texture2D" uid="uid://eg8jumojsr27" path="res://assets/textures/ground/dirt_floor_diff_2k.jpg" id="1_wedfo"]
@@ -19,16 +19,19 @@ size = Vector2(311.05, 256.2)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_i7ioy"]
 data = PackedVector3Array(155.525, 0, 128.1, -155.525, 0, 128.1, 155.525, 0, -128.1, -155.525, 0, 128.1, -155.525, 0, -128.1, 155.525, 0, -128.1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t2r0e"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8l4in"]
 albedo_color = Color(0.45098, 0.435294, 0.415686, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_l686a"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_t2r0e")
+material = SubResource("StandardMaterial3D_8l4in")
 size = Vector3(10, 5, 5)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_laocn"]
 data = PackedVector3Array(-5, 2.5, 2.5, 5, 2.5, 2.5, -5, -2.5, 2.5, 5, 2.5, 2.5, 5, -2.5, 2.5, -5, -2.5, 2.5, 5, 2.5, -2.5, -5, 2.5, -2.5, 5, -2.5, -2.5, -5, 2.5, -2.5, -5, -2.5, -2.5, 5, -2.5, -2.5, 5, 2.5, 2.5, 5, 2.5, -2.5, 5, -2.5, 2.5, 5, 2.5, -2.5, 5, -2.5, -2.5, 5, -2.5, 2.5, -5, 2.5, -2.5, -5, 2.5, 2.5, -5, -2.5, -2.5, -5, 2.5, 2.5, -5, -2.5, 2.5, -5, -2.5, -2.5, 5, 2.5, 2.5, -5, 2.5, 2.5, 5, 2.5, -2.5, -5, 2.5, 2.5, -5, 2.5, -2.5, 5, 2.5, -2.5, -5, -2.5, 2.5, 5, -2.5, 2.5, -5, -2.5, -2.5, 5, -2.5, 2.5, 5, -2.5, -2.5, -5, -2.5, -2.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t2r0e"]
+albedo_color = Color(0.45098, 0.435294, 0.415686, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_udp7e"]
 resource_local_to_scene = true
