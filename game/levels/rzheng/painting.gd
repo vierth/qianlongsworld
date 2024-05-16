@@ -28,6 +28,8 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 		push_error("Failed to load image")
 		return
 		
+	GlobalSingleton.set_painting_image(image)
+	
 	var img_size=image.get_size()
 	var width=img_size[0]
 	var height=img_size[1]
@@ -38,7 +40,6 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 		
 	print(canvas_mesh.mesh.size)
 		
-
 	var texture = ImageTexture.create_from_image(image)
 	var material: BaseMaterial3D = canvas_mesh.get_active_material(0)
 	material.albedo_texture = texture		
@@ -55,14 +56,17 @@ func show_new_painting():
 	list_of_paintings.remove_at(my_random_number)
 	
 func get_size_for_mesh(img_width, img_height):
-	var mesh_width=2
-	var mesh_height=2
+	var mesh_width=3
+	var mesh_height=3
 
 	if img_width>img_height:
-		mesh_width=2
-		mesh_height=(img_height *2.0)/img_width
+		mesh_width=3
+		mesh_height=(img_height *3.0)/img_width
 	elif img_height>img_width:
-		mesh_width=(img_width*2.0)/img_height
-		mesh_height=2
+		mesh_width=(img_width*3.0)/img_height
+		mesh_height=3
 	return [mesh_width, mesh_height]
+	
+func switch_mode():
+	SceneSwitcher.switch_scene("res://levels/rzheng/painting_viewer.tscn")
 	
