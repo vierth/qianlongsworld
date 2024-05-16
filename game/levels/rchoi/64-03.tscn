@@ -138,7 +138,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.128838, 0.511904, -0.01114
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.867142, 32.5374, 3.37669)
 
 [node name="Environment" parent="." instance=ExtResource("2_w38ws")]
-script = null
 
 [node name="terrain" type="StaticBody3D" parent="."]
 
