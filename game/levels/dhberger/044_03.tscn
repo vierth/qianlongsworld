@@ -7,7 +7,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctlfr"]
 albedo_texture = ExtResource("1_wedfo")
-uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pxee"]
 albedo_texture = ExtResource("1_ct01d")

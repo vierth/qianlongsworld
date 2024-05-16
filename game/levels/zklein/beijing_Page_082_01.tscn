@@ -208,7 +208,6 @@ data = PackedVector3Array(-3.5, 3, 3.5, 3.5, 3, 3.5, -3.5, -3, 3.5, 3.5, 3, 3.5,
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4dham"]
 albedo_texture = ExtResource("3_7pmmv")
-uv1_triplanar = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_et0hb"]
 material = SubResource("StandardMaterial3D_4dham")
