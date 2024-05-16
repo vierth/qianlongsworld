@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://swq1rmp8mb1x"]
+
+[ext_resource type="Texture2D" uid="uid://dpw62b7x1f6vk" path="res://levels/rzheng/Alongtheriver_QingMing_half_1_1.jpg" id="1_ax7dl"]
+[ext_resource type="Script" path="res://levels/rzheng/qingming_viewer.gd" id="1_yc176"]
+[ext_resource type="Texture2D" uid="uid://doe4q5jt4i7s2" path="res://levels/rzheng/Alongtheriver_QingMing_half_1_2.jpg" id="2_lbj42"]
+[ext_resource type="Texture2D" uid="uid://escbs0vyad5r" path="res://levels/rzheng/Alongtheriver_QingMing_half_2_1.jpg" id="3_44iqb"]
+[ext_resource type="Texture2D" uid="uid://ig4iebqtk2ep" path="res://levels/rzheng/Alongtheriver_QingMing_half_2_2.jpg" id="4_688bu"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_yc176")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+
+[node name="qingming1" type="Sprite2D" parent="."]
+position = Vector2(-3600.5, 0)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_ax7dl")
+
+[node name="qingming2" type="Sprite2D" parent="."]
+position = Vector2(-1207.5, 0)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_lbj42")
+
+[node name="qingming3" type="Sprite2D" parent="."]
+position = Vector2(1206, 0)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_44iqb")
+
+[node name="qingming4" type="Sprite2D" parent="."]
+position = Vector2(3593, 0)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_688bu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Exit Viewer"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

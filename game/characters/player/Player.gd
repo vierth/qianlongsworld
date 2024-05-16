@@ -55,6 +55,14 @@ func _unhandled_input(event):
 		if gallery_building.get_is_entered():
 			var painting = get_tree().current_scene.get_node("painting")
 			painting.show_new_painting()
+	
+	if event.is_action_pressed("view_painting_mode"):
+		var gallery_building = get_tree().current_scene.get_node("gallery_building")
+		if gallery_building.get_is_entered():
+			var painting = get_tree().current_scene.get_node("painting")
+			painting.switch_mode()
+		else:
+			SceneSwitcher.switch_scene("res://levels/rzheng/qingming_viewer.tscn")
 			
 	#if event.is_action_pressed("interact"):
 		## check for what we are interacting with
