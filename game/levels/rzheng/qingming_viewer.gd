@@ -1,6 +1,5 @@
 extends Node
 
-@onready var painting = $painting
 ########################
 # EXPORT PARAMS
 ########################
@@ -44,11 +43,6 @@ func _input(event: InputEvent) -> void:
 		_last_mouse_position = get_viewport().get_mouse_position()
 	if event.is_action_released("camera_pan"):
 		is_panning = false
-
-func set_sprite_size(img_height):
-	if img_height>900:
-		painting.scale.x=900.0/img_height
-		painting.scale.y=900.0/img_height
 
 func _zoom(delta):
 	if Input.is_action_just_pressed("camera_zoom_in") and zoom_target[0]<=max_zoom:

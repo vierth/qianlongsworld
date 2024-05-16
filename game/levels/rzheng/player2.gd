@@ -50,10 +50,19 @@ func _unhandled_input(event):
 		if speed < 0:
 			speed = 0
 			
-	#if event.is_action_pressed("interact"):
-		## check for what we are interacting with
-		#
-		#print(SqlController.get_item_data(1))
+	if event.is_action_pressed("show_new_painting"):	
+		var gallery_building = get_tree().current_scene.get_node("gallery_building")
+		if gallery_building.get_is_entered():
+			var painting = get_tree().current_scene.get_node("painting")
+			painting.show_new_painting()
+	
+	if event.is_action_pressed("view_painting_mode"):
+		var gallery_building = get_tree().current_scene.get_node("gallery_building")
+		if gallery_building.get_is_entered():
+			var painting = get_tree().current_scene.get_node("painting")
+			painting.switch_mode()
+		else:
+			SceneSwitcher.switch_scene("res://levels/rzheng/qingming_viewer.tscn")
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -101,6 +110,4 @@ func _process(_delta):
 			if observed != null :	
 				pass
 			observed = coll2
-	
-func player():
-	pass
+
