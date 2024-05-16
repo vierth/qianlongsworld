@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://bjtwfg4q8hcm0"]
 
 [ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="1_3hkc6"]
-[ext_resource type="Material" path="res://levels/zzeng/flooring.tres" id="1_8t2eo"]
+[ext_resource type="Material" uid="uid://d08u1sqi3l0gj" path="res://levels/zzeng/flooring.tres" id="1_8t2eo"]
 [ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://levels/sheckstall/assets/prefabs/environments/environment.tscn" id="2_dbfs5"]
 [ext_resource type="PackedScene" uid="uid://ruigj6ttxwlv" path="res://assets/models/walls/Hutong Wall vedits.glb" id="4_jwonn"]
-[ext_resource type="PackedScene" path="res://levels/zzeng/building_temp.tscn" id="5_j34m0"]
+[ext_resource type="PackedScene" uid="uid://wujp1w0oppas" path="res://levels/zzeng/building_temp.tscn" id="5_j34m0"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_t7x6t"]
 material = ExtResource("1_8t2eo")

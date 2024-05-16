@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://cpmvj4478hmdi"]
 
-[ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://assets/prefabs/environments/environment.tscn" id="1_nm6on"]
+[ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://levels/sheckstall/assets/prefabs/environments/environment.tscn" id="1_nm6on"]
 [ext_resource type="Texture2D" uid="uid://d340vp5q7spwv" path="res://levels/rzheng/map_tile/bake_color2_4k.png" id="2_4w6wj"]
 [ext_resource type="Texture2D" uid="uid://blxwf5fm6bjec" path="res://levels/rzheng/map_tile/bake_normal_4k.png" id="3_m8d3x"]
 [ext_resource type="Texture2D" uid="uid://dgn4wa1ym8uxk" path="res://levels/rzheng/map_tile/bake_rough_4k.png" id="4_tbhr1"]
@@ -39,7 +39,6 @@ data = PackedVector3Array(155.602, 0, 128.102, -155.602, 0, 128.102, 155.602, 0,
 [node name="Node3D2" type="Node3D"]
 
 [node name="Environment" parent="." instance=ExtResource("1_nm6on")]
-day_time = 7.5689
 
 [node name="terrain_textured" type="StaticBody3D" parent="."]
 
