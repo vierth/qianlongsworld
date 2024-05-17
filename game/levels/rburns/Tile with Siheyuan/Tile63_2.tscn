@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ptr5v6jhomto"]
+[gd_scene load_steps=29 format=3 uid="uid://ptr5v6jhomto"]
 
 [ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="1_sbft0"]
 [ext_resource type="Texture2D" uid="uid://ckffhcxqiqd06" path="res://levels/rburns/textures/cobblestone_05_diff_2k.jpg" id="2_irf6t"]
@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://djn20t0fg3blh" path="res://levels/rburns/buildings/1bldg.tscn" id="9_8pl71"]
 [ext_resource type="PackedScene" uid="uid://7q7rv0peopav" path="res://levels/rburns/assets/door.tscn" id="10_y665c"]
 [ext_resource type="PackedScene" uid="uid://bpduk82dgyom0" path="res://components/scene_switcher.tscn" id="15_3guw0"]
+[ext_resource type="PackedScene" uid="uid://c3a6hgfpe5uid" path="res://levels/rburns/Tile with Siheyuan/final_project_1.tscn" id="16_cuc41"]
+[ext_resource type="PackedScene" uid="uid://culvo73ud3x6j" path="res://assets/models/trees/willow.glb" id="17_3q2on"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dwtgj"]
 sky_top_color = Color(0.14902, 0.364706, 1, 1)
@@ -64,7 +66,7 @@ data = PackedVector3Array(-6.75, 1.5, 0.5, 6.75, 1.5, 0.5, -6.75, -1.5, 0.5, 6.7
 environment = SubResource("Environment_18re3")
 
 [node name="player" parent="." instance=ExtResource("1_sbft0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -149.856, 1.29643, -19.6016)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -133.136, 3.10521, -17.8565)
 warp_location = Vector3(2.08165e-12, 20, 2.08165e-12)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -484,9 +486,6 @@ transform = Transform3D(1.73888, 0, 0, 0, 1, 0, 0, 0, 1.95642, 82.8619, 0, -76.8
 [node name="5-Long-Building25" type="Node3D" parent="Buildings/5 Long"]
 transform = Transform3D(1.35196, 0, 0, 0, 1, 0, 0, 0, 1.49803, -148.626, 0, 20.3721)
 
-[node name="5Building" parent="Buildings/5 Long/5-Long-Building25" instance=ExtResource("4_15721")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.394188, 0, 0.930734)
-
 [node name="5-Long-Building28" type="Node3D" parent="Buildings/5 Long"]
 transform = Transform3D(1.35145, -9.96866e-08, -0.0412525, 1.34772e-07, 1, -2.0567e-09, 0.03723, -1.37293e-09, 1.49746, 141.579, 0, 114.987)
 
@@ -532,9 +531,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.752861, 0, -0.0941076)
 
 [node name="5-Long-Building6" type="Node3D" parent="Buildings/5 Long"]
 transform = Transform3D(1.53173, 0, -0.0238405, 0, 1, 0, 0.0219498, 0, 1.66366, -152.728, 0.00012207, 2.82432)
-
-[node name="5Building" parent="Buildings/5 Long/5-Long-Building6" instance=ExtResource("4_15721")]
-transform = Transform3D(1, 0, -2.79397e-09, 0, 1, 0, 1.86265e-09, 0, 1, -0.00285339, 0, -0.183249)
 
 [node name="5-Long-Building7" type="Node3D" parent="Buildings/5 Long"]
 transform = Transform3D(1.291, 0, 0, 0, 1, 0, 0, 0, 2.34, -133.674, 0, 65.4784)
@@ -1458,12 +1454,8 @@ transform = Transform3D(0.999948, 0, -0.0101576, 0, 1, 0, 0.0101576, 0, 0.999948
 [node name="3-Long-Building135" type="Node3D" parent="Buildings/3 Long"]
 transform = Transform3D(-4.00709e-08, 0, 1, 0, 1, 0, -0.916715, 0, -4.37114e-08, -107.292, 0, -43.6109)
 
-[node name="StaticBody3D" parent="Buildings/3 Long/3-Long-Building135" instance=ExtResource("7_mq4ck")]
-
 [node name="3-Long-Building136" type="Node3D" parent="Buildings/3 Long"]
 transform = Transform3D(-3.91817e-08, 0, 1, 0, 1, 0, -0.896373, 0, -4.37114e-08, -122.728, 0, -43.8655)
-
-[node name="StaticBody3D" parent="Buildings/3 Long/3-Long-Building136" instance=ExtResource("7_mq4ck")]
 
 [node name="3-Long-Building137" type="Node3D" parent="Buildings/3 Long"]
 transform = Transform3D(-3.37315e-08, 0, 1, 0, 1, 0, -0.771687, 0, -4.37114e-08, -73.8357, 0, 27.2065)
@@ -6562,12 +6554,6 @@ transform = Transform3D(1.01593, 0, 0, 0, 1, 0, 0, 0, 1, -105.316, 0, -39.712)
 [node name="Door149" parent="Assets" instance=ExtResource("10_y665c")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -98.9945, 0, -28.9021)
 
-[node name="Door150" parent="Assets" instance=ExtResource("10_y665c")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -135.874, 0, -18.7724)
-
-[node name="Door151" parent="Assets" instance=ExtResource("10_y665c")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -139.169, 0, -29.6102)
-
 [node name="Door181" parent="Assets" instance=ExtResource("10_y665c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.38, 0, 123.232)
 
@@ -6585,9 +6571,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.195, 0, 106.703)
 
 [node name="Door186" parent="Assets" instance=ExtResource("10_y665c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.242, 0, 106.703)
-
-[node name="Door152" parent="Assets" instance=ExtResource("10_y665c")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -139.169, 0, -31.1737)
 
 [node name="Door153" parent="Assets" instance=ExtResource("10_y665c")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.1796, 0, -26.3898)
@@ -6763,6 +6746,20 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 111.60
 [node name="Door6" parent="Assets" instance=ExtResource("10_y665c")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.63644, 0, -99.2648)
 
-[node name="SceneSwitchZone" parent="." instance=ExtResource("15_3guw0")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -136.005, 1.06319, -17.4044)
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(-2.51209e-07, 0, -0.166795, 0, 1.27118, 0, 5.747, 0, -7.29083e-09, -140.556, 0.783399, -44.2598)
+
+[node name="SceneSwitchZone" parent="Node3D" instance=ExtResource("15_3guw0")]
 destination_scene = "res://levels/rburns/Zheng Fang Interior/ZhengFangInside.tscn"
+
+[node name="FinalProject1" parent="." instance=ExtResource("16_cuc41")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -140.54, 0.126215, -39.1384)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("17_3q2on")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -143.954, 0.00119905, -39.5095)
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("17_3q2on")]
+transform = Transform3D(0.398957, 0, -0.91697, 0, 1, 0, 0.91697, 0, 0.398957, -136.974, 0.00120191, -40.0811)
+
+[node name="Sketchfab_Scene3" parent="." instance=ExtResource("17_3q2on")]
+transform = Transform3D(-0.801682, 0, 0.597751, 0, 1, 0, -0.597751, 0, -0.801682, -148.863, 0.00119905, -27.3505)
