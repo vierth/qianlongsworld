@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://bgvwfmeiys8hq"]
 
 [ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="1_5cng4"]
-[ext_resource type="Texture2D" path="res://levels/iachang/beijing_Page_046_02.png" id="2_edk3f"]
+[ext_resource type="Texture2D" uid="uid://6bfo85exp84u" path="res://levels/iachang/beijing_Page_046_02.png" id="2_edk3f"]
 [ext_resource type="PackedScene" uid="uid://ruigj6ttxwlv" path="res://assets/models/walls/Hutong Wall vedits.glb" id="3_1q0bl"]
 [ext_resource type="Texture2D" uid="uid://eg8jumojsr27" path="res://assets/textures/ground/dirt_floor_diff_2k.jpg" id="3_cehlh"]
-[ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://assets/prefabs/environments/environment.tscn" id="5_4ebiy"]
+[ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://levels/sheckstall/assets/prefabs/environments/environment.tscn" id="5_4ebiy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2nppw"]
 albedo_texture = ExtResource("2_edk3f")
