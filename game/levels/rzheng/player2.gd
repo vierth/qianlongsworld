@@ -43,12 +43,7 @@ func _unhandled_input(event):
 			neck.rotate_y(-event.relative.x * 0.01)
 			active_cam.rotate_x(-event.relative.y * 0.01)
 			active_cam.rotation.x = clamp(active_cam.rotation.x, deg_to_rad(-60), deg_to_rad(90))
-	if event.is_action_pressed("speed_up"):
-		speed += 1
-	if event.is_action_pressed("speed_down"):
-		speed -= 1
-		if speed < 0:
-			speed = 0
+
 			
 	if event.is_action_pressed("show_new_painting"):	
 		var gallery_building = get_tree().current_scene.get_node("gallery_building")
