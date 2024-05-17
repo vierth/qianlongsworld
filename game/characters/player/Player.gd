@@ -111,10 +111,7 @@ func _physics_process(delta):
 			velocity.y = 0
 
 		move_and_slide()
-	else:
-		# Add the gravity.
-		if not is_on_floor():
-			velocity.y -= gravity * delta
+	
 
 	if Settings.current_scene == "res://levels/GUI/pausescreen/pause_screen.tscn":
 		Settings.current_scene = scene_file_path
