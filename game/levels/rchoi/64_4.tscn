@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://gt3alfuhbpqs"]
 
-[ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://assets/prefabs/environments/environment.tscn" id="1_oeoin"]
+[ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://levels/sheckstall/assets/prefabs/environments/environment.tscn" id="1_oeoin"]
 [ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="2_gxm11"]
 [ext_resource type="Texture2D" uid="uid://eg8jumojsr27" path="res://assets/textures/ground/dirt_floor_diff_2k.jpg" id="3_ir7ow"]
 [ext_resource type="Texture2D" uid="uid://ch7nqpni8cscn" path="res://assets/models/walls/Hutong Wall vedits_base_color_hutong.jpg" id="4_kwjos"]
@@ -72,8 +72,6 @@ shadow_mesh = SubResource("ArrayMesh_80h4j")
 [node name="Node3D2" type="Node3D"]
 
 [node name="Environment" parent="." instance=ExtResource("1_oeoin")]
-day_time = 7.3108
-time_scale = 0.1
 
 [node name="Player" parent="." instance=ExtResource("2_gxm11")]
 
