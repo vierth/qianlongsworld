@@ -1,7 +1,7 @@
 [gd_scene load_steps=39 format=3 uid="uid://c0ofdmei1etee"]
 
 [ext_resource type="Texture2D" uid="uid://wfhmmtmhnmkf" path="res://levels/sheckstall/assets/dirty dirt.png" id="3_i8w7t"]
-[ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://assets/prefabs/environments/environment.tscn" id="4_mkxhs"]
+[ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://levels/sheckstall/assets/prefabs/environments/environment.tscn" id="4_mkxhs"]
 [ext_resource type="PackedScene" uid="uid://bt7rkmheto3ed" path="res://levels/sheckstall/template.tscn" id="4_yc4kg"]
 [ext_resource type="PackedScene" uid="uid://bavcm1n03hrtg" path="res://levels/sheckstall/mediumbuildings.tscn" id="5_7q6ya"]
 [ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="5_bga72"]

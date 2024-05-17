@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://co13b30ojsybm"]
+
+[ext_resource type="Script" path="res://levels/rzheng/painting_viewer.gd" id="1_v5qhg"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_v5qhg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="painting" type="Sprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Exit Viewer"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
