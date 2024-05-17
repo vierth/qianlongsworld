@@ -11,8 +11,10 @@ var active_cam = main_cam
 
 
 
+
 var speed = Settings.player_speed
 var sens = Settings.mouse_sensitivity
+
 const JUMP_VELOCITY = 4.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -29,11 +31,8 @@ func switch_camera():
 	active_cam = main_cam if is_main_camera_active else secondary_cam
 
 
-
 # set up mouse handling
 func _unhandled_input(event):
-	
-	
 	if active_cam == null:
 		active_cam = main_cam
 	if event.is_action_pressed("switch_camera"):
@@ -117,7 +116,6 @@ func _process(_delta):
 			if observed != null :	
 				pass
 			observed = coll2
-		
-
+	
 func player():
 	pass
