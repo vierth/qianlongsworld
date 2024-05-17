@@ -11,9 +11,7 @@ config_version=5
 [application]
 
 config/name="Game"
-
 run/main_scene="res://levels/GUI/titlescreen/title_screen.tscn"
-
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,9 +21,7 @@ SceneSwitcher="*res://autoloadscripts/scene_switcher.gd"
 SqlController="*res://autoloadscripts/sql_controller.gd"
 Settings="*res://autoloadscripts/Settings.gd"
 GameState="*res://autoloadscripts/GameState.gd"
-
 GlobalSingleton="*res://autoloadscripts/GlobalSingleton.gd"
-
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
