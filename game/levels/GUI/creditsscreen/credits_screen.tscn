@@ -1,0 +1,1676 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2jvqc6nvnrso"]
+
+[ext_resource type="FontFile" uid="uid://c5pa5j5xqjyac" path="res://assets/fonts/DMSerifDisplay-Italic.ttf" id="1_ca6bm"]
+[ext_resource type="Script" path="res://levels/GUI/creditsscreen/credits_screen.gd" id="1_jt5as"]
+[ext_resource type="FontFile" uid="uid://b5nu84rp3nks6" path="res://assets/fonts/DMSerifDisplay-Regular.ttf" id="2_otjji"]
+[ext_resource type="Script" path="res://levels/GUI/settingsscreen/ReturnButton.gd" id="3_miww5"]
+
+[node name="CreditsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jt5as")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.270588, 0.270588, 0.270588, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.0
+offset_top = -265.0
+offset_right = 575.0
+offset_bottom = 265.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.252027, 0.252028, 0.252028, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -563.5
+offset_top = -255.0
+offset_right = 563.5
+offset_bottom = 255.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.344076, 0.344076, 0.344076, 1)
+
+[node name="CreditsLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -233.5
+offset_right = 233.5
+offset_bottom = 248.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 20
+theme_override_fonts/normal_font = ExtResource("1_ca6bm")
+theme_override_fonts/italics_font = ExtResource("1_ca6bm")
+theme_override_font_sizes/normal_font_size = 150
+theme_override_font_sizes/italics_font_size = 180
+text = "Credits"
+fit_content = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -563.5
+offset_top = -255.0
+offset_right = 563.5
+offset_bottom = 255.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer"]
+custom_minimum_size = Vector2(1127, 500)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Paul Vierthaler"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Rija Masroor"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Rhea Vidyababu"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Zachary Klein"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer4/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer4/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer4/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer4/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Zupeng Zeng"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer5"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer5/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer5/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer5/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer5/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Shamsallah Ahmadzai"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer6"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer6/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer6/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer6/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer6/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Ingrid Chang"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer7"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer7/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer7/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer7/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer7/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer8"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Isabel Li"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer8"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer8/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer8/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer8/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer8/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer8"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer8"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer9"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Andy Shufer"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer9"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer9/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer9/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer9/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer9/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer9"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer9"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer10"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "David Berger"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer10"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer10/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer10/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer10/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer10/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer10"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer10"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer11" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer11"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Neel Davuluri"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer11"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer11/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer11/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer11/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer11/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer11"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer11"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer12" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer12"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Maxim Sarciaux"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer12"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer12/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer12/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer12/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer12/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer12"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer12"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer13" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer13"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Emily Yu"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer13"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer13/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer13/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer13/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer13/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer13"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer13"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer14" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer14"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Jing Li"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer14"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer14/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer14/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer14/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer14/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer14"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer14"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer15" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer15"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Russell Burns"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer15"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer15/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer15/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer15/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer15/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer15"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer15"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer16" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer16"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Bruke Amare"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer16"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer16/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer16/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer16/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer16/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer16"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer16"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer17" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer17"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Ryan Choi"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer17"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer17/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer17/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer17/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer17/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer17"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer17"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer18" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer18"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Sa'nia Heckstall"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer18"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer18/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer18/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer18/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer18/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer18"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer18"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer19" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer19"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Trung Nguyen"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer19"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer19/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer19/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer19/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer19/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer19"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer19"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer20" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer20"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Jessica Johnson"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer20"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer20/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer20/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer20/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer20/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer20"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer20"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer21" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer21"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Rachel Zheng"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer21"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer21/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer21/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer21/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer21/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer21"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer21"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer22" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer22"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Sarah Brownstein"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer22"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer22/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer22/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer22/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer22/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer22"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer22"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="HBoxContainer23" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Contributor" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer23"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Hudson Fortney"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer23"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer23/ScrollContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Item1" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer23/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item1"
+
+[node name="Item2" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer23/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item2"
+
+[node name="Item3" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer23/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 25
+text = "Item3"
+
+[node name="License" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer23"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "License"
+
+[node name="Source" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer23"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.941176, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 35
+text = "Source"
+
+[node name="ReturnButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -161.0
+offset_top = -209.0
+offset_right = 162.0
+offset_bottom = -102.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_otjji")
+theme_override_font_sizes/font_size = 60
+text = "Return"
+script = ExtResource("3_miww5")
+
+[connection signal="button_down" from="ReturnButton" to="." method="_on_return_button_button_down"]

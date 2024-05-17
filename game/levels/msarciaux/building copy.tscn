@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://iey5gd8y8e3d"]
+
+[ext_resource type="Texture2D" uid="uid://magfoyr1jkxd" path="res://5wall_texture_big_100405.jpg" id="1_hq1w1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mq5l8"]
+albedo_texture = ExtResource("1_hq1w1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yf64h"]
+uv1_scale = Vector3(2, 2, 2)
+uv1_offset = Vector3(1.11, 0, 0)
+uv2_scale = Vector3(1.66, 1.66, 1.66)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kyy03"]
+material = SubResource("StandardMaterial3D_yf64h")
+custom_aabb = AABB(0, 2.56, 0, 0, 1.5, 0)
+uv2_padding = 2.36
+size = Vector3(10, 4, 10)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_wxmbc"]
+data = PackedVector3Array(-5, 2, 5, 5, 2, 5, -5, -2, 5, 5, 2, 5, 5, -2, 5, -5, -2, 5, 5, 2, -5, -5, 2, -5, 5, -2, -5, -5, 2, -5, -5, -2, -5, 5, -2, -5, 5, 2, 5, 5, 2, -5, 5, -2, 5, 5, 2, -5, 5, -2, -5, 5, -2, 5, -5, 2, -5, -5, 2, 5, -5, -2, -5, -5, 2, 5, -5, -2, 5, -5, -2, -5, 5, 2, 5, -5, 2, 5, 5, 2, -5, -5, 2, 5, -5, 2, -5, 5, 2, -5, -5, -2, 5, 5, -2, 5, -5, -2, -5, 5, -2, 5, 5, -2, -5, -5, -2, -5)
+
+[node name="Building" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+material_override = SubResource("StandardMaterial3D_mq5l8")
+mesh = SubResource("BoxMesh_kyy03")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_wxmbc")

@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://841w0sv8tvjr"]
+
+[sub_resource type="Gradient" id="Gradient_fpcwd"]
+colors = PackedColorArray(0, 0, 0.439216, 1, 0, 0, 0.223529, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_y1dsw"]
+gradient = SubResource("Gradient_fpcwd")
+fill_from = Vector2(1, 0.510989)
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_3vbo2"]
+night_sky = SubResource("GradientTexture2D_y1dsw")
+
+[sub_resource type="Sky" id="Sky_3qwpf"]
+sky_material = SubResource("PhysicalSkyMaterial_3vbo2")
+
+[sub_resource type="Environment" id="Environment_07qps"]
+background_mode = 2
+sky = SubResource("Sky_3qwpf")
+
+[sub_resource type="Animation" id="Animation_twvx4"]
+resource_name = "DayCycler"
+length = 600.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnvironmentLight:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 600),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(6.28319, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_p66y0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnvironmentLight:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(6.28319, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f3x8w"]
+_data = {
+"DayCycler": SubResource("Animation_twvx4"),
+"RESET": SubResource("Animation_p66y0")
+}
+
+[node name="DayCycle" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_07qps")
+
+[node name="EnvironmentLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_f3x8w")
+}
+autoplay = "DayCycler"

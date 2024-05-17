@@ -3,12 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://cwgnycma6qqbx" path="res://assets/textures/roads/cobblestone/cobblestone_floor_08_diff_2k.jpg" id="1_7mm4m"]
 [ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="1_gyeyk"]
 [ext_resource type="Script" path="res://levels/main/main.gd" id="1_h0s2j"]
+[ext_resource type="PackedScene" uid="uid://841w0sv8tvjr" path="res://assets/prefabs/environments/day_cycle.tscn" id="2_sxdrj"]
 [ext_resource type="Texture2D" uid="uid://bun0npkhy1ilj" path="res://assets/textures/roads/cobblestone/cobblestone_floor_08_nor_gl_2k.jpg" id="2_u2tk3"]
-[ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://assets/prefabs/environments/environment.tscn" id="4_vvj20"]
+
 [ext_resource type="PackedScene" uid="uid://bpduk82dgyom0" path="res://components/scene_switcher.tscn" id="6_o8urw"]
 [ext_resource type="PackedScene" uid="uid://dl15j5ugxwd6b" path="res://characters/npcs/emperors/qianlongemperor.tscn" id="7_gwg1r"]
 [ext_resource type="PackedScene" uid="uid://culvo73ud3x6j" path="res://assets/models/trees/willow.glb" id="8_s2fmk"]
-[ext_resource type="PackedScene" uid="uid://bkq5l6o7clkjp" path="res://characters/generic_npc.tscn" id="9_s4nyb"]
+[ext_resource type="PackedScene" path="res://characters/generic_npc.tscn" id="9_s4nyb"]
 [ext_resource type="PackedScene" uid="uid://bxe2m06hdgsrt" path="res://assets/models/statues/round_mendun.blend" id="10_2l2f1"]
 [ext_resource type="PackedScene" uid="uid://busnh818u4yud" path="res://assets/models/kitchenware/bowl2.glb" id="11_tth01"]
 [ext_resource type="PackedScene" uid="uid://crrxgvfgo2urp" path="res://assets/models/kitchenware/chineseSpoon/chinese_spoony.blend" id="12_c1o7s"]
@@ -56,9 +57,10 @@ size = Vector3(20, 1, 1)
 [node name="World" type="Node3D"]
 script = ExtResource("1_h0s2j")
 
-[node name="Environment" parent="." instance=ExtResource("4_vvj20")]
-day_time = 7.3108
-time_scale = 0.1
+
+[node name="DayCycle" parent="." instance=ExtResource("2_sxdrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
 
 [node name="Terrain" type="StaticBody3D" parent="."]
 

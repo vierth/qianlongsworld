@@ -1,1 +1,6 @@
 .DS_Store
+game/levels/dhberger/Player.gd
+game/assets/textures/grey_plaster_02_nor_gl_8k.exr
+game/assets/textures/grey_roof_tiles_nor_gl_8k.exr
+game/assets/textures/grey_roof_tiles_nor_gl_8k.exr
+game/assets/textures/white_sandstone_blocks_02_nor_gl_8k.exr

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://7q7rv0peopav"]
+
+[ext_resource type="Texture2D" uid="uid://b0xlouc7hhos5" path="res://textures/wooden_garage_door_diff_4k.jpg" id="1_oqssr"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_k5bhv"]
+albedo_texture = ExtResource("1_oqssr")
+uv1_scale = Vector3(10, 10, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2wolq"]
+material = SubResource("ORMMaterial3D_k5bhv")
+size = Vector3(0.1, 1.8, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4x0rf"]
+data = PackedVector3Array(-0.05, 0.9, 0.5, 0.05, 0.9, 0.5, -0.05, -0.9, 0.5, 0.05, 0.9, 0.5, 0.05, -0.9, 0.5, -0.05, -0.9, 0.5, 0.05, 0.9, -0.5, -0.05, 0.9, -0.5, 0.05, -0.9, -0.5, -0.05, 0.9, -0.5, -0.05, -0.9, -0.5, 0.05, -0.9, -0.5, 0.05, 0.9, 0.5, 0.05, 0.9, -0.5, 0.05, -0.9, 0.5, 0.05, 0.9, -0.5, 0.05, -0.9, -0.5, 0.05, -0.9, 0.5, -0.05, 0.9, -0.5, -0.05, 0.9, 0.5, -0.05, -0.9, -0.5, -0.05, 0.9, 0.5, -0.05, -0.9, 0.5, -0.05, -0.9, -0.5, 0.05, 0.9, 0.5, -0.05, 0.9, 0.5, 0.05, 0.9, -0.5, -0.05, 0.9, 0.5, -0.05, 0.9, -0.5, 0.05, 0.9, -0.5, -0.05, -0.9, 0.5, 0.05, -0.9, 0.5, -0.05, -0.9, -0.5, 0.05, -0.9, 0.5, 0.05, -0.9, -0.5, -0.05, -0.9, -0.5)
+
+[node name="Door" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource("BoxMesh_2wolq")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("ConcavePolygonShape3D_4x0rf")

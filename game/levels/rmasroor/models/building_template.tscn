@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://e54obf0qd71r"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_la440"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ri1i"]
+albedo_color = Color(0.439216, 0.227451, 0.113725, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0nwgv"]
+material = SubResource("StandardMaterial3D_1ri1i")
+size = Vector3(10, 4, 30)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2hxa6"]
+data = PackedVector3Array(-5, 2, 15, 5, 2, 15, -5, -2, 15, 5, 2, 15, 5, -2, 15, -5, -2, 15, 5, 2, -15, -5, 2, -15, 5, -2, -15, -5, 2, -15, -5, -2, -15, 5, -2, -15, 5, 2, 15, 5, 2, -15, 5, -2, 15, 5, 2, -15, 5, -2, -15, 5, -2, 15, -5, 2, -15, -5, 2, 15, -5, -2, -15, -5, 2, 15, -5, -2, 15, -5, -2, -15, 5, 2, 15, -5, 2, 15, 5, 2, -15, -5, 2, 15, -5, 2, -15, 5, 2, -15, -5, -2, 15, 5, -2, 15, -5, -2, -15, 5, -2, 15, 5, -2, -15, -5, -2, -15)
+
+[node name="BuildingTemplate" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_la440")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_0nwgv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_2hxa6")

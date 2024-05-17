@@ -1,0 +1,127 @@
+[gd_scene load_steps=25 format=3 uid="uid://dpkjos3a2moao"]
+
+[ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://levels/sheckstall/assets/prefabs/environments/environment.tscn" id="1_pknsc"]
+[ext_resource type="Script" path="res://levels/rzheng/dynamic_gallery_3d.gd" id="1_rjoo1"]
+[ext_resource type="PackedScene" uid="uid://bofsn7egn1vcy" path="res://levels/rzheng/player2.tscn" id="2_antt4"]
+[ext_resource type="PackedScene" uid="uid://d2ikbbn66e3ai" path="res://levels/rzheng/painting.tscn" id="3_risvl"]
+[ext_resource type="PackedScene" uid="uid://usd15divgbar" path="res://levels/rzheng/gallery_building.tscn" id="4_au07y"]
+[ext_resource type="Texture2D" uid="uid://dpw62b7x1f6vk" path="res://levels/rzheng/Alongtheriver_QingMing_half_1_1.jpg" id="6_uorch"]
+[ext_resource type="Texture2D" uid="uid://doe4q5jt4i7s2" path="res://levels/rzheng/Alongtheriver_QingMing_half_1_2.jpg" id="7_v35eu"]
+[ext_resource type="Texture2D" uid="uid://escbs0vyad5r" path="res://levels/rzheng/Alongtheriver_QingMing_half_2_1.jpg" id="8_oouxy"]
+[ext_resource type="Texture2D" uid="uid://ig4iebqtk2ep" path="res://levels/rzheng/Alongtheriver_QingMing_half_2_2.jpg" id="9_hqqmh"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wg5e1"]
+size = Vector2(50, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ncp57"]
+albedo_color = Color(0.886275, 0.772549, 0.756863, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_yuffc"]
+data = PackedVector3Array(25, 0, 25, -25, 0, 25, 25, 0, -25, -25, 0, 25, -25, 0, -25, 25, 0, -25)
+
+[sub_resource type="QuadMesh" id="QuadMesh_hv20t"]
+size = Vector2(9.61, 1.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ld5j4"]
+albedo_texture = ExtResource("6_uorch")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5mmlu"]
+data = PackedVector3Array(4.805, -0.9, 0, -4.805, -0.9, 0, 4.805, 0.9, 0, -4.805, -0.9, 0, -4.805, 0.9, 0, 4.805, 0.9, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_hlyim"]
+size = Vector2(9.66, 1.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g1k3i"]
+albedo_texture = ExtResource("7_v35eu")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_wsuqq"]
+data = PackedVector3Array(4.83, -0.9, 0, -4.83, -0.9, 0, 4.83, 0.9, 0, -4.83, -0.9, 0, -4.83, 0.9, 0, 4.83, 0.9, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_8mcvl"]
+size = Vector2(9.646, 1.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mujdh"]
+albedo_texture = ExtResource("8_oouxy")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ap5v1"]
+data = PackedVector3Array(4.823, -0.9, 0, -4.823, -0.9, 0, 4.823, 0.9, 0, -4.823, -0.9, 0, -4.823, 0.9, 0, 4.823, 0.9, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_j8tcv"]
+size = Vector2(9.67, 1.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rky15"]
+albedo_texture = ExtResource("9_hqqmh")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_f3bji"]
+data = PackedVector3Array(4.835, -0.9, 0, -4.835, -0.9, 0, 4.835, 0.9, 0, -4.835, -0.9, 0, -4.835, 0.9, 0, 4.835, 0.9, 0)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_rjoo1")
+
+[node name="Environment" parent="." instance=ExtResource("1_pknsc")]
+
+[node name="floor" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
+mesh = SubResource("PlaneMesh_wg5e1")
+surface_material_override/0 = SubResource("StandardMaterial3D_ncp57")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+shape = SubResource("ConcavePolygonShape3D_yuffc")
+
+[node name="Player2" parent="." instance=ExtResource("2_antt4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.32393, 0.865, 11.5512)
+
+[node name="painting" parent="." instance=ExtResource("3_risvl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1.7)
+
+[node name="gallery_building" parent="." instance=ExtResource("4_au07y")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="qingming" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="qingming_1" type="StaticBody3D" parent="qingming"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="qingming/qingming_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 1.5, -14)
+mesh = SubResource("QuadMesh_hv20t")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ld5j4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="qingming/qingming_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 1.5, -14)
+shape = SubResource("ConcavePolygonShape3D_5mmlu")
+
+[node name="qingming_2" type="StaticBody3D" parent="qingming"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="qingming/qingming_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.43, 1.5, -14)
+mesh = SubResource("QuadMesh_hlyim")
+surface_material_override/0 = SubResource("StandardMaterial3D_g1k3i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="qingming/qingming_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.43, 1.5, -14)
+shape = SubResource("ConcavePolygonShape3D_wsuqq")
+
+[node name="qingming_3" type="StaticBody3D" parent="qingming"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="qingming/qingming_3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.777, 1.5, -14)
+mesh = SubResource("QuadMesh_8mcvl")
+surface_material_override/0 = SubResource("StandardMaterial3D_mujdh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="qingming/qingming_3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.777, 1.5, -14)
+shape = SubResource("ConcavePolygonShape3D_ap5v1")
+
+[node name="qingming_4" type="StaticBody3D" parent="qingming"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="qingming/qingming_4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.77, 1.5, -14)
+mesh = SubResource("QuadMesh_j8tcv")
+surface_material_override/0 = SubResource("StandardMaterial3D_rky15")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="qingming/qingming_4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.77, 1.5, -14)
+shape = SubResource("ConcavePolygonShape3D_f3bji")

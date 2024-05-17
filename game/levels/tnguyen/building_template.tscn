@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ck82bs7nyn8pj"]
+
+[ext_resource type="Texture2D" uid="uid://dk3qmmotkqj12" path="res://levels/tnguyen/textures/buildingtexture.jpeg" id="1_y5arm"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vvqtx"]
+size = Vector3(30, 10, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c52tl"]
+albedo_texture = ExtResource("1_y5arm")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ppxws"]
+data = PackedVector3Array(-15, 5, 2.5, 15, 5, 2.5, -15, -5, 2.5, 15, 5, 2.5, 15, -5, 2.5, -15, -5, 2.5, 15, 5, -2.5, -15, 5, -2.5, 15, -5, -2.5, -15, 5, -2.5, -15, -5, -2.5, 15, -5, -2.5, 15, 5, 2.5, 15, 5, -2.5, 15, -5, 2.5, 15, 5, -2.5, 15, -5, -2.5, 15, -5, 2.5, -15, 5, -2.5, -15, 5, 2.5, -15, -5, -2.5, -15, 5, 2.5, -15, -5, 2.5, -15, -5, -2.5, 15, 5, 2.5, -15, 5, 2.5, 15, 5, -2.5, -15, 5, 2.5, -15, 5, -2.5, 15, 5, -2.5, -15, -5, 2.5, 15, -5, 2.5, -15, -5, -2.5, 15, -5, 2.5, 15, -5, -2.5, -15, -5, -2.5)
+
+[node name="BuildingTemplate" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_vvqtx")
+surface_material_override/0 = SubResource("StandardMaterial3D_c52tl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ppxws")

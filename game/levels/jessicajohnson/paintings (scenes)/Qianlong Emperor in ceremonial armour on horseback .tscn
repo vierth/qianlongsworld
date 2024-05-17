@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://yqku2cc524jc"]
+
+[ext_resource type="Texture2D" uid="uid://bcllccd44ynxg" path="res://levels/jessicajohnson/paintings (jpgs and pngs)/清人画弘历戎装骑马像轴.png" id="1_f1akl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mci24"]
+albedo_texture = ExtResource("1_f1akl")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_t567c"]
+material = SubResource("StandardMaterial3D_mci24")
+size = Vector2(2.32, 3.325)
+orientation = 2
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_t567c")

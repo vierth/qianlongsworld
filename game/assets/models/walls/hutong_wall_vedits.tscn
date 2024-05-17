@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd7efr5as4lrw"]
+
+[ext_resource type="PackedScene" uid="uid://ruigj6ttxwlv" path="res://assets/models/walls/Hutong Wall vedits.glb" id="1_u0tiu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_38e55"]
+size = Vector3(0.874451, 2.40105, 2.82169)
+
+[node name="Hutong Wall vedits" instance=ExtResource("1_u0tiu")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00698853, 1.17524, 0.00196838)
+shape = SubResource("BoxShape3D_38e55")

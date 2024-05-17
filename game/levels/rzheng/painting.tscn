@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2ikbbn66e3ai"]
+
+[ext_resource type="Script" path="res://levels/rzheng/painting.gd" id="1_7d4e0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fwex7"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ndq5s"]
+lightmap_size_hint = Vector2i(12, 12)
+material = SubResource("StandardMaterial3D_fwex7")
+add_uv2 = true
+size = Vector2(2, 2)
+
+[node name="painting" type="Node3D"]
+script = ExtResource("1_7d4e0")
+
+[node name="painting" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("QuadMesh_ndq5s")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

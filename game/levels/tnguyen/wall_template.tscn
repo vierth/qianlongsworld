@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsiqk5x6yh1ui"]
+
+[ext_resource type="Texture2D" uid="uid://bkpogjr0ca847" path="res://levels/tnguyen/textures/walltexture.jpg" id="1_x0dti"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3gk05"]
+size = Vector3(30, 7.5, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_glxtn"]
+albedo_texture = ExtResource("1_x0dti")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qqqtt"]
+data = PackedVector3Array(-15, 3.75, 0.5, 15, 3.75, 0.5, -15, -3.75, 0.5, 15, 3.75, 0.5, 15, -3.75, 0.5, -15, -3.75, 0.5, 15, 3.75, -0.5, -15, 3.75, -0.5, 15, -3.75, -0.5, -15, 3.75, -0.5, -15, -3.75, -0.5, 15, -3.75, -0.5, 15, 3.75, 0.5, 15, 3.75, -0.5, 15, -3.75, 0.5, 15, 3.75, -0.5, 15, -3.75, -0.5, 15, -3.75, 0.5, -15, 3.75, -0.5, -15, 3.75, 0.5, -15, -3.75, -0.5, -15, 3.75, 0.5, -15, -3.75, 0.5, -15, -3.75, -0.5, 15, 3.75, 0.5, -15, 3.75, 0.5, 15, 3.75, -0.5, -15, 3.75, 0.5, -15, 3.75, -0.5, 15, 3.75, -0.5, -15, -3.75, 0.5, 15, -3.75, 0.5, -15, -3.75, -0.5, 15, -3.75, 0.5, 15, -3.75, -0.5, -15, -3.75, -0.5)
+
+[node name="wall_template" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_3gk05")
+surface_material_override/0 = SubResource("StandardMaterial3D_glxtn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_qqqtt")
