@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ta5snl0d7xdq"]
+
+[ext_resource type="Texture2D" uid="uid://cj62hg7raxgq8" path="res://levels/jessicajohnson/paintings (jpgs and pngs)/54336.jpg" id="1_0pq05"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6cb5"]
+albedo_texture = ExtResource("1_0pq05")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3njvo"]
+material = SubResource("StandardMaterial3D_q6cb5")
+size = Vector2(0.612, 1.18)
+orientation = 2
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_3njvo")

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Game"
-run/main_scene="res://levels/jessicajohnson/beijing_Page_080_02_Jessica_Johnson.tscn"
+run/main_scene="res://levels/jessicajohnson/Final Project/final project.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 

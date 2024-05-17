@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx0lriwair3pb"
-path.s3tc="res://.godot/imported/beijing_Page_080_02.png-75d351a3b8c088481f0f5b84f40ba2d5.s3tc.ctex"
+uid="uid://b1f7wl2cw0w3f"
+path.s3tc="res://.godot/imported/s5c6f67b704e7b.jpg-6d23399a8e557272dd02f842597a1b32.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://levels/jessicajohnson/beijing_Page_080_02.png"
-dest_files=["res://.godot/imported/beijing_Page_080_02.png-75d351a3b8c088481f0f5b84f40ba2d5.s3tc.ctex"]
+source_file="res://levels/jessicajohnson/paintings (jpgs and pngs)/s5c6f67b704e7b.jpg"
+dest_files=["res://.godot/imported/s5c6f67b704e7b.jpg-6d23399a8e557272dd02f842597a1b32.s3tc.ctex"]
 
 [params]
 
