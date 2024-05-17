@@ -1,0 +1,1071 @@
+[gd_scene load_steps=91 format=3 uid="uid://b3gkj6usy3wn3"]
+
+[ext_resource type="PackedScene" uid="uid://buoa4rfr48kmo" path="res://characters/player/player.tscn" id="1_snado"]
+[ext_resource type="PackedScene" uid="uid://bjikvl7hhugl2" path="res://levels/sheckstall/assets/prefabs/environments/environment.tscn" id="2_xlk6v"]
+[ext_resource type="PackedScene" uid="uid://yqku2cc524jc" path="res://levels/jessicajohnson/paintings (scenes)/Qianlong Emperor in ceremonial armour on horseback .tscn" id="3_j3khj"]
+[ext_resource type="PackedScene" uid="uid://bpge4itvg5yyx" path="res://levels/jessicajohnson/paintings (scenes)/The Qianlong Emperor in court dress..tscn" id="4_adpei"]
+[ext_resource type="PackedScene" uid="uid://cbuqvsooxjogw" path="res://levels/jessicajohnson/paintings (scenes)/Envoys from vassal states and foreigncountries presenting tribute to theEmperor .tscn" id="5_o3440"]
+[ext_resource type="PackedScene" uid="uid://fnfwiv4emysy" path="res://levels/jessicajohnson/paintings (scenes)/Imperial Banquet in the Garden of TenThousand Trees .tscn" id="6_r74tu"]
+[ext_resource type="PackedScene" uid="uid://cgxfuu3tbksx3" path="res://levels/jessicajohnson/paintings (scenes)/Qianlong Emperor attending Imperial hunting game.tscn" id="7_i6bbg"]
+[ext_resource type="PackedScene" uid="uid://8aw7op76a4s5" path="res://levels/jessicajohnson/paintings (scenes)/Qianlong Emperor hunting deer.tscn" id="8_vrpes"]
+[ext_resource type="PackedScene" uid="uid://8qkxfe4yo3gq" path="res://levels/jessicajohnson/paintings (scenes)/Spring’s peaceful message depictingPrince Hongli (future QianlongEmperor) and his father YongzhengEmperor.tscn" id="9_t1f1w"]
+[ext_resource type="PackedScene" uid="uid://r6gj2uwpun2o" path="res://levels/jessicajohnson/paintings (scenes)/Qianlong Emperor reading in a snowy landscape .tscn" id="10_ugyym"]
+[ext_resource type="PackedScene" uid="uid://cil6xrk8lmums" path="res://levels/jessicajohnson/paintings (scenes)/Qianlong Emperor with qin (zither).tscn" id="11_rmkox"]
+[ext_resource type="PackedScene" uid="uid://h1l6iv2s11kf" path="res://levels/jessicajohnson/paintings (scenes)/Qianlong Emperor admiring lotus whileplaying qin (zither).tscn" id="12_p8mdf"]
+[ext_resource type="PackedScene" uid="uid://ta5snl0d7xdq" path="res://levels/jessicajohnson/paintings (scenes)/Qianlong Emperor playing the role of Vimalakirti .tscn" id="13_6i3rc"]
+[ext_resource type="PackedScene" uid="uid://d3sih1huaq7p" path="res://levels/jessicajohnson/paintings (scenes)/Prince Hongli (future QianlongEmperor) practising calligraphy on abanana leaf.tscn" id="14_t5tmr"]
+[ext_resource type="PackedScene" uid="uid://bfa2rroy0j3gf" path="res://levels/jessicajohnson/paintings (scenes)/Qianlong Emperor celebrating on New Year’s morning .tscn" id="15_o5k7b"]
+[ext_resource type="PackedScene" uid="uid://dygpq6qvn8wla" path="res://levels/jessicajohnson/paintings (scenes)/Portrait of Imperial HonorableConsortHuixian.tscn" id="16_n05vf"]
+[ext_resource type="PackedScene" uid="uid://bo1gdbttnwg8k" path="res://levels/jessicajohnson/paintings (scenes)/The Qianlong Emperor enjoying the pleasures of life.tscn" id="17_fg8kh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_svxi8"]
+albedo_color = Color(0.617455, 0.617455, 0.617455, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_run6t"]
+material = SubResource("StandardMaterial3D_svxi8")
+size = Vector2(10, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2pcgh"]
+size = Vector3(0.001, 0.103485, 10.7664)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vha0t"]
+size = Vector3(40.2167, 0.546997, 24.8008)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_plr2l"]
+albedo_color = Color(0.724643, 0.724643, 0.724642, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cj6lh"]
+material = SubResource("StandardMaterial3D_plr2l")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2p6fm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4yqsu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2n3lk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_42xyw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yfu27"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wuel5"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_a1qre"]
+material = SubResource("StandardMaterial3D_wuel5")
+text = "The Life and Art of the Qianlong Emperor"
+font_size = 44
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bk4wp"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_ra82r"]
+material = SubResource("StandardMaterial3D_bk4wp")
+text = "Emperor Qianlong's art collection, one of the most extensive and diverse in Chinese history,"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jntx4"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_mb13d"]
+material = SubResource("StandardMaterial3D_jntx4")
+text = "reflects his profound appreciation for both traditional Chinese artistry and the innovative techniques introduced by"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bv7yv"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_5llfr"]
+material = SubResource("StandardMaterial3D_bv7yv")
+text = "Western artists. As a passionate patron of the arts, Qianlong amassed a collection that not only showcased the cultural"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l7vov"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_68pee"]
+material = SubResource("StandardMaterial3D_l7vov")
+text = "and artistic achievements of his reign but also symbolized his power and intellectual pursuits. This exhibition"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drtia"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_cwmr3"]
+material = SubResource("StandardMaterial3D_drtia")
+text = "features a selection of works from his collection, highlighting their significance and the intriguing blend"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_poox3"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_2lvy6"]
+material = SubResource("StandardMaterial3D_poox3")
+text = "of styles they represent. These masterpieces provide a unique window into the sophisticated taste and cultural"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mjcfo"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_5ueg0"]
+material = SubResource("StandardMaterial3D_mjcfo")
+text = "ambition of an emperor who sought to merge the best of Eastern and Western artistic traditions, making his"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dcfrp"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_afjx6"]
+material = SubResource("StandardMaterial3D_dcfrp")
+text = "collection a fascinating and enriching testament to the cultural dynamism of the Qing dynasty."
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p408t"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_co56a"]
+material = SubResource("StandardMaterial3D_p408t")
+text = "Imperial Power and Authority"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ukqc3"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_w4ab4"]
+material = SubResource("StandardMaterial3D_ukqc3")
+text = "Cultural and Artistic Influence"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b48rg"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_ltxql"]
+material = SubResource("StandardMaterial3D_b48rg")
+text = "Personal and Prvate Life"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bgglx"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_ucba8"]
+material = SubResource("StandardMaterial3D_bgglx")
+text = "\"Cultural and Artistic Influence,\" showcases the
+
+cultural exchanges and artistic endeavors during Emperor Qianlong’s
+
+reign. Featuring pieces like \"Qianlong Emperor Hunting Deer,\" which
+
+exemplifies the new European style of realistic documentary painting
+
+that emerged during Qianlong's time, these works blend Western
+
+techniques with traditional Chinese subjects. The incorporation of
+
+linear perspective and chiaroscuro highlights the influence of European realism.
+
+Also included is \"Qianlong Emperor Reading in a Snowy Landscape,\"
+
+which shows the emperor in a serene setting, capturing his
+
+dedication to scholarly pursuits and artistic expression. This
+
+painting employs Western methods of shadow and light to create
+
+depth, while maintaining the Chinese aesthetic of simplicity and harmony.
+
+These artworks collectively illustrate the emperor's passion for art
+
+and culture and his role in fostering a rich cultural synthesis
+
+during his reign."
+font_size = 8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_254f2"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_xt4qb"]
+material = SubResource("StandardMaterial3D_254f2")
+text = "\"Imperial Power and Authority,\" highlights the
+
+grandeur and influence of Emperor Qianlong’s reign through a series
+
+of monumental artworks. Featuring pieces like Giuseppe
+
+Castiglione's \"Qianlong Emperor in Ceremonial Armour on Horseback,\"
+
+which portrays the emperor in full military regalia, and \"Portrait
+
+of Qianlong Emperor in Ceremonial Court Robe,\" which captures his
+
+inauguration, these works blend European realism with traditional
+
+Chinese techniques. The section also includes impressive scenes
+
+like the \"Envoys from Vassal States and Foreign Countries Presenting
+
+Tribute to the Emperor,\" showcasing the political strength and
+
+opulence of the Qing dynasty. These artworks collectively emphasizes
+
+the emperor's authority and the sophisticated cultural synthesis
+
+that characterized his court."
+font_size = 8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ey8c5"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_atny3"]
+material = SubResource("StandardMaterial3D_ey8c5")
+text = "\"Personal and Private Life,\" provides an intimate look
+
+into Emperor Qianlong's more personal moments and interests.
+
+Featuring works like Zhang Zongcang's \"Qianlong Emperor with Qin
+
+(Zither),\" where the emperor is depicted sitting beside a qin in his
+
+country retreat, these paintings celebrate the ideal of finding
+
+quietude in nature. 
+
+Ding Guanpeng's \"Qianlong Emperor Playing the Role of Vimalakirti\"
+
+portrays the emperor as a Mahayana Buddhist lay practitioner,
+
+engaged in discourse with Manjushri, Bodhisattva of Wisdom. This
+
+piece reflects Qianlong's intellectual pursuits and religious
+interests.
+
+Lastly, \"The Qianlong Emperor Enjoying the Pleasures of
+
+Life\" depicts the emperor gazing at three imperial women in a
+
+peaceful garden setting, illustrating his enjoyment of personal
+
+pleasures and the beauty of his surroundings.
+
+These artworks collectively offer a glimpse into the private and
+
+personal life of Emperor Qianlong, showcasing his scholarly,
+
+artistic, and leisurely pursuits."
+font_size = 8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qyes"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_pqof8"]
+material = SubResource("StandardMaterial3D_7qyes")
+text = "Giuseppe CASTIGLIONE
+Italian 1688–1766, worked in China 1714–66
+Qianlong Emperor in ceremonial armour on horseback
+清人画弘历戎装骑马像轴
+Qing dynasty, Qianlong period 1739
+coloured inks on silk"
+font_size = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xqi4"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_1uj1x"]
+material = SubResource("StandardMaterial3D_0xqi4")
+text = "Giuseppe CASTIGLIONE
+Italian 1688–1766, worked in China 1714–66
+Portrait of Qianlong Emperor in ceremonial court robe
+清人画弘历朝服像轴
+Qing dynasty, Qianlong period 1736
+coloured inks on silk"
+font_size = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kdeh4"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_um4ml"]
+material = SubResource("StandardMaterial3D_kdeh4")
+text = "Lables from A Golden Age of China: Qianlong Emperor, 1736-1795"
+font_size = 12
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jg4g6"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_w1u6g"]
+material = SubResource("StandardMaterial3D_jg4g6")
+text = "CHINESE
+Envoys from vassal states and foreign
+countries presenting tribute to the
+Emperor
+清人万国来朝图轴
+Qing dynasty, Qianlong period 1736–95
+coloured inks on silk"
+font_size = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8rcjh"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_44c4a"]
+material = SubResource("StandardMaterial3D_8rcjh")
+text = "Giuseppe CASTIGLIONE (attributed to)
+Italian 1688–1766, worked in China 1714–66
+CHINESE (court artists)
+Imperial Banquet in the Garden of Ten
+Thousand Trees
+清人画万树园赐宴图
+Qing dynasty, Qianlong period 1755
+coloured inks on silk"
+font_size = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_04pun"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_iu2uc"]
+material = SubResource("StandardMaterial3D_04pun")
+text = "CHINESE
+Portrait of Imperial Honorable
+ConsortHuixian
+清人画慧贤贵妃半身像屏
+Qing dynasty, Qianlong period 1736–95
+coloured inks on paper"
+font_size = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gypmu"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_ohlsd"]
+material = SubResource("StandardMaterial3D_gypmu")
+text = "Giuseppe CASTIGLIONE
+Italian 1688–1766, worked in China 1714–66
+Qianlong Emperor attending Imperial hunting game
+郎世宁画弘历哨鹿图轴
+Qing dynasty, Qianlong period 1741
+coloured inks on silk"
+font_size = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xcg0x"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_swuwr"]
+material = SubResource("StandardMaterial3D_xcg0x")
+text = "CHINESE
+Qianlong Emperor hunting deer
+清人画弘历威弧获鹿图像轴
+Qing dynasty, Qianlong period 1736–95
+coloured inks on paper"
+font_size = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f6nky"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_c5wvr"]
+material = SubResource("StandardMaterial3D_f6nky")
+text = "Giuseppe CASTIGLIONE
+Italian 1688–1766, worked in China 1714–66
+Spring’s peaceful message depicting
+Prince Hongli (future Qianlong
+Emperor) and his father Yongzheng
+Emperor
+郎世宁画弘历平安春信图像轴
+inscribed by Qianlong Emperor in 1782 and with 5 seals of
+the Qianlong Emperor
+Qing dynasty, Qianlong period c. 1736
+coloured inks on silk"
+font_size = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4p0wk"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_eojof"]
+material = SubResource("StandardMaterial3D_4p0wk")
+text = "Qianlong Emperor
+Chinese 1711–99
+XAING Shengmo (after)
+Chinese 1597–1658
+Giuseppe CASTIGLIONE
+Italian 1688–1766, worked in China 1714–66
+Qianlong Emperor reading in a snowy landscape
+弘历雪景园林郎世宁画人物图轴
+inscribed with poem by Qianlong Emperor in 1763 and
+with 2 seals of the Qianlong Emperor
+Qing dynasty, Qianlong period 1736–95
+coloured inks on paper"
+font_size = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e14v4"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_q17v6"]
+material = SubResource("StandardMaterial3D_e14v4")
+text = "DING Guanpeng
+Chinese active 1726–61
+Giuseppe CASTIGLIONE
+Italian 1688–1766, worked in China 1714–66
+Qianlong Emperor celebrating on New Year’s morning
+丁观鹏郎世宁合画弘历岁朝行乐图
+Qing dynasty, Qianlong period 1736–95
+coloured inks on silk"
+font_size = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_exv44"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_vd1qt"]
+material = SubResource("StandardMaterial3D_exv44")
+text = "ZHANG Zongcang
+Chinese 1686–1756
+Qianlong Emperor with qin (zither)
+张宗苍画弘历抚琴图轴
+signed by the artist and inscribed with poem by Qianlong
+Emperor in 1753 and with 6 seals of the Qianlong Emperor
+Qing dynasty, Qianlong period 1736–95
+ink on paper"
+font_size = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ruy0d"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_wvru2"]
+material = SubResource("StandardMaterial3D_ruy0d")
+text = "CHINESE
+Qianlong Emperor admiring lotus while
+playing qin (zither)
+清人画弘历观荷抚琴图轴
+Qing dynasty, Qianlong period 1753
+coloured inks on silk"
+font_size = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_57k2w"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_70itm"]
+material = SubResource("StandardMaterial3D_57k2w")
+text = "DING Guanpeng
+Chinese active 1726–61
+Qianlong Emperor playing the role of
+Vimalakirti
+丁观鹏画弘历不二图像轴
+inscribed with poem and 2 seals by Qianlong Emperor in
+1753 and with 5 seals of the Qianlong Emperor
+Qing dynasty, Qianlong period 1736–95
+coloured inks on paper"
+font_size = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6pkr8"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_o7qk3"]
+material = SubResource("StandardMaterial3D_6pkr8")
+text = "CHINESE
+Prince Hongli (future Qianlong
+Emperor) practising calligraphy on a
+banana leaf
+清人画弘历圆形古装行乐图轴
+Qing dynasty, Qianlong period c. 1730
+coloured inks on silk"
+font_size = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t35da"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_5kk7u"]
+material = SubResource("StandardMaterial3D_t35da")
+text = "JIN Tingbiao
+Chinese active c. 1750–68
+Giuseppe CASTIGLIONE (attributed to)
+Italian 1688–1766, worked in China 1714–66
+The Qianlong Emperor enjoying the pleasures of life 金廷标
+画弘历宫中行乐图轴
+poem inscribed by Qianlong Emperor in the spring of 1763
+Qing dynasty, Qianlong period 1736–95
+coloured inks on silk"
+font_size = 6
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.97939)
+mesh = SubResource("PlaneMesh_run6t")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0291319, -0.0108185, 0.122458)
+shape = SubResource("BoxShape3D_2pcgh")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.329949, 6.86376, 0, -7.97939)
+mesh = SubResource("PlaneMesh_run6t")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D5/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0291319, -0.0108185, 0.122458)
+shape = SubResource("BoxShape3D_2pcgh")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.329949, -6.93553, 0, -7.97939)
+mesh = SubResource("PlaneMesh_run6t")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D6/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0291319, -0.0108185, 0.122458)
+shape = SubResource("BoxShape3D_2pcgh")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 0.329949, 0, 1, 0, -1, 0, -1.44225e-08, 0.138181, 0, -1.48885)
+mesh = SubResource("PlaneMesh_run6t")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 7.45058e-09, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D7/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0291319, -0.0108185, 0.122458)
+shape = SubResource("BoxShape3D_2pcgh")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7815, 0, -8.11081)
+mesh = SubResource("PlaneMesh_run6t")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0291319, -0.0108185, 0.122458)
+shape = SubResource("BoxShape3D_2pcgh")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0942039, 0, 4.60147)
+mesh = SubResource("PlaneMesh_run6t")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0291319, -0.0108185, 0.122458)
+shape = SubResource("BoxShape3D_2pcgh")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1369, 0, -7.95044)
+mesh = SubResource("PlaneMesh_run6t")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4472, -0.226501, 6.0918)
+shape = SubResource("BoxShape3D_vha0t")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="."]
+transform = Transform3D(-10.0706, 1.29531e-08, 2.37349e-14, 0, -6.47655e-09, 6.2111, 8.80398e-07, 0.148166, 2.71496e-07, -13.158, 3.09765, -12.9348)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D9/StaticBody3D"]
+shape = SubResource("BoxShape3D_2p6fm")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="."]
+transform = Transform3D(-10.0706, 1.29531e-08, 2.37349e-14, 0, -6.47655e-09, 6.2111, 8.80398e-07, 0.148166, 2.71496e-07, -0.0066185, 3.09765, -12.9348)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D10/StaticBody3D"]
+shape = SubResource("BoxShape3D_2p6fm")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="."]
+transform = Transform3D(-10.0706, 1.29531e-08, 2.37349e-14, 0, -6.47655e-09, 6.2111, 8.80398e-07, 0.148166, 2.71496e-07, -13.158, 3.09765, -3.0461)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D12"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D12/StaticBody3D"]
+shape = SubResource("BoxShape3D_4yqsu")
+
+[node name="MeshInstance3D34" type="MeshInstance3D" parent="."]
+transform = Transform3D(-10.0706, 1.29531e-08, 2.37349e-14, 0, -6.47655e-09, 6.2111, 8.80398e-07, 0.148166, 2.71496e-07, 0.0836287, 3.09765, 9.47872)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D34"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D34/StaticBody3D"]
+shape = SubResource("BoxShape3D_4yqsu")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.45569e-07, -0.148166, -2.71496e-07, 0, -6.47655e-09, 6.2111, -3.33023, 6.47655e-09, 1.18675e-14, -8.13919, 3.09765, -4.62448)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D13"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D13/StaticBody3D"]
+shape = SubResource("BoxShape3D_2n3lk")
+
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.45569e-07, -0.148166, -2.71496e-07, 0, -6.47655e-09, 6.2111, -3.33023, 6.47655e-09, 1.18675e-14, 7.80599, 3.09765, -4.66108)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D20"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D20/StaticBody3D"]
+shape = SubResource("BoxShape3D_2n3lk")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.45569e-07, -0.148166, -2.71496e-07, 0, -6.47655e-09, 6.2111, -3.33023, 6.47655e-09, 1.18675e-14, -8.13919, 3.09765, -11.2564)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D14"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D14/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D21" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.55557e-07, -0.148166, -2.71496e-07, 0, -6.47655e-09, 6.2111, -3.55872, 6.47655e-09, 1.18675e-14, 7.69796, 3.09765, -11.408)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D21"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D21/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D24" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.55557e-07, -0.148166, -2.71496e-07, 0, -6.47655e-09, 6.2111, -3.55872, 6.47655e-09, 1.18675e-14, 5.07316, 3.09765, -11.408)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D24"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D24/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D25" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.55557e-07, -0.148166, -2.71496e-07, 0, -6.47655e-09, 6.2111, -3.55872, 6.47655e-09, 1.18675e-14, 5.05748, 3.09765, -4.58612)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D25"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D25/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D38" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.55557e-07, -0.148166, -7.34552e-08, 0, -6.47655e-09, 1.68046, -3.55872, 6.47655e-09, 3.21084e-15, 5.05748, 5.61387, -7.94254)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D38"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D38/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D39" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.55557e-07, -0.148166, -7.34552e-08, 0, -6.47655e-09, 1.68046, -3.55872, 6.47655e-09, 3.21084e-15, -5.02719, 5.61387, -7.94254)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D39"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D39/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D40" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.72823, 1.29531e-08, 6.42165e-15, 0, -6.47654e-09, 1.68046, 3.25932e-07, 0.148166, 7.34551e-08, 0.208729, 5.61387, -3.01906)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D40"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D40/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D30" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.1794e-07, -0.148166, -2.71496e-07, 0, -6.47655e-09, 6.2111, -2.69815, 6.47655e-09, 1.18675e-14, 1.77907, 3.09765, -1.74663)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D30"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D30/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D31" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.1794e-07, -0.148166, -2.71496e-07, 0, -6.47655e-09, 6.2111, -2.69815, 6.47655e-09, 1.18675e-14, -1.49444, 3.09765, -1.6148)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D31"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D31/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D26" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.55557e-07, -0.148166, -2.71496e-07, 0, -6.47655e-09, 6.2111, -3.55872, 6.47655e-09, 1.18675e-14, -5.03497, 3.09765, -4.58612)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D26"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D26/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D27" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.55557e-07, -0.148166, -2.71496e-07, 0, -6.47655e-09, 6.2111, -3.55872, 6.47655e-09, 1.18675e-14, -5.03497, 3.09765, -11.3144)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D27"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D27/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.11066, 0, 0, 0, -6.47655e-09, 6.2111, 0, -0.148166, -2.71496e-07, -6.65208, 3.09765, -9.61353)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D15"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D15/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D22" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.75846, 0, 0, 0, -6.47655e-09, 6.2111, 0, -0.148166, -2.71496e-07, 6.3769, 3.09765, -9.66177)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D22"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D22/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D23" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.75846, 0, 0, 0, -6.47655e-09, 6.2111, 0, -0.148166, -2.71496e-07, 6.48591, 3.09765, -6.28789)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D23"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D23/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.13621, 0, 0, 0, -6.47655e-09, 6.2111, 0, -0.148166, -2.71496e-07, -6.55363, 3.09765, -6.27401)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D16"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D16/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D28" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.53326, 0, 0, 0, -6.47655e-09, 6.2111, 0, -0.148166, -2.71496e-07, -3.2036, 3.09765, -2.93564)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D28"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D28/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D32" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.53326, 0, 0, 0, -6.47655e-09, 6.2111, 0, -0.148166, -2.71496e-07, -3.22808, 3.09765, -0.349949)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D32"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D32/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, -2.27374e-13, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D33" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.53326, 0, 0, 0, -6.47655e-09, 6.2111, 0, -0.148166, -2.71496e-07, 3.5157, 3.09765, -0.349949)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D33"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D33/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D29" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.33023, 0, 0, 0, -6.47655e-09, 6.2111, 0, -0.148166, -2.71496e-07, 3.48584, 3.09765, -3.03842)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D29"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D29/StaticBody3D"]
+shape = SubResource("BoxShape3D_42xyw")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.40199e-07, -0.148166, -2.71496e-07, 0, -6.47655e-09, 6.2111, -10.0706, 6.47655e-09, 1.18675e-14, -18.1213, 3.06096, -7.86804)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D11/StaticBody3D"]
+shape = SubResource("BoxShape3D_yfu27")
+
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.40199e-07, -0.148166, -2.71496e-07, 0, -6.47655e-09, 6.2111, -10.0706, 6.47655e-09, 1.18675e-14, -4.85204, 3.06096, 4.72066)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D35"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D35/StaticBody3D"]
+shape = SubResource("BoxShape3D_yfu27")
+
+[node name="MeshInstance3D36" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.40199e-07, -0.148166, -2.71496e-07, 0, -6.47655e-09, 6.2111, -10.0706, 6.47655e-09, 1.18675e-14, 5.10134, 3.06096, 4.72066)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D36"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D36/StaticBody3D"]
+shape = SubResource("BoxShape3D_yfu27")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.40199e-07, -0.148166, -2.71496e-07, 0, -6.47655e-09, 6.2111, -10.0706, 6.47655e-09, 1.18675e-14, 17.7536, 3.06096, -8.10417)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D17"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D17/StaticBody3D"]
+shape = SubResource("BoxShape3D_yfu27")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="."]
+transform = Transform3D(10.0706, 0, 0, 0, -6.47655e-09, 6.2111, 0, -0.148166, -2.71496e-07, 12.8112, 3.06096, -3.12257)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D18"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D18/StaticBody3D"]
+shape = SubResource("BoxShape3D_yfu27")
+
+[node name="MeshInstance3D37" type="MeshInstance3D" parent="."]
+transform = Transform3D(37.949, 0, 0, 0, 0.148166, 0, 0, 0, 43.3352, 0.255523, 6.15678, -10.2763)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D37"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D37/StaticBody3D"]
+shape = SubResource("BoxShape3D_yfu27")
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="."]
+transform = Transform3D(10.0706, 0, 0, 0, -6.47655e-09, 6.2111, 0, -0.148166, -2.71496e-07, 12.8112, 3.06096, -13.1653)
+mesh = SubResource("BoxMesh_cj6lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D19"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D19/StaticBody3D"]
+shape = SubResource("BoxShape3D_yfu27")
+
+[node name="Environment" parent="." instance=ExtResource("2_xlk6v")]
+
+[node name="Node3D" parent="." instance=ExtResource("3_j3khj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.608, 2.5, -6.028)
+
+[node name="Node3D2" parent="." instance=ExtResource("4_adpei")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.674, 2.5, -10.229)
+
+[node name="Node3D3" parent="." instance=ExtResource("5_o3440")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.784, 2.5, -13.08)
+
+[node name="Node3D4" parent="." instance=ExtResource("6_r74tu")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 12.893, 2.5, -3.227)
+
+[node name="Player" parent="." instance=ExtResource("1_snado")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.865, -5.09283)
+
+[node name="Node3D5" parent="." instance=ExtResource("7_i6bbg")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 2.56996, 2.5, 9.39374)
+
+[node name="Node3D6" parent="." instance=ExtResource("8_vrpes")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2.01304, 2.5, 9.38834)
+
+[node name="Node3D7" parent="." instance=ExtResource("9_t1f1w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.21, 2, -0.246)
+
+[node name="Node3D8" parent="." instance=ExtResource("10_ugyym")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.93083, 3.02634, 4.77325)
+
+[node name="Node3D9" parent="." instance=ExtResource("11_rmkox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1086, 2.5, -12.857)
+
+[node name="Node3D10" parent="." instance=ExtResource("12_p8mdf")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -13.0831, 2.5, -3.17379)
+
+[node name="Node3D11" parent="." instance=ExtResource("13_6i3rc")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8.29696, 2.5, -11.2675)
+
+[node name="Node3D12" parent="." instance=ExtResource("14_t5tmr")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18.015, 2.5, -5.86732)
+
+[node name="Node3D13" parent="." instance=ExtResource("15_o5k7b")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.72236, 2.5, 4.46277)
+
+[node name="Node3D14" parent="." instance=ExtResource("16_n05vf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.00057, 2.5, -4.73632)
+
+[node name="Node3D15" parent="." instance=ExtResource("17_fg8kh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18.0184, 2.5, -10.1255)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.912, 2.5, -4.847)
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.60105, 2.5, -5.27541)
+
+[node name="OmniLight3D21" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.60105, 2.5, -10.9958)
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.143, 2.5, -5.27541)
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.143, 2.5, -11.0491)
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.75674, 2.5, -11.0491)
+
+[node name="OmniLight3D20" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.75674, 2.5, -4.97614)
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89643, 2.5, 4.61149)
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.87388, 2.5, 7.69405)
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2212, 2.5, 7.69405)
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.19819, 2.5, 4.45307)
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.39849, 2.5, 1.7842)
+
+[node name="OmniLight3D22" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06535, 2.5, 1.7842)
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.42425, 2.5, -10.434)
+
+[node name="OmniLight3D19" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.00833, 2.5, -10.434)
+
+[node name="OmniLight3D17" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.08569, 2.5, -5.581)
+
+[node name="OmniLight3D18" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.73216, 2.5, -5.581)
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3886, 2.5, -9.93196)
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3886, 2.5, -6.11293)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6143, 2.5, -5.94349)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6143, 2.5, -9.80813)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7567, 2.5, -11.2005)
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.079, 4.5, -12.702)
+mesh = SubResource("TextMesh_a1qre")
+
+[node name="MeshInstance3D41" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, -12.885)
+mesh = SubResource("TextMesh_ra82r")
+
+[node name="MeshInstance3D42" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, -12.8755)
+mesh = SubResource("TextMesh_mb13d")
+
+[node name="MeshInstance3D43" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9, -12.8785)
+mesh = SubResource("TextMesh_5llfr")
+
+[node name="MeshInstance3D44" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6, -12.8763)
+mesh = SubResource("TextMesh_68pee")
+
+[node name="MeshInstance3D45" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, -12.8771)
+mesh = SubResource("TextMesh_cwmr3")
+
+[node name="MeshInstance3D46" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -12.8725)
+mesh = SubResource("TextMesh_2lvy6")
+
+[node name="MeshInstance3D47" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, -12.8752)
+mesh = SubResource("TextMesh_5ueg0")
+
+[node name="MeshInstance3D48" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, -12.8756)
+mesh = SubResource("TextMesh_afjx6")
+
+[node name="MeshInstance3D49" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.00309, 5.14403, -8.09027)
+mesh = SubResource("TextMesh_co56a")
+
+[node name="MeshInstance3D50" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0691922, 5.05865, -3.07049)
+mesh = SubResource("TextMesh_w4ab4")
+
+[node name="MeshInstance3D51" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.97519, 5.05254, -7.90201)
+mesh = SubResource("TextMesh_ltxql")
+
+[node name="MeshInstance3D65" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.41, 3, -0.30069)
+mesh = SubResource("TextMesh_ucba8")
+
+[node name="MeshInstance3D52" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.75122, 3, -11.2972)
+mesh = SubResource("TextMesh_xt4qb")
+
+[node name="MeshInstance3D53" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8.19055, 3, -4.84847)
+mesh = SubResource("TextMesh_atny3")
+
+[node name="MeshInstance3D54" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.7036, 1.09383, -4.064)
+mesh = SubResource("TextMesh_pqof8")
+
+[node name="MeshInstance3D55" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.6973, 1, -10.2456)
+mesh = SubResource("TextMesh_1uj1x")
+
+[node name="MeshInstance3D56" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89783, 0.257963, -12.8677)
+mesh = SubResource("TextMesh_um4ml")
+
+[node name="MeshInstance3D57" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7431, 1, -13.115)
+mesh = SubResource("TextMesh_w1u6g")
+
+[node name="MeshInstance3D58" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 12.9001, 1, -3.17283)
+mesh = SubResource("TextMesh_44c4a")
+
+[node name="MeshInstance3D59" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.85747, 1.22066, -4.739)
+mesh = SubResource("TextMesh_iu2uc")
+
+[node name="MeshInstance3D60" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.54398, 0.849733, 9.424)
+mesh = SubResource("TextMesh_ohlsd")
+
+[node name="MeshInstance3D61" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.93086, 1.28716, 9.4275)
+mesh = SubResource("TextMesh_swuwr")
+
+[node name="MeshInstance3D62" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1833, 1.09301, -0.298943)
+mesh = SubResource("TextMesh_c5wvr")
+
+[node name="MeshInstance3D63" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.04848, 1.11498, 2.07723)
+mesh = SubResource("TextMesh_eojof")
+
+[node name="MeshInstance3D64" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.80075, 1.30773, 6.3034)
+mesh = SubResource("TextMesh_q17v6")
+
+[node name="MeshInstance3D66" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1034, 1.13181, -12.8847)
+mesh = SubResource("TextMesh_vd1qt")
+
+[node name="MeshInstance3D67" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11.6775, 1.2543, -3.09672)
+mesh = SubResource("TextMesh_wvru2")
+
+[node name="MeshInstance3D68" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8.19175, 1.43341, -11.2799)
+mesh = SubResource("TextMesh_70itm")
+
+[node name="MeshInstance3D69" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18.0707, 1.5399, -5.89055)
+mesh = SubResource("TextMesh_o7qk3")
+
+[node name="MeshInstance3D70" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18.0716, 1.22343, -10.187)
+mesh = SubResource("TextMesh_5kk7u")
