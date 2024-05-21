@@ -1,3 +1,0 @@
-StoneLion is the initial attempt of the main structure of the Lion.
-
-The second attempted used Rino8 which is slightly more effective for facial detail of the lion. The resulted OBJ file has some issue that could only be rendered but not put into godot.
