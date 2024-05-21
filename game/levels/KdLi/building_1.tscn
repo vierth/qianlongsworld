@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6ety4oqro4yi"]
+
+[ext_resource type="Texture2D" uid="uid://dacx8v6xtp3ya" path="res://levels/KdLi/concrete_floor_worn_001_disp_4k.png" id="1_jp71d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7lcjw"]
+albedo_texture = ExtResource("1_jp71d")
+
+[sub_resource type="BoxMesh" id="BoxMesh_rehdt"]
+material = SubResource("StandardMaterial3D_7lcjw")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hapdo"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="Building1" type="Node3D"]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.57096, 0, 0, 0, 3.73662, 0, 0, 0, 2.51895, -16.1117, 0.842964, 1.94089)
+mesh = SubResource("BoxMesh_rehdt")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hapdo")
